@@ -18,5 +18,16 @@ namespace SM_Movie.Presenter
             loginView = view;
         }
 
+        public bool LoginAttempt()
+        {
+            Utils.DBUtil db = new Utils.DBUtil();
+            if (db.LoginAttempt(loginView.userId, loginView.userPassword))
+            {
+                return true;
+
+            }
+            return false;
+        }
+
     }
 }

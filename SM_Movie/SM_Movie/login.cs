@@ -7,11 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SM_Movie.View;
+using SM_Movie.Presenter;
+
 
 namespace SM_Movie
 {
-    public partial class login : Form
+    public partial class login : Form,ILogin
     {
+        string ILogin.userId
+        {
+            get
+            {
+                return userId.Text;
+            }
+            set
+            {
+                userId.Text = value;
+            }
+        }
+        string ILogin.userPassword
+        {
+            get
+            {
+                return userPassword.Text;
+            }
+            set
+            {
+                userPassword.Text = value;
+            }
+        }
+
         public login()
         {
             InitializeComponent();
@@ -45,6 +71,19 @@ namespace SM_Movie
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginPresenter presenter = new LoginPresenter(this);
+            Utils.DBUtil db = new Utils.DBUtil();
+            if (presenter.LoginAttempt())
+            {
+                MessageBox.Show("성공");
+            } else
+            {
+                MessageBox.Show("실패");
+            }
         }
     }
 }

@@ -35,10 +35,10 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.PW = new System.Windows.Forms.TextBox();
+            this.userPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.userId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -55,10 +55,10 @@
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.PW);
+            this.panel2.Controls.Add(this.userPassword);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.userId);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(210, 0);
@@ -112,16 +112,17 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "로그인";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // PW
+            // userPassword
             // 
-            this.PW.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PW.Location = new System.Drawing.Point(50, 256);
-            this.PW.Name = "PW";
-            this.PW.PasswordChar = '●';
-            this.PW.Size = new System.Drawing.Size(218, 29);
-            this.PW.TabIndex = 5;
-            this.PW.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.userPassword.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.userPassword.Location = new System.Drawing.Point(50, 256);
+            this.userPassword.Name = "userPassword";
+            this.userPassword.PasswordChar = '●';
+            this.userPassword.Size = new System.Drawing.Size(218, 29);
+            this.userPassword.TabIndex = 5;
+            this.userPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -144,13 +145,13 @@
             this.label2.Text = "ID";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // userId
             // 
-            this.textBox1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(50, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 29);
-            this.textBox1.TabIndex = 1;
+            this.userId.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.userId.Location = new System.Drawing.Point(50, 159);
+            this.userId.Name = "userId";
+            this.userId.Size = new System.Drawing.Size(218, 29);
+            this.userId.TabIndex = 1;
             // 
             // label1
             // 
@@ -208,13 +209,13 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox userId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox PW;
+        private System.Windows.Forms.TextBox userPassword;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;

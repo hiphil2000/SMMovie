@@ -10,5 +10,7 @@ namespace SM_Movie.View
     {
         string userId { get; set; }
         string userPassword { get; set; }
+
+       
     }
 }

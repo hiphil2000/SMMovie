@@ -19,10 +19,7 @@ namespace SM_Movie.Utils
         {
             try
             {
-                string oradb = "Data Source=(DESCRIPTION="              // C#
-                + "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=LOCALHOST)(PORT=1521)))"
-                + "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCL)));"
-                + "User Id=system;Password=1234;";
+                string oradb = "Data Source=YPC;User Id=system;Password=1234;Integrated Security=no;";
 
                 conn = new OracleConnection(oradb);
             }
