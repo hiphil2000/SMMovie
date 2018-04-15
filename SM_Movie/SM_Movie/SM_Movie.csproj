@@ -107,12 +107,13 @@
     <Folder Include="Assets\Images\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Icons\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Assets\Icons\exit.png" />
     <Content Include="Assets\Icons\home.png" />
-    <Content Include="Assets\Icons\minimize.png" />
     <Content Include="Assets\Icons\menu.png" />
+    <Content Include="Assets\Icons\minimize.png" />
+    <Content Include="Assets\Icons\restore.png" />
+    <Content Include="Assets\Icons\setting.png" />
+    <Content Include="Assets\Icons\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

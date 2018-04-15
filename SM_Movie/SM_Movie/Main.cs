@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,7 @@ namespace SM_Movie
     public partial class Main : Form
     {
         Point mousePos = new Point();
+        bool menuState = false;
         
         public Main()
         {
@@ -36,6 +38,7 @@ namespace SM_Movie
 
             menuButtonIcon.MouseEnter += buttonFocus;
             menuButtonIcon.MouseLeave += buttonLostFocus;
+            menuButtonIcon.MouseClick += openMenu;
             closeButtonIcon.MouseEnter += buttonFocus;
             closeButtonIcon.MouseLeave += buttonLostFocus;
             closeButtonIcon.MouseClick += exitApp;
@@ -58,8 +61,8 @@ namespace SM_Movie
                 mainPane.Width = this.Width - 4;
                 mainPane.Height = this.Height - taskBar.Height - 4;
                 mainPane.Location = new Point(2, taskBar.Height + 2);
-                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - userSettingPane.Height;
-                commonUserMenuFlow.Location = new Point(0, this.Height - commonUserMenuFlow.Height - 2);
+                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height;
+                commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
             }
             else
             {
@@ -69,8 +72,8 @@ namespace SM_Movie
                 mainPane.Width = this.Width;
                 mainPane.Height = this.Height - taskBar.Height;
                 mainPane.Location = new Point(0, taskBar.Height);
-                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - userSettingPane.Height;
-                commonUserMenuFlow.Location = new Point(0, this.Height - commonUserMenuFlow.Height);
+                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height;
+                commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
             }
 
         }
@@ -247,6 +250,27 @@ namespace SM_Movie
                 this.WindowState = FormWindowState.Normal;
             else
                 this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void openMenu(object sender, EventArgs e)
+        {
+            if(menuState)
+            {
+                for (int i = menuBarFlow.Width; i >= 48; i -= 4)
+                {
+                    menuBarFlow.Width = i;
+                    Thread.Sleep(1);
+                }
+                menuState = false;
+            } else
+            {
+                for (int i = menuBarFlow.Width; i <= 200; i += 4)
+                {
+                    menuBarFlow.Width = i;
+                    Thread.Sleep(1);
+                }
+                menuState = true;
+            }
         }
     }
 }
