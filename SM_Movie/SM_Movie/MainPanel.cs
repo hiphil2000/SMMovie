@@ -59,6 +59,9 @@ namespace SM_Movie
 
         }
 
-      
+        private void BestMovieFLPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

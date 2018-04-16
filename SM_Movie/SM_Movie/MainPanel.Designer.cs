@@ -259,6 +259,7 @@
             this.BestMovieFLPanel1.Name = "BestMovieFLPanel1";
             this.BestMovieFLPanel1.Size = new System.Drawing.Size(903, 411);
             this.BestMovieFLPanel1.TabIndex = 15;
+            this.BestMovieFLPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.BestMovieFLPanel1_Paint);
             // 
             // BestMoviePanel1
             // 
@@ -270,7 +271,6 @@
             this.BestMoviePanel1.Name = "BestMoviePanel1";
             this.BestMoviePanel1.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel1.TabIndex = 19;
-            this.BestMoviePanel1.Visible = false;
             // 
             // BestMoviedirector1
             // 
@@ -311,7 +311,6 @@
             this.BestMoviePanel2.Name = "BestMoviePanel2";
             this.BestMoviePanel2.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel2.TabIndex = 20;
-            this.BestMoviePanel2.Visible = false;
             // 
             // BestMoviedirector2
             // 
@@ -352,7 +351,6 @@
             this.BestMoviePanel3.Name = "BestMoviePanel3";
             this.BestMoviePanel3.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel3.TabIndex = 21;
-            this.BestMoviePanel3.Visible = false;
             // 
             // BestMoviedirector3
             // 
@@ -393,7 +391,6 @@
             this.BestMoviePanel4.Name = "BestMoviePanel4";
             this.BestMoviePanel4.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel4.TabIndex = 22;
-            this.BestMoviePanel4.Visible = false;
             // 
             // BestMoviedirector4
             // 
