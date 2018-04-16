@@ -124,6 +124,7 @@ namespace SM_Movie
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
                 movieSearch1.Width = this.Width - menuBarFlow.Width - 4;
+                menuTitle.Width = mainPane.Width;
             }
             else
             {
@@ -143,6 +144,8 @@ namespace SM_Movie
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
                 movieSearch1.Width = this.Width - menuBarFlow.Width;
+
+                menuTitle.Width = mainPane.Width;
             }
 
         }
