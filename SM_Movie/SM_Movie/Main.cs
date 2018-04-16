@@ -301,11 +301,6 @@ namespace SM_Movie
             }
         }
 
-        private void mainPane_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void mainPanel1_Load(object sender, EventArgs e)
         {
 
