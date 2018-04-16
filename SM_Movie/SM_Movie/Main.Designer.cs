@@ -151,7 +151,6 @@
             this.mainPane.Name = "mainPane";
             this.mainPane.Size = new System.Drawing.Size(963, 522);
             this.mainPane.TabIndex = 1;
-            this.mainPane.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPane_Paint);
             // 
             // menuBarFlow
             // 
