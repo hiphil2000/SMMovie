@@ -4,43 +4,83 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SM_Movie.View;
-using SM_Movie.Presenter;
 
 
 namespace SM_Movie
 {
-    public partial class login : Form,ILogin
+    public partial class login : Form
     {
-        string ILogin.userId
-        {
-            get
-            {
-                return userId.Text;
-            }
-            set
-            {
-                userId.Text = value;
-            }
-        }
-        string ILogin.userPassword
-        {
-            get
-            {
-                return userPassword.Text;
-            }
-            set
-            {
-                userPassword.Text = value;
-            }
-        }
+
+        Point mousePos = new Point();
+        Utils.DBUtil db;
 
         public login()
         {
             InitializeComponent();
+
+            db = new Utils.DBUtil();
+
+            leftPanel.MouseDown += setMousePos;
+            leftPanel.MouseMove += moveForm;
+            rightPanel.MouseDown += setMousePos;
+            rightPanel.MouseMove += moveForm;
+            logo.MouseDown += setMousePos;
+            logo.MouseMove += moveForm;
+            closeButtonIcon.MouseEnter += buttonFocus;
+            closeButtonIcon.MouseLeave += buttonLostFocus;
+            closeButtonIcon.MouseClick += close;
+        }
+
+        #region formMove
+        private void setMousePos(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && this.WindowState == FormWindowState.Normal)
+            {
+                mousePos.X = e.X;
+                mousePos.Y = e.Y;
+            }
+        }
+
+        private void moveForm(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && this.WindowState == FormWindowState.Normal)
+            {
+                this.Location = new Point(this.Location.X + (e.X - mousePos.X), this.Location.Y + (e.Y - mousePos.Y));
+            }
+        }
+        #endregion
+
+        #region buttonFocus
+        private void buttonFocus(object sender, EventArgs e)
+        {
+            Color color = Color.FromArgb(100, 255, 0, 0);
+            PictureBox pic = (PictureBox)sender;
+            if (pic.Name.Contains("close"))
+                closeButtonPane.BackColor = color;
+
+        }
+
+        private void buttonLostFocus(object sender, EventArgs e)
+        {
+            Color color = Color.FromArgb(0, 0, 0, 0);
+            PictureBox pic = (PictureBox)sender;
+            if (pic.Name.Contains("close"))
+                closeButtonPane.BackColor = color;
+        }
+
+        private void exitApp(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
+
+        private void close(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,9 +115,7 @@ namespace SM_Movie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoginPresenter presenter = new LoginPresenter(this);
-            Utils.DBUtil db = new Utils.DBUtil();
-            if (presenter.LoginAttempt())
+            if(db.LoginAttempt(userId.Text, userPassword.Text))
             {
                 MessageBox.Show("성공");
             } else

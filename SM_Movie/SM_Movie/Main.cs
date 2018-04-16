@@ -14,6 +14,7 @@ namespace SM_Movie
 {
     public partial class Main : Form
     {
+        Model.User currentUser;
         Point mousePos = new Point();
         bool menuState = false;
         
@@ -63,6 +64,7 @@ namespace SM_Movie
                 mainPane.Location = new Point(2, taskBar.Height + 2);
                 menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height;
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
+                movieSearch1.Width = this.Width - menuBarFlow.Width - 4;
             }
             else
             {
@@ -74,9 +76,14 @@ namespace SM_Movie
                 mainPane.Location = new Point(0, taskBar.Height);
                 menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height;
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
+                movieSearch1.Width = this.Width - menuBarFlow.Width;
             }
 
         }
+
+        #region formResize
+
+        
 
         //***********************************************************
         //This gives us the ability to resize the borderless from any borders instead of just the lower right corner
@@ -183,6 +190,8 @@ namespace SM_Movie
             }
         }
 
+        #endregion
+
         private void Main_Resize(object sender, EventArgs e)
         {
             resize();
@@ -256,20 +265,39 @@ namespace SM_Movie
         {
             if(menuState)
             {
-                for (int i = menuBarFlow.Width; i >= 48; i -= 4)
+                menuState = false;
+                for (int i = menuBarFlow.Width; i >= 48; i -= 2)
                 {
                     menuBarFlow.Width = i;
                     Thread.Sleep(1);
                 }
-                menuState = false;
             } else
             {
-                for (int i = menuBarFlow.Width; i <= 200; i += 4)
+                menuState = true;
+                for (int i = menuBarFlow.Width; i <= 200; i += 2)
                 {
                     menuBarFlow.Width = i;
                     Thread.Sleep(1);
                 }
-                menuState = true;
+            }
+        }
+
+        private void mainPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void programSettingIcon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userSettingIcon_Click(object sender, EventArgs e)
+        {
+            if(currentUser == null)
+            {
+                login login = new login();
+                login.ShowDialog();
             }
         }
     }

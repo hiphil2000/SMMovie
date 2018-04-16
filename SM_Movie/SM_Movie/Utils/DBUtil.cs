@@ -1,16 +1,16 @@
-﻿using Oracle.DataAccess.Client;
-using SM_Movie.Model;
+﻿using SM_Movie.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.OracleClient;
 
 namespace SM_Movie.Utils
 {
     class DBUtil
     {
-        private OracleConnection conn { get; }
+        private OracleConnection conn { get; set; }
 
         /// <summary>
         /// DB 유틸 생성자, DB Connection 생성함.
@@ -19,7 +19,7 @@ namespace SM_Movie.Utils
         {
             try
             {
-                string oradb = "Data Source=YPC;User Id=system;Password=1234;Integrated Security=no;";
+                string oradb = "Data Source=XE;user Id=system;Password=1234;";
 
                 conn = new OracleConnection(oradb);
             }
@@ -40,32 +40,29 @@ namespace SM_Movie.Utils
             try
             {
                 conn.Open();
-                string sql = "SELECT id FROM userTbl WHERE userId = :userId AND userPassword = :userPassword";
-                using (OracleCommand cmd = new OracleCommand())
-                {
-                    cmd.CommandText = sql;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.Parameters.Add(new OracleParameter("userId", userId));
-                    cmd.Parameters.Add(new OracleParameter("userPassword", userPassword));
+                string sql = "SELECT userId FROM userTbl WHERE userId = :userId AND userPassword = :userPassword";
 
-                    using (OracleDataReader dr = cmd.ExecuteReader())
-                    {
-                        if (dr.HasRows)
-                            return true;
-                        else
-                            return false;
-                    }
-                }
+                OracleCommand cmd = new OracleCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("userId", userId);
+                cmd.Parameters.AddWithValue("userPassword", userPassword);
+
+                OracleDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+                string st = dr.GetString(0);
+                return false;
 
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 Console.WriteLine(e.StackTrace);
                 return false;
             }
             finally
             {
-                conn.Close();
+                if (conn != null)
+                    conn.Close();
             }
         }
     }
