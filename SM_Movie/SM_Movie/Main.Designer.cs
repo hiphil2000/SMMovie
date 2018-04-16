@@ -39,7 +39,6 @@
             this.title = new System.Windows.Forms.Label();
             this.programIcon = new System.Windows.Forms.PictureBox();
             this.mainPane = new System.Windows.Forms.Panel();
-            this.movieSearch1 = new SM_Movie.movieSearch();
             this.menuBarFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.homeMenuPane = new System.Windows.Forms.Panel();
             this.homeMenuLabel = new System.Windows.Forms.Label();
@@ -57,7 +56,9 @@
             this.userSettingIcon = new System.Windows.Forms.PictureBox();
             this.programSettingPane = new System.Windows.Forms.Panel();
             this.programSettingIcon = new System.Windows.Forms.PictureBox();
+            this.movieSearch2 = new SM_Movie.movieSearch();
             this.mainPanel1 = new SM_Movie.MainPanel();
+            this.movieSearch1 = new SM_Movie.movieSearch();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
@@ -193,6 +194,7 @@
             // mainPane
             // 
             this.mainPane.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPane.Controls.Add(this.movieSearch2);
             this.mainPane.Controls.Add(this.mainPanel1);
             this.mainPane.Controls.Add(this.movieSearch1);
             this.mainPane.Controls.Add(this.menuBarFlow);
@@ -203,15 +205,6 @@
             this.mainPane.Name = "mainPane";
             this.mainPane.Size = new System.Drawing.Size(963, 522);
             this.mainPane.TabIndex = 1;
-            // 
-            // movieSearch1
-            // 
-            this.movieSearch1.Location = new System.Drawing.Point(48, 48);
-            this.movieSearch1.Margin = new System.Windows.Forms.Padding(0);
-            this.movieSearch1.Name = "movieSearch1";
-            this.movieSearch1.Size = new System.Drawing.Size(915, 474);
-            this.movieSearch1.TabIndex = 4;
-            this.movieSearch1.Visible = false;
             // 
             // menuBarFlow
             // 
@@ -266,6 +259,7 @@
             this.homeMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homeMenuIcon.TabIndex = 11;
             this.homeMenuIcon.TabStop = false;
+            this.homeMenuIcon.Click += new System.EventHandler(this.homeMenuIcon_Click);
             // 
             // movieMenuPane
             // 
@@ -404,14 +398,30 @@
             this.programSettingIcon.TabStop = false;
             this.programSettingIcon.Click += new System.EventHandler(this.programSettingIcon_Click);
             // 
+            // movieSearch2
+            // 
+            this.movieSearch2.Location = new System.Drawing.Point(808, 147);
+            this.movieSearch2.Name = "movieSearch2";
+            this.movieSearch2.Size = new System.Drawing.Size(8, 267);
+            this.movieSearch2.TabIndex = 0;
+            // 
             // mainPanel1
             // 
             this.mainPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanel1.Location = new System.Drawing.Point(48, 48);
+            this.mainPanel1.Location = new System.Drawing.Point(47, 48);
             this.mainPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel1.Name = "mainPanel1";
             this.mainPanel1.Size = new System.Drawing.Size(915, 474);
             this.mainPanel1.TabIndex = 5;
+            // 
+            // movieSearch1
+            // 
+            this.movieSearch1.Location = new System.Drawing.Point(48, 48);
+            this.movieSearch1.Margin = new System.Windows.Forms.Padding(0);
+            this.movieSearch1.Name = "movieSearch1";
+            this.movieSearch1.Size = new System.Drawing.Size(915, 474);
+            this.movieSearch1.TabIndex = 4;
+            this.movieSearch1.Visible = false;
             // 
             // Main
             // 
@@ -485,5 +495,6 @@
         private System.Windows.Forms.PictureBox programSettingIcon;
         private movieSearch movieSearch1;
         private MainPanel mainPanel1;
+        private movieSearch movieSearch2;
     }
 }

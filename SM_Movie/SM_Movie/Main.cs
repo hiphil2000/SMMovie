@@ -261,27 +261,6 @@ namespace SM_Movie
                 this.WindowState = FormWindowState.Maximized;
         }
 
-        private void openMenu(object sender, EventArgs e)
-        {
-            if(menuState)
-            {
-                menuState = false;
-                for (int i = menuBarFlow.Width; i >= 48; i -= 2)
-                {
-                    menuBarFlow.Width = i;
-                    Thread.Sleep(1);
-                }
-            } else
-            {
-                menuState = true;
-                for (int i = menuBarFlow.Width; i <= 200; i += 2)
-                {
-                    menuBarFlow.Width = i;
-                    Thread.Sleep(1);
-                }
-            }
-        }
-
         private void mainPane_Paint(object sender, PaintEventArgs e)
         {
 
@@ -289,7 +268,8 @@ namespace SM_Movie
 
         private void programSettingIcon_Click(object sender, EventArgs e)
         {
-
+            SettingPanel setting = new SettingPanel();
+            setting.ShowDialog();
         }
 
         private void userSettingIcon_Click(object sender, EventArgs e)
@@ -302,6 +282,11 @@ namespace SM_Movie
         }
 
         private void mainPanel1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homeMenuIcon_Click(object sender, EventArgs e)
         {
 
         }
