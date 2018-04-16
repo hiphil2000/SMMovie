@@ -14,9 +14,36 @@ namespace SM_Movie
 {
     public partial class Main : Form
     {
+        class ButtonGeneric <Pic, Pa, La, Uc, Hi>
+        {
+            public Pic buttonIcon;
+            public Pa buttonPanel;
+            public La buttonTitle;
+            public Uc buttonPage;
+            public Hi highLight;
+
+            public ButtonGeneric()
+            {
+            }
+
+            public ButtonGeneric(Pic buttonIcon, Pa buttonPanel, La buttonTitle, Uc buttonPage, Hi highLight)
+            {
+                this.buttonIcon = buttonIcon;
+                this.buttonPanel = buttonPanel;
+                this.buttonTitle = buttonTitle;
+                this.buttonPage = buttonPage;
+                this.highLight = highLight;
+            }
+        }
+
+
         Model.User currentUser;
         Point mousePos = new Point();
         bool menuState = false;
+        Dictionary<PictureBox, Panel> buttonDictionary = new Dictionary<PictureBox, Panel>();
+        Dictionary<PictureBox, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>> buttonGeneric
+            = new Dictionary<PictureBox, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>>();
+        PictureBox currentPage;
         
         public Main()
         {
@@ -40,16 +67,41 @@ namespace SM_Movie
             menuButtonIcon.MouseEnter += buttonFocus;
             menuButtonIcon.MouseLeave += buttonLostFocus;
             menuButtonIcon.MouseClick += openMenu;
+            buttonDictionary.Add(menuButtonIcon, menuButtonPane);
             closeButtonIcon.MouseEnter += buttonFocus;
             closeButtonIcon.MouseLeave += buttonLostFocus;
             closeButtonIcon.MouseClick += exitApp;
+            buttonDictionary.Add(closeButtonIcon, closeButtonPane);
             recoverButtonIcon.MouseEnter += buttonFocus;
             recoverButtonIcon.MouseLeave += buttonLostFocus;
             recoverButtonIcon.MouseClick += recoverApp;
+            buttonDictionary.Add(recoverButtonIcon, recoverButtonPane);
             minButtonIcon.MouseEnter += buttonFocus;
             minButtonIcon.MouseLeave += buttonLostFocus;
             minButtonIcon.MouseClick += minimizeApp;
+            buttonDictionary.Add(minButtonIcon, minButtonPane);
+            homeMenuIcon.MouseEnter += buttonFocus;
+            homeMenuIcon.MouseLeave += buttonLostFocus;
+            homeMenuIcon.MouseClick += openPage;
+            buttonDictionary.Add(homeMenuIcon, homeMenuPane);
+            buttonGeneric.Add(homeMenuIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(homeMenuIcon, homeMenuPane, homeMenuLabel, mainPanel1, homeMenuHighLight));
+            movieMenuIcon.MouseEnter += buttonFocus;
+            movieMenuIcon.MouseLeave += buttonLostFocus;
+            movieMenuIcon.MouseClick += openPage;
+            buttonDictionary.Add(movieMenuIcon, movieMenuPane);
+            buttonGeneric.Add(movieMenuIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(movieMenuIcon, movieMenuPane, movieMenuLabel, movieSearch1, movieButtonHighLight));
+            userButtonIcon.MouseEnter += buttonFocus;
+            userButtonIcon.MouseLeave += buttonLostFocus;
+            userButtonIcon.MouseClick += openPage;
+            buttonDictionary.Add(userButtonIcon, userButtonPane);
+            buttonGeneric.Add(userButtonIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(userButtonIcon, userButtonPane, userButtonLabel, mainPanel1, userButtonHighLight));
+            settingButtonIcon.MouseEnter += buttonFocus;
+            settingButtonIcon.MouseLeave += buttonLostFocus;
+            settingButtonIcon.MouseClick += openPage;
+            buttonDictionary.Add(settingButtonIcon, settingButtonPane);
+            buttonGeneric.Add(settingButtonIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(settingButtonIcon, settingButtonPane, settingButtonLabel, mainPanel1, settingButtonHighLight));
 
+            openPage(null, new EventArgs());
         }
 
         public void resize()
@@ -59,11 +111,18 @@ namespace SM_Movie
                 taskBar.Width = this.Width - 4;
                 taskBar.Location = new Point(2, 2);
                 buttonFlow.Location = new Point(this.Width - buttonFlow.Width, 0);
-                mainPane.Width = this.Width - 4;
+                mainPane.Width = this.Width - 52;
                 mainPane.Height = this.Height - taskBar.Height - 4;
-                mainPane.Location = new Point(2, taskBar.Height + 2);
-                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height;
+                mainPane.Location = new Point(50, taskBar.Height + 2);
+                menuPane.Location = new Point(2, 28);
+
+                menuFlowWrap.Height = this.Height - taskBar.Height - menuButtonBack.Height;
+                menuFlowWrap.Location = new Point(2, 74);
+
+                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height - 2;
+
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
+
                 movieSearch1.Width = this.Width - menuBarFlow.Width - 4;
             }
             else
@@ -71,15 +130,24 @@ namespace SM_Movie
                 taskBar.Width = this.Width;
                 taskBar.Location = new Point(0, 0);
                 buttonFlow.Location = new Point(this.Width - buttonFlow.Width, 0);
-                mainPane.Width = this.Width;
+                mainPane.Width = this.Width - 48;
                 mainPane.Height = this.Height - taskBar.Height;
-                mainPane.Location = new Point(0, taskBar.Height);
-                menuBarFlow.Height = this.Height - menuButtonPane.Height - taskBar.Height - commonUserMenuFlow.Height;
+                mainPane.Location = new Point(48, taskBar.Height);
+                menuPane.Location = new Point(0, 26);
+
+                menuFlowWrap.Height = this.Height - taskBar.Height - menuButtonBack.Height;
+                menuFlowWrap.Location = new Point(0, 72);
+
+                menuBarFlow.Height = menuFlowWrap.Height - commonUserMenuFlow.Height;
+
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
+
                 movieSearch1.Width = this.Width - menuBarFlow.Width;
             }
 
         }
+
+
 
         #region formResize
 
@@ -216,16 +284,9 @@ namespace SM_Movie
 
         private void buttonFocus(object sender, EventArgs e)
         {
-            Color color = Color.FromArgb(100,255,255,255);
+            Color color = Color.FromArgb(50,255,255,255);
             PictureBox pic = (PictureBox)sender;
-            if (pic.Name.Contains("close"))
-                closeButtonPane.BackColor = color;
-            else if (pic.Name.Contains("recover"))
-                recoverButtonPane.BackColor = color;
-            else if (pic.Name.Contains("min"))
-                minButtonPane.BackColor = color;
-            else if (pic.Name.Contains("menu"))
-                menuButtonPane.BackColor = color;
+            buttonDictionary[pic].BackColor = color;
 
         }
 
@@ -233,14 +294,7 @@ namespace SM_Movie
         {
             Color color = Color.FromArgb(0, 0, 0, 0);
             PictureBox pic = (PictureBox)sender;
-            if (pic.Name.Contains("close"))
-                closeButtonPane.BackColor = color;
-            else if (pic.Name.Contains("recover"))
-                recoverButtonPane.BackColor = color;
-            else if (pic.Name.Contains("min"))
-                minButtonPane.BackColor = color;
-            else if (pic.Name.Contains("menu"))
-                menuButtonPane.BackColor = color;
+            buttonDictionary[pic].BackColor = color;
         }
 
         private void exitApp(object sender, EventArgs e)
@@ -261,22 +315,53 @@ namespace SM_Movie
                 this.WindowState = FormWindowState.Maximized;
         }
 
+        private void openPage(object sender, EventArgs e)
+        {
+            if(sender == null)
+            {
+                mainPanel1.Visible = true;
+                titleLabel.Text = homeMenuLabel.Text;
+                title.Text = homeMenuLabel.Text;
+                homeMenuHighLight.BackColor = Color.FromArgb(255, 0, 0);
+                currentPage = homeMenuIcon;
+                return;
+            }
+
+            PictureBox pic = (PictureBox) sender;
+            Panel pane = buttonDictionary[pic];
+            ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel> button = buttonGeneric[pic];
+
+            if (title.Equals(button.buttonTitle.Text))
+                return;
+
+            title.Text = button.buttonTitle.Text;
+            titleLabel.Text = button.buttonTitle.Text;
+            buttonGeneric[currentPage].highLight.BackColor = Color.Transparent;
+            buttonGeneric[currentPage].buttonPage.Visible = false;
+            currentPage = button.buttonIcon;
+            button.highLight.BackColor = Color.Red;
+            button.buttonPage.Visible = true;
+
+
+            
+        }
+
         private void openMenu(object sender, EventArgs e)
         {
             if(menuState)
             {
                 menuState = false;
-                for (int i = menuBarFlow.Width; i >= 48; i -= 2)
+                for (int i = menuFlowWrap.Width; i >= 48; i -= 2)
                 {
-                    menuBarFlow.Width = i;
+                    menuFlowWrap.Width = i;
                     Thread.Sleep(1);
                 }
             } else
             {
                 menuState = true;
-                for (int i = menuBarFlow.Width; i <= 200; i += 2)
+                for (int i = menuFlowWrap.Width; i <= 200; i += 2)
                 {
-                    menuBarFlow.Width = i;
+                    menuFlowWrap.Width = i;
                     Thread.Sleep(1);
                 }
             }
