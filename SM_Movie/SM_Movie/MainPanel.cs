@@ -63,5 +63,39 @@ namespace SM_Movie
         {
 
         }
+
+        private void NewMovieButton_Click(object sender, EventArgs e)
+        {
+            NewMoviePanel.Visible = true;
+            BestMoviePanel.Visible = false;
+            EventPanel.Visible = false;
+            NoticePanel.Visible = false;
+
+
+        }
+
+        private void BestMovieButton_Click(object sender, EventArgs e)
+        {
+            NewMoviePanel.Visible = false;
+            BestMoviePanel.Visible = true;
+            EventPanel.Visible = false;
+            NoticePanel.Visible = false;
+        }
+
+        private void EventButton_Click(object sender, EventArgs e)
+        {
+            NewMoviePanel.Visible = false;
+            BestMoviePanel.Visible = false;
+            EventPanel.Visible = true;
+            NoticePanel.Visible = false;
+        }
+
+        private void NoticeButton_Click(object sender, EventArgs e)
+        {
+            NewMoviePanel.Visible = false;
+            BestMoviePanel.Visible = false;
+            EventPanel.Visible = false;
+            NoticePanel.Visible = true;
+        }
     }
 }

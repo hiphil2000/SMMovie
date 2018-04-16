@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingPanel.Designer.cs">
+      <DependentUpon>SettingPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DBUtil.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="movieSearch.resx">
       <DependentUpon>movieSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingPanel.resx">
+      <DependentUpon>SettingPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
