@@ -39,7 +39,6 @@
             this.title = new System.Windows.Forms.Label();
             this.programIcon = new System.Windows.Forms.PictureBox();
             this.mainPane = new System.Windows.Forms.Panel();
-            this.mainPanel1 = new SM_Movie.MainPanel();
             this.movieSearch1 = new SM_Movie.movieSearch();
             this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
             this.titleLabel = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@
             this.settingButtonIcon = new System.Windows.Forms.PictureBox();
             this.settingButtonLabel = new System.Windows.Forms.Label();
             this.menuFlowWrap = new System.Windows.Forms.Panel();
+            this.mainPanel1 = new SM_Movie.MainPanel();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
@@ -215,18 +215,9 @@
             this.mainPane.Size = new System.Drawing.Size(915, 522);
             this.mainPane.TabIndex = 1;
             // 
-            // mainPanel1
-            // 
-            this.mainPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanel1.Location = new System.Drawing.Point(0, 48);
-            this.mainPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.mainPanel1.Name = "mainPanel1";
-            this.mainPanel1.Size = new System.Drawing.Size(914, 474);
-            this.mainPanel1.TabIndex = 5;
-            // 
             // movieSearch1
             // 
-            this.movieSearch1.Location = new System.Drawing.Point(48, 48);
+            this.movieSearch1.Location = new System.Drawing.Point(0, 48);
             this.movieSearch1.Margin = new System.Windows.Forms.Padding(0);
             this.movieSearch1.Name = "movieSearch1";
             this.movieSearch1.Size = new System.Drawing.Size(915, 474);
@@ -527,6 +518,15 @@
             this.menuFlowWrap.Size = new System.Drawing.Size(48, 474);
             this.menuFlowWrap.TabIndex = 6;
             // 
+            // mainPanel1
+            // 
+            this.mainPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPanel1.Location = new System.Drawing.Point(0, 48);
+            this.mainPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPanel1.Name = "mainPanel1";
+            this.mainPanel1.Size = new System.Drawing.Size(911, 700);
+            this.mainPanel1.TabIndex = 5;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -590,7 +590,6 @@
         private System.Windows.Forms.TableLayoutPanel menuTitle;
         private System.Windows.Forms.PictureBox menuButtonIcon;
         private movieSearch movieSearch1;
-        private MainPanel mainPanel1;
         private System.Windows.Forms.Panel menuButtonBack;
         private System.Windows.Forms.Panel menuPane;
         private System.Windows.Forms.FlowLayoutPanel menuBarFlow;
@@ -614,5 +613,6 @@
         private System.Windows.Forms.Panel homeMenuHighLight;
         private System.Windows.Forms.Panel movieButtonHighLight;
         private System.Windows.Forms.Label titleLabel;
+        private MainPanel mainPanel1;
     }
 }
