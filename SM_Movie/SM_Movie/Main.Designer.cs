@@ -41,6 +41,7 @@
             this.mainPane = new System.Windows.Forms.Panel();
             this.menuBarFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,7 @@
             this.userSettingIcon = new System.Windows.Forms.PictureBox();
             this.programSettingPane = new System.Windows.Forms.Panel();
             this.programSettingIcon = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.mainPanel1 = new SM_Movie.MainPanel();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
@@ -192,6 +193,7 @@
             // mainPane
             // 
             this.mainPane.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPane.Controls.Add(this.mainPanel1);
             this.mainPane.Controls.Add(this.menuBarFlow);
             this.mainPane.Controls.Add(this.tableLayoutPanel1);
             this.mainPane.Controls.Add(this.menuButtonPane);
@@ -200,6 +202,7 @@
             this.mainPane.Name = "mainPane";
             this.mainPane.Size = new System.Drawing.Size(963, 522);
             this.mainPane.TabIndex = 1;
+            this.mainPane.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPane_Paint);
             // 
             // menuBarFlow
             // 
@@ -223,6 +226,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 48);
             this.panel1.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 48);
+            this.panel4.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -368,14 +380,13 @@
             this.programSettingIcon.TabIndex = 5;
             this.programSettingIcon.TabStop = false;
             // 
-            // panel4
+            // mainPanel1
             // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 48);
-            this.panel4.TabIndex = 4;
+            this.mainPanel1.Location = new System.Drawing.Point(188, 96);
+            this.mainPanel1.Name = "mainPanel1";
+            this.mainPanel1.Size = new System.Drawing.Size(775, 650);
+            this.mainPanel1.TabIndex = 4;
+            this.mainPanel1.Load += new System.EventHandler(this.mainPanel1_Load);
             // 
             // Main
             // 
@@ -447,5 +458,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
+        private MainPanel mainPanel1;
     }
 }
