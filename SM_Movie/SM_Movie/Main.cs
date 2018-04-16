@@ -123,7 +123,8 @@ namespace SM_Movie
 
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
-                movieSearch1.Width = this.Width - menuBarFlow.Width - 4;
+                movieSearch1.Size = new Size(this.Width - 52, this.Height - 78);
+                mainPanel1.Size = new Size(this.Width - 52, this.Height - 78);
                 menuTitle.Width = mainPane.Width;
             }
             else
@@ -143,7 +144,10 @@ namespace SM_Movie
 
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
-                movieSearch1.Width = this.Width - menuBarFlow.Width;
+                movieSearch1.Size = new Size(this.Width - 48, this.Height - 74);
+                mainPanel1.Size = new Size(this.Width - 48, this.Height - 74);
+
+                mainPanel1.Size = this.Size;
 
                 menuTitle.Width = mainPane.Width;
             }
@@ -362,7 +366,7 @@ namespace SM_Movie
             } else
             {
                 menuState = true;
-                for (int i = menuFlowWrap.Width; i <= 200; i += 2)
+                for (int i = menuFlowWrap.Width; i <= 250; i += 2)
                 {
                     menuFlowWrap.Width = i;
                     Thread.Sleep(1);
