@@ -39,26 +39,34 @@
             this.title = new System.Windows.Forms.Label();
             this.programIcon = new System.Windows.Forms.PictureBox();
             this.mainPane = new System.Windows.Forms.Panel();
-            this.menuBarFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.homeMenuPane = new System.Windows.Forms.Panel();
-            this.homeMenuLabel = new System.Windows.Forms.Label();
-            this.homeMenuHighLight = new System.Windows.Forms.Panel();
-            this.homeMenuIcon = new System.Windows.Forms.PictureBox();
-            this.movieMenuPane = new System.Windows.Forms.Panel();
-            this.movieMenuLabel = new System.Windows.Forms.Label();
-            this.movieMenuHighLight = new System.Windows.Forms.Panel();
-            this.movieMenuIcon = new System.Windows.Forms.PictureBox();
-            this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
-            this.menuButtonPane = new System.Windows.Forms.Panel();
-            this.menuButtonIcon = new System.Windows.Forms.PictureBox();
-            this.commonUserMenuFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.userSettingPane = new System.Windows.Forms.Panel();
-            this.userSettingIcon = new System.Windows.Forms.PictureBox();
-            this.programSettingPane = new System.Windows.Forms.Panel();
-            this.programSettingIcon = new System.Windows.Forms.PictureBox();
-            this.movieSearch2 = new SM_Movie.movieSearch();
             this.mainPanel1 = new SM_Movie.MainPanel();
             this.movieSearch1 = new SM_Movie.movieSearch();
+            this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.menuButtonPane = new System.Windows.Forms.Panel();
+            this.menuButtonIcon = new System.Windows.Forms.PictureBox();
+            this.menuButtonBack = new System.Windows.Forms.Panel();
+            this.menuPane = new System.Windows.Forms.Panel();
+            this.menuBarFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.homeMenuPane = new System.Windows.Forms.Panel();
+            this.homeMenuHighLight = new System.Windows.Forms.Panel();
+            this.homeMenuLabel = new System.Windows.Forms.Label();
+            this.homeMenuIcon = new System.Windows.Forms.PictureBox();
+            this.movieMenuPane = new System.Windows.Forms.Panel();
+            this.movieButtonHighLight = new System.Windows.Forms.Panel();
+            this.movieMenuIcon = new System.Windows.Forms.PictureBox();
+            this.movieMenuLabel = new System.Windows.Forms.Label();
+            this.movieMenuHighLight = new System.Windows.Forms.Panel();
+            this.commonUserMenuFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.userButtonPane = new System.Windows.Forms.Panel();
+            this.userButtonHighLight = new System.Windows.Forms.Panel();
+            this.userButtonIcon = new System.Windows.Forms.PictureBox();
+            this.userButtonLabel = new System.Windows.Forms.Label();
+            this.settingButtonPane = new System.Windows.Forms.Panel();
+            this.settingButtonHighLight = new System.Windows.Forms.Panel();
+            this.settingButtonIcon = new System.Windows.Forms.PictureBox();
+            this.settingButtonLabel = new System.Windows.Forms.Label();
+            this.menuFlowWrap = new System.Windows.Forms.Panel();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
@@ -69,18 +77,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             this.mainPane.SuspendLayout();
+            this.menuTitle.SuspendLayout();
+            this.menuButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).BeginInit();
+            this.menuButtonBack.SuspendLayout();
+            this.menuPane.SuspendLayout();
             this.menuBarFlow.SuspendLayout();
             this.homeMenuPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeMenuIcon)).BeginInit();
             this.movieMenuPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movieMenuIcon)).BeginInit();
-            this.menuButtonPane.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).BeginInit();
             this.commonUserMenuFlow.SuspendLayout();
-            this.userSettingPane.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userSettingIcon)).BeginInit();
-            this.programSettingPane.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.programSettingIcon)).BeginInit();
+            this.userButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userButtonIcon)).BeginInit();
+            this.settingButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).BeginInit();
+            this.menuFlowWrap.SuspendLayout();
             this.SuspendLayout();
             // 
             // taskBar
@@ -194,122 +206,40 @@
             // mainPane
             // 
             this.mainPane.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPane.Controls.Add(this.movieSearch2);
             this.mainPane.Controls.Add(this.mainPanel1);
             this.mainPane.Controls.Add(this.movieSearch1);
-            this.mainPane.Controls.Add(this.menuBarFlow);
             this.mainPane.Controls.Add(this.menuTitle);
-            this.mainPane.Controls.Add(this.menuButtonPane);
-            this.mainPane.Controls.Add(this.commonUserMenuFlow);
-            this.mainPane.Location = new System.Drawing.Point(2, 28);
+            this.mainPane.Location = new System.Drawing.Point(50, 28);
+            this.mainPane.Margin = new System.Windows.Forms.Padding(0);
             this.mainPane.Name = "mainPane";
-            this.mainPane.Size = new System.Drawing.Size(963, 522);
+            this.mainPane.Size = new System.Drawing.Size(915, 522);
             this.mainPane.TabIndex = 1;
             // 
-            // menuBarFlow
+            // mainPanel1
             // 
-            this.menuBarFlow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.menuBarFlow.Controls.Add(this.homeMenuPane);
-            this.menuBarFlow.Controls.Add(this.movieMenuPane);
-            this.menuBarFlow.Location = new System.Drawing.Point(0, 48);
-            this.menuBarFlow.Margin = new System.Windows.Forms.Padding(0);
-            this.menuBarFlow.Name = "menuBarFlow";
-            this.menuBarFlow.Size = new System.Drawing.Size(48, 378);
-            this.menuBarFlow.TabIndex = 0;
+            this.mainPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPanel1.Location = new System.Drawing.Point(0, 48);
+            this.mainPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPanel1.Name = "mainPanel1";
+            this.mainPanel1.Size = new System.Drawing.Size(914, 474);
+            this.mainPanel1.TabIndex = 5;
             // 
-            // homeMenuPane
+            // movieSearch1
             // 
-            this.homeMenuPane.Controls.Add(this.homeMenuLabel);
-            this.homeMenuPane.Controls.Add(this.homeMenuHighLight);
-            this.homeMenuPane.Controls.Add(this.homeMenuIcon);
-            this.homeMenuPane.Location = new System.Drawing.Point(0, 0);
-            this.homeMenuPane.Margin = new System.Windows.Forms.Padding(0);
-            this.homeMenuPane.Name = "homeMenuPane";
-            this.homeMenuPane.Size = new System.Drawing.Size(200, 48);
-            this.homeMenuPane.TabIndex = 4;
-            // 
-            // homeMenuLabel
-            // 
-            this.homeMenuLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.homeMenuLabel.ForeColor = System.Drawing.Color.White;
-            this.homeMenuLabel.Location = new System.Drawing.Point(60, 0);
-            this.homeMenuLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.homeMenuLabel.Name = "homeMenuLabel";
-            this.homeMenuLabel.Size = new System.Drawing.Size(139, 48);
-            this.homeMenuLabel.TabIndex = 9;
-            this.homeMenuLabel.Text = "홈";
-            this.homeMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // homeMenuHighLight
-            // 
-            this.homeMenuHighLight.BackColor = System.Drawing.Color.Red;
-            this.homeMenuHighLight.Location = new System.Drawing.Point(2, 0);
-            this.homeMenuHighLight.Margin = new System.Windows.Forms.Padding(0);
-            this.homeMenuHighLight.Name = "homeMenuHighLight";
-            this.homeMenuHighLight.Size = new System.Drawing.Size(10, 48);
-            this.homeMenuHighLight.TabIndex = 10;
-            // 
-            // homeMenuIcon
-            // 
-            this.homeMenuIcon.Image = global::SM_Movie.Properties.Resources.home;
-            this.homeMenuIcon.Location = new System.Drawing.Point(2, 0);
-            this.homeMenuIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.homeMenuIcon.Name = "homeMenuIcon";
-            this.homeMenuIcon.Size = new System.Drawing.Size(48, 48);
-            this.homeMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.homeMenuIcon.TabIndex = 11;
-            this.homeMenuIcon.TabStop = false;
-            this.homeMenuIcon.Click += new System.EventHandler(this.homeMenuIcon_Click);
-            // 
-            // movieMenuPane
-            // 
-            this.movieMenuPane.Controls.Add(this.movieMenuLabel);
-            this.movieMenuPane.Controls.Add(this.movieMenuHighLight);
-            this.movieMenuPane.Controls.Add(this.movieMenuIcon);
-            this.movieMenuPane.Location = new System.Drawing.Point(0, 48);
-            this.movieMenuPane.Margin = new System.Windows.Forms.Padding(0);
-            this.movieMenuPane.Name = "movieMenuPane";
-            this.movieMenuPane.Size = new System.Drawing.Size(200, 48);
-            this.movieMenuPane.TabIndex = 12;
-            // 
-            // movieMenuLabel
-            // 
-            this.movieMenuLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.movieMenuLabel.ForeColor = System.Drawing.Color.White;
-            this.movieMenuLabel.Location = new System.Drawing.Point(60, 0);
-            this.movieMenuLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.movieMenuLabel.Name = "movieMenuLabel";
-            this.movieMenuLabel.Size = new System.Drawing.Size(139, 48);
-            this.movieMenuLabel.TabIndex = 9;
-            this.movieMenuLabel.Text = "영화";
-            this.movieMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // movieMenuHighLight
-            // 
-            this.movieMenuHighLight.BackColor = System.Drawing.Color.Transparent;
-            this.movieMenuHighLight.Location = new System.Drawing.Point(2, 0);
-            this.movieMenuHighLight.Margin = new System.Windows.Forms.Padding(0);
-            this.movieMenuHighLight.Name = "movieMenuHighLight";
-            this.movieMenuHighLight.Size = new System.Drawing.Size(10, 48);
-            this.movieMenuHighLight.TabIndex = 10;
-            // 
-            // movieMenuIcon
-            // 
-            this.movieMenuIcon.Image = global::SM_Movie.Properties.Resources.movie;
-            this.movieMenuIcon.Location = new System.Drawing.Point(2, 0);
-            this.movieMenuIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.movieMenuIcon.Name = "movieMenuIcon";
-            this.movieMenuIcon.Size = new System.Drawing.Size(48, 48);
-            this.movieMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.movieMenuIcon.TabIndex = 11;
-            this.movieMenuIcon.TabStop = false;
+            this.movieSearch1.Location = new System.Drawing.Point(48, 48);
+            this.movieSearch1.Margin = new System.Windows.Forms.Padding(0);
+            this.movieSearch1.Name = "movieSearch1";
+            this.movieSearch1.Size = new System.Drawing.Size(915, 474);
+            this.movieSearch1.TabIndex = 4;
+            this.movieSearch1.Visible = false;
             // 
             // menuTitle
             // 
             this.menuTitle.BackColor = System.Drawing.Color.White;
             this.menuTitle.ColumnCount = 1;
             this.menuTitle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.menuTitle.Location = new System.Drawing.Point(48, 0);
+            this.menuTitle.Controls.Add(this.titleLabel, 0, 0);
+            this.menuTitle.Location = new System.Drawing.Point(0, 0);
             this.menuTitle.Margin = new System.Windows.Forms.Padding(0);
             this.menuTitle.Name = "menuTitle";
             this.menuTitle.RowCount = 1;
@@ -317,10 +247,21 @@
             this.menuTitle.Size = new System.Drawing.Size(914, 48);
             this.menuTitle.TabIndex = 2;
             // 
+            // titleLabel
+            // 
+            this.titleLabel.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.titleLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titleLabel.Location = new System.Drawing.Point(3, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(908, 46);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // menuButtonPane
             // 
             this.menuButtonPane.BackColor = System.Drawing.Color.Red;
             this.menuButtonPane.Controls.Add(this.menuButtonIcon);
+            this.menuButtonPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuButtonPane.Location = new System.Drawing.Point(0, 0);
             this.menuButtonPane.Margin = new System.Windows.Forms.Padding(0);
             this.menuButtonPane.Name = "menuButtonPane";
@@ -340,88 +281,251 @@
             this.menuButtonIcon.TabIndex = 5;
             this.menuButtonIcon.TabStop = false;
             // 
+            // menuButtonBack
+            // 
+            this.menuButtonBack.BackColor = System.Drawing.Color.Red;
+            this.menuButtonBack.Controls.Add(this.menuButtonPane);
+            this.menuButtonBack.Location = new System.Drawing.Point(0, 0);
+            this.menuButtonBack.Margin = new System.Windows.Forms.Padding(0);
+            this.menuButtonBack.Name = "menuButtonBack";
+            this.menuButtonBack.Size = new System.Drawing.Size(48, 48);
+            this.menuButtonBack.TabIndex = 6;
+            // 
+            // menuPane
+            // 
+            this.menuPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuPane.Controls.Add(this.menuButtonBack);
+            this.menuPane.Location = new System.Drawing.Point(2, 28);
+            this.menuPane.Margin = new System.Windows.Forms.Padding(0);
+            this.menuPane.Name = "menuPane";
+            this.menuPane.Size = new System.Drawing.Size(48, 522);
+            this.menuPane.TabIndex = 2;
+            // 
+            // menuBarFlow
+            // 
+            this.menuBarFlow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuBarFlow.Controls.Add(this.homeMenuPane);
+            this.menuBarFlow.Controls.Add(this.movieMenuPane);
+            this.menuBarFlow.Location = new System.Drawing.Point(0, 0);
+            this.menuBarFlow.Margin = new System.Windows.Forms.Padding(0);
+            this.menuBarFlow.Name = "menuBarFlow";
+            this.menuBarFlow.Size = new System.Drawing.Size(200, 378);
+            this.menuBarFlow.TabIndex = 6;
+            // 
+            // homeMenuPane
+            // 
+            this.homeMenuPane.Controls.Add(this.homeMenuHighLight);
+            this.homeMenuPane.Controls.Add(this.homeMenuLabel);
+            this.homeMenuPane.Controls.Add(this.homeMenuIcon);
+            this.homeMenuPane.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeMenuPane.Location = new System.Drawing.Point(0, 0);
+            this.homeMenuPane.Margin = new System.Windows.Forms.Padding(0);
+            this.homeMenuPane.Name = "homeMenuPane";
+            this.homeMenuPane.Size = new System.Drawing.Size(200, 48);
+            this.homeMenuPane.TabIndex = 4;
+            // 
+            // homeMenuHighLight
+            // 
+            this.homeMenuHighLight.BackColor = System.Drawing.Color.Red;
+            this.homeMenuHighLight.Location = new System.Drawing.Point(0, 0);
+            this.homeMenuHighLight.Margin = new System.Windows.Forms.Padding(0);
+            this.homeMenuHighLight.Name = "homeMenuHighLight";
+            this.homeMenuHighLight.Size = new System.Drawing.Size(10, 48);
+            this.homeMenuHighLight.TabIndex = 12;
+            // 
+            // homeMenuLabel
+            // 
+            this.homeMenuLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeMenuLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.homeMenuLabel.ForeColor = System.Drawing.Color.White;
+            this.homeMenuLabel.Location = new System.Drawing.Point(48, 0);
+            this.homeMenuLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.homeMenuLabel.Name = "homeMenuLabel";
+            this.homeMenuLabel.Size = new System.Drawing.Size(151, 48);
+            this.homeMenuLabel.TabIndex = 9;
+            this.homeMenuLabel.Text = "홈";
+            this.homeMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // homeMenuIcon
+            // 
+            this.homeMenuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeMenuIcon.Image = global::SM_Movie.Properties.Resources.home;
+            this.homeMenuIcon.Location = new System.Drawing.Point(2, 0);
+            this.homeMenuIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.homeMenuIcon.Name = "homeMenuIcon";
+            this.homeMenuIcon.Size = new System.Drawing.Size(48, 48);
+            this.homeMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homeMenuIcon.TabIndex = 11;
+            this.homeMenuIcon.TabStop = false;
+            // 
+            // movieMenuPane
+            // 
+            this.movieMenuPane.Controls.Add(this.movieButtonHighLight);
+            this.movieMenuPane.Controls.Add(this.movieMenuIcon);
+            this.movieMenuPane.Controls.Add(this.movieMenuLabel);
+            this.movieMenuPane.Controls.Add(this.movieMenuHighLight);
+            this.movieMenuPane.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.movieMenuPane.Location = new System.Drawing.Point(0, 48);
+            this.movieMenuPane.Margin = new System.Windows.Forms.Padding(0);
+            this.movieMenuPane.Name = "movieMenuPane";
+            this.movieMenuPane.Size = new System.Drawing.Size(200, 48);
+            this.movieMenuPane.TabIndex = 12;
+            // 
+            // movieButtonHighLight
+            // 
+            this.movieButtonHighLight.BackColor = System.Drawing.Color.Transparent;
+            this.movieButtonHighLight.Location = new System.Drawing.Point(0, 0);
+            this.movieButtonHighLight.Margin = new System.Windows.Forms.Padding(0);
+            this.movieButtonHighLight.Name = "movieButtonHighLight";
+            this.movieButtonHighLight.Size = new System.Drawing.Size(10, 48);
+            this.movieButtonHighLight.TabIndex = 14;
+            // 
+            // movieMenuIcon
+            // 
+            this.movieMenuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.movieMenuIcon.Image = global::SM_Movie.Properties.Resources.movie;
+            this.movieMenuIcon.Location = new System.Drawing.Point(2, 0);
+            this.movieMenuIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.movieMenuIcon.Name = "movieMenuIcon";
+            this.movieMenuIcon.Size = new System.Drawing.Size(48, 48);
+            this.movieMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.movieMenuIcon.TabIndex = 11;
+            this.movieMenuIcon.TabStop = false;
+            // 
+            // movieMenuLabel
+            // 
+            this.movieMenuLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.movieMenuLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movieMenuLabel.ForeColor = System.Drawing.Color.White;
+            this.movieMenuLabel.Location = new System.Drawing.Point(48, 0);
+            this.movieMenuLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.movieMenuLabel.Name = "movieMenuLabel";
+            this.movieMenuLabel.Size = new System.Drawing.Size(151, 48);
+            this.movieMenuLabel.TabIndex = 9;
+            this.movieMenuLabel.Text = "영화";
+            this.movieMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // movieMenuHighLight
+            // 
+            this.movieMenuHighLight.BackColor = System.Drawing.Color.Transparent;
+            this.movieMenuHighLight.Location = new System.Drawing.Point(2, 0);
+            this.movieMenuHighLight.Margin = new System.Windows.Forms.Padding(0);
+            this.movieMenuHighLight.Name = "movieMenuHighLight";
+            this.movieMenuHighLight.Size = new System.Drawing.Size(10, 48);
+            this.movieMenuHighLight.TabIndex = 10;
+            // 
             // commonUserMenuFlow
             // 
             this.commonUserMenuFlow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.commonUserMenuFlow.Controls.Add(this.userSettingPane);
-            this.commonUserMenuFlow.Controls.Add(this.programSettingPane);
-            this.commonUserMenuFlow.Location = new System.Drawing.Point(0, 426);
+            this.commonUserMenuFlow.Controls.Add(this.userButtonPane);
+            this.commonUserMenuFlow.Controls.Add(this.settingButtonPane);
+            this.commonUserMenuFlow.Location = new System.Drawing.Point(0, 378);
             this.commonUserMenuFlow.Margin = new System.Windows.Forms.Padding(0);
             this.commonUserMenuFlow.Name = "commonUserMenuFlow";
-            this.commonUserMenuFlow.Size = new System.Drawing.Size(48, 96);
-            this.commonUserMenuFlow.TabIndex = 1;
+            this.commonUserMenuFlow.Size = new System.Drawing.Size(200, 96);
+            this.commonUserMenuFlow.TabIndex = 7;
             // 
-            // userSettingPane
+            // userButtonPane
             // 
-            this.userSettingPane.BackColor = System.Drawing.Color.Transparent;
-            this.userSettingPane.Controls.Add(this.userSettingIcon);
-            this.userSettingPane.Location = new System.Drawing.Point(0, 0);
-            this.userSettingPane.Margin = new System.Windows.Forms.Padding(0);
-            this.userSettingPane.Name = "userSettingPane";
-            this.userSettingPane.Size = new System.Drawing.Size(48, 48);
-            this.userSettingPane.TabIndex = 4;
+            this.userButtonPane.Controls.Add(this.userButtonHighLight);
+            this.userButtonPane.Controls.Add(this.userButtonIcon);
+            this.userButtonPane.Controls.Add(this.userButtonLabel);
+            this.userButtonPane.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userButtonPane.Location = new System.Drawing.Point(0, 0);
+            this.userButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.userButtonPane.Name = "userButtonPane";
+            this.userButtonPane.Size = new System.Drawing.Size(200, 48);
+            this.userButtonPane.TabIndex = 13;
             // 
-            // userSettingIcon
+            // userButtonHighLight
             // 
-            this.userSettingIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userSettingIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userSettingIcon.Image = global::SM_Movie.Properties.Resources.user;
-            this.userSettingIcon.Location = new System.Drawing.Point(0, 0);
-            this.userSettingIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.userSettingIcon.Name = "userSettingIcon";
-            this.userSettingIcon.Size = new System.Drawing.Size(48, 48);
-            this.userSettingIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userSettingIcon.TabIndex = 5;
-            this.userSettingIcon.TabStop = false;
-            this.userSettingIcon.Click += new System.EventHandler(this.userSettingIcon_Click);
+            this.userButtonHighLight.BackColor = System.Drawing.Color.Transparent;
+            this.userButtonHighLight.Location = new System.Drawing.Point(0, 0);
+            this.userButtonHighLight.Margin = new System.Windows.Forms.Padding(0);
+            this.userButtonHighLight.Name = "userButtonHighLight";
+            this.userButtonHighLight.Size = new System.Drawing.Size(10, 48);
+            this.userButtonHighLight.TabIndex = 12;
             // 
-            // programSettingPane
+            // userButtonIcon
             // 
-            this.programSettingPane.Controls.Add(this.programSettingIcon);
-            this.programSettingPane.Location = new System.Drawing.Point(0, 48);
-            this.programSettingPane.Margin = new System.Windows.Forms.Padding(0);
-            this.programSettingPane.Name = "programSettingPane";
-            this.programSettingPane.Size = new System.Drawing.Size(48, 48);
-            this.programSettingPane.TabIndex = 6;
+            this.userButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userButtonIcon.Image = global::SM_Movie.Properties.Resources.user;
+            this.userButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.userButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.userButtonIcon.Name = "userButtonIcon";
+            this.userButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.userButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userButtonIcon.TabIndex = 11;
+            this.userButtonIcon.TabStop = false;
             // 
-            // programSettingIcon
+            // userButtonLabel
             // 
-            this.programSettingIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.programSettingIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.programSettingIcon.Image = global::SM_Movie.Properties.Resources.setting;
-            this.programSettingIcon.Location = new System.Drawing.Point(0, 0);
-            this.programSettingIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.programSettingIcon.Name = "programSettingIcon";
-            this.programSettingIcon.Size = new System.Drawing.Size(48, 48);
-            this.programSettingIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.programSettingIcon.TabIndex = 5;
-            this.programSettingIcon.TabStop = false;
-            this.programSettingIcon.Click += new System.EventHandler(this.programSettingIcon_Click);
+            this.userButtonLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userButtonLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.userButtonLabel.ForeColor = System.Drawing.Color.White;
+            this.userButtonLabel.Location = new System.Drawing.Point(48, 0);
+            this.userButtonLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.userButtonLabel.Name = "userButtonLabel";
+            this.userButtonLabel.Size = new System.Drawing.Size(151, 48);
+            this.userButtonLabel.TabIndex = 9;
+            this.userButtonLabel.Text = "로그인";
+            this.userButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // movieSearch2
+            // settingButtonPane
             // 
-            this.movieSearch2.Location = new System.Drawing.Point(808, 147);
-            this.movieSearch2.Name = "movieSearch2";
-            this.movieSearch2.Size = new System.Drawing.Size(8, 267);
-            this.movieSearch2.TabIndex = 0;
+            this.settingButtonPane.Controls.Add(this.settingButtonHighLight);
+            this.settingButtonPane.Controls.Add(this.settingButtonIcon);
+            this.settingButtonPane.Controls.Add(this.settingButtonLabel);
+            this.settingButtonPane.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingButtonPane.Location = new System.Drawing.Point(0, 48);
+            this.settingButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.settingButtonPane.Name = "settingButtonPane";
+            this.settingButtonPane.Size = new System.Drawing.Size(200, 48);
+            this.settingButtonPane.TabIndex = 14;
             // 
-            // mainPanel1
+            // settingButtonHighLight
             // 
-            this.mainPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanel1.Location = new System.Drawing.Point(47, 48);
-            this.mainPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.mainPanel1.Name = "mainPanel1";
-            this.mainPanel1.Size = new System.Drawing.Size(915, 474);
-            this.mainPanel1.TabIndex = 5;
+            this.settingButtonHighLight.BackColor = System.Drawing.Color.Transparent;
+            this.settingButtonHighLight.Location = new System.Drawing.Point(0, 0);
+            this.settingButtonHighLight.Margin = new System.Windows.Forms.Padding(0);
+            this.settingButtonHighLight.Name = "settingButtonHighLight";
+            this.settingButtonHighLight.Size = new System.Drawing.Size(10, 48);
+            this.settingButtonHighLight.TabIndex = 11;
             // 
-            // movieSearch1
+            // settingButtonIcon
             // 
-            this.movieSearch1.Location = new System.Drawing.Point(48, 48);
-            this.movieSearch1.Margin = new System.Windows.Forms.Padding(0);
-            this.movieSearch1.Name = "movieSearch1";
-            this.movieSearch1.Size = new System.Drawing.Size(915, 474);
-            this.movieSearch1.TabIndex = 4;
-            this.movieSearch1.Visible = false;
+            this.settingButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingButtonIcon.Image = global::SM_Movie.Properties.Resources.setting;
+            this.settingButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.settingButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.settingButtonIcon.Name = "settingButtonIcon";
+            this.settingButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.settingButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.settingButtonIcon.TabIndex = 11;
+            this.settingButtonIcon.TabStop = false;
+            // 
+            // settingButtonLabel
+            // 
+            this.settingButtonLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.settingButtonLabel.ForeColor = System.Drawing.Color.White;
+            this.settingButtonLabel.Location = new System.Drawing.Point(48, 0);
+            this.settingButtonLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.settingButtonLabel.Name = "settingButtonLabel";
+            this.settingButtonLabel.Size = new System.Drawing.Size(151, 48);
+            this.settingButtonLabel.TabIndex = 9;
+            this.settingButtonLabel.Text = "설정";
+            this.settingButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // menuFlowWrap
+            // 
+            this.menuFlowWrap.BackColor = System.Drawing.Color.Transparent;
+            this.menuFlowWrap.Controls.Add(this.menuBarFlow);
+            this.menuFlowWrap.Controls.Add(this.commonUserMenuFlow);
+            this.menuFlowWrap.Location = new System.Drawing.Point(2, 74);
+            this.menuFlowWrap.Margin = new System.Windows.Forms.Padding(0);
+            this.menuFlowWrap.Name = "menuFlowWrap";
+            this.menuFlowWrap.Size = new System.Drawing.Size(48, 474);
+            this.menuFlowWrap.TabIndex = 6;
             // 
             // Main
             // 
@@ -429,8 +533,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(967, 552);
+            this.Controls.Add(this.menuFlowWrap);
             this.Controls.Add(this.mainPane);
             this.Controls.Add(this.taskBar);
+            this.Controls.Add(this.menuPane);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "Main";
@@ -447,18 +553,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             this.mainPane.ResumeLayout(false);
+            this.menuTitle.ResumeLayout(false);
+            this.menuButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).EndInit();
+            this.menuButtonBack.ResumeLayout(false);
+            this.menuPane.ResumeLayout(false);
             this.menuBarFlow.ResumeLayout(false);
             this.homeMenuPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeMenuIcon)).EndInit();
             this.movieMenuPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.movieMenuIcon)).EndInit();
-            this.menuButtonPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).EndInit();
             this.commonUserMenuFlow.ResumeLayout(false);
-            this.userSettingPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userSettingIcon)).EndInit();
-            this.programSettingPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.programSettingIcon)).EndInit();
+            this.userButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userButtonIcon)).EndInit();
+            this.settingButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).EndInit();
+            this.menuFlowWrap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -479,22 +589,30 @@
         private System.Windows.Forms.Panel menuButtonPane;
         private System.Windows.Forms.TableLayoutPanel menuTitle;
         private System.Windows.Forms.PictureBox menuButtonIcon;
+        private movieSearch movieSearch1;
+        private MainPanel mainPanel1;
+        private System.Windows.Forms.Panel menuButtonBack;
+        private System.Windows.Forms.Panel menuPane;
         private System.Windows.Forms.FlowLayoutPanel menuBarFlow;
         private System.Windows.Forms.Panel homeMenuPane;
         private System.Windows.Forms.Label homeMenuLabel;
-        private System.Windows.Forms.Panel homeMenuHighLight;
         private System.Windows.Forms.PictureBox homeMenuIcon;
         private System.Windows.Forms.Panel movieMenuPane;
         private System.Windows.Forms.Label movieMenuLabel;
         private System.Windows.Forms.Panel movieMenuHighLight;
         private System.Windows.Forms.PictureBox movieMenuIcon;
         private System.Windows.Forms.FlowLayoutPanel commonUserMenuFlow;
-        private System.Windows.Forms.Panel userSettingPane;
-        private System.Windows.Forms.PictureBox userSettingIcon;
-        private System.Windows.Forms.Panel programSettingPane;
-        private System.Windows.Forms.PictureBox programSettingIcon;
-        private movieSearch movieSearch1;
-        private MainPanel mainPanel1;
-        private movieSearch movieSearch2;
+        private System.Windows.Forms.Panel menuFlowWrap;
+        private System.Windows.Forms.Panel userButtonPane;
+        private System.Windows.Forms.PictureBox userButtonIcon;
+        private System.Windows.Forms.Label userButtonLabel;
+        private System.Windows.Forms.Panel settingButtonPane;
+        private System.Windows.Forms.PictureBox settingButtonIcon;
+        private System.Windows.Forms.Label settingButtonLabel;
+        private System.Windows.Forms.Panel userButtonHighLight;
+        private System.Windows.Forms.Panel settingButtonHighLight;
+        private System.Windows.Forms.Panel homeMenuHighLight;
+        private System.Windows.Forms.Panel movieButtonHighLight;
+        private System.Windows.Forms.Label titleLabel;
     }
 }
