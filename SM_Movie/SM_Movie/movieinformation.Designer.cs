@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Movieinformation));
             this.MovieContents = new System.Windows.Forms.Panel();
             this.genreSeq = new System.Windows.Forms.Label();
             this.movieRunningTime = new System.Windows.Forms.Label();
@@ -168,6 +169,7 @@
             // 
             // moviePoster
             // 
+            this.moviePoster.Image = ((System.Drawing.Image)(resources.GetObject("moviePoster.Image")));
             this.moviePoster.Location = new System.Drawing.Point(32, 52);
             this.moviePoster.Name = "moviePoster";
             this.moviePoster.Size = new System.Drawing.Size(225, 318);

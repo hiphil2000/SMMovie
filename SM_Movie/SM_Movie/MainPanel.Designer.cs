@@ -429,6 +429,7 @@
             // 
             // BestMoviePicture1
             // 
+            this.BestMoviePicture1.Image = ((System.Drawing.Image)(resources.GetObject("BestMoviePicture1.Image")));
             this.BestMoviePicture1.Location = new System.Drawing.Point(0, 0);
             this.BestMoviePicture1.Margin = new System.Windows.Forms.Padding(0);
             this.BestMoviePicture1.Name = "BestMoviePicture1";
@@ -438,6 +439,7 @@
             // 
             // BestMoviePicture2
             // 
+            this.BestMoviePicture2.Image = ((System.Drawing.Image)(resources.GetObject("BestMoviePicture2.Image")));
             this.BestMoviePicture2.Location = new System.Drawing.Point(0, 0);
             this.BestMoviePicture2.Margin = new System.Windows.Forms.Padding(0);
             this.BestMoviePicture2.Name = "BestMoviePicture2";
