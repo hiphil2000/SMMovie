@@ -145,6 +145,8 @@ namespace SM_Movie
 
                 movieSearch.Size = new Size(this.Width - 52, this.Height - 78);
                 mainPanel.Size = new Size(this.Width - 52, this.Height - 78);
+                settingPanel.Size = mainPanel.Size;
+                movieSearch.Size = settingPanel.Size;
                 menuTitle.Width = mainPane.Width;
             }
             else
@@ -168,7 +170,8 @@ namespace SM_Movie
                 mainPanel.Size = new Size(this.Width - 48, this.Height - 74);
 
                 mainPanel.Size = this.Size;
-
+                settingPanel.Size = mainPanel.Size;
+                movieSearch.Size = settingPanel.Size;
                 menuTitle.Width = mainPane.Width;
             }
 
@@ -364,18 +367,29 @@ namespace SM_Movie
             
             Control con = (Control) sender;
             string name = con.Name.Split(new[] { "Label", "Icon", "HighLight" }, StringSplitOptions.None)[0];
-            ButtonInfo button = buttonInfoDic[name];
+            ButtonInfo clickedButton = buttonInfoDic[name];
+            ButtonInfo prevButton = buttonInfoDic[currentPage];
 
-            if (currentPage.Equals(name))
+            if (clickedButton.Get_buttonTitle().Equals(prevButton.Get_buttonTitle()))
                 return;
+            if(name.Equals("userButton"))
+            {
+                if(currentUser == null)
+                {
+                    openLogin(sender, e);
+                }
+                return;
+            }
 
-            title.Text = button.Get_buttonTitle().Text;
-            titleLabel.Text = button.Get_buttonTitle().Text;
-            buttonInfoDic[currentPage].Get_buttonHighLight().BackColor = Color.Transparent;
-            buttonInfoDic[currentPage].Get_buttonBindPage().Visible = false;
+            title.Text = clickedButton.Get_buttonTitle().Text;
+            titleLabel.Text = clickedButton.Get_buttonTitle().Text;
+            prevButton.Get_buttonHighLight().BackColor = Color.Transparent;
+            prevButton.Get_buttonBindPage().Visible = false;
+            clickedButton.Get_buttonHighLight().BackColor = Color.Red;
+            clickedButton.Get_buttonBindPage().Visible = true;
+
+
             currentPage = name;
-            buttonInfoDic[name].Get_buttonHighLight().BackColor = Color.Red;
-            buttonInfoDic[name].Get_buttonHighLight().Visible = true;
             
         }
 
@@ -404,7 +418,6 @@ namespace SM_Movie
         {
 
         }
-
         private void programSettingIcon_Click(object sender, EventArgs e)
         {
 
@@ -412,11 +425,8 @@ namespace SM_Movie
 
         private void openLogin(object sender, EventArgs e)
         {
-            if(currentUser == null)
-            {
-                login login = new login();
-                login.ShowDialog();
-            }
+            login login = new login();
+            login.ShowDialog();
         }
 
         private void openMypage(object sender, EventArgs e)
