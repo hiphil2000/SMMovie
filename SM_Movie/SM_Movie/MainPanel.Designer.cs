@@ -31,14 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
             this.onpanel = new System.Windows.Forms.Panel();
             this.Mainbar1 = new System.Windows.Forms.Panel();
-            this.fistmoviename = new System.Windows.Forms.Label();
-            this.Mainbar1image = new System.Windows.Forms.PictureBox();
+            this.firstmoviename = new System.Windows.Forms.Label();
             this.Mainbar2 = new System.Windows.Forms.Panel();
             this.Thirdmoviename = new System.Windows.Forms.Label();
-            this.Mainbar2image = new System.Windows.Forms.PictureBox();
             this.Mainbar3 = new System.Windows.Forms.Panel();
             this.secondmoviename = new System.Windows.Forms.Label();
-            this.Mainbar3image = new System.Windows.Forms.PictureBox();
             this.FirstPage = new System.Windows.Forms.RadioButton();
             this.FifthPage = new System.Windows.Forms.RadioButton();
             this.SecondPage = new System.Windows.Forms.RadioButton();
@@ -46,143 +43,123 @@
             this.FourthPage = new System.Windows.Forms.RadioButton();
             this.underpanel = new System.Windows.Forms.Panel();
             this.BestMoviePanel4 = new System.Windows.Forms.Panel();
-            this.BestMoviePicture4 = new System.Windows.Forms.PictureBox();
-            this.BestMovieTitle4 = new System.Windows.Forms.Label();
             this.BestMoviedirector4 = new System.Windows.Forms.Label();
+            this.BestMovieTitle4 = new System.Windows.Forms.Label();
             this.BestMoviePanel3 = new System.Windows.Forms.Panel();
-            this.BestMoviePicture3 = new System.Windows.Forms.PictureBox();
-            this.BestMovieTitle3 = new System.Windows.Forms.Label();
             this.BestMoviedirector3 = new System.Windows.Forms.Label();
+            this.BestMovieTitle3 = new System.Windows.Forms.Label();
             this.BestMoviePanel2 = new System.Windows.Forms.Panel();
-            this.BestMoviePicture2 = new System.Windows.Forms.PictureBox();
-            this.BestMovieTitle2 = new System.Windows.Forms.Label();
             this.BestMoviedirector2 = new System.Windows.Forms.Label();
+            this.BestMovieTitle2 = new System.Windows.Forms.Label();
             this.BestMoviePanel1 = new System.Windows.Forms.Panel();
-            this.BestMoviePicture1 = new System.Windows.Forms.PictureBox();
-            this.BestMovieTitle1 = new System.Windows.Forms.Label();
             this.BestMoviedirector1 = new System.Windows.Forms.Label();
+            this.BestMovieTitle1 = new System.Windows.Forms.Label();
             this.BestMovieFLPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Mainbar4 = new System.Windows.Forms.Panel();
+            this.fourthmoviename = new System.Windows.Forms.Label();
+            this.Mainbar5 = new System.Windows.Forms.Panel();
+            this.fifthmoviename = new System.Windows.Forms.Label();
+            this.Mainbar5image = new System.Windows.Forms.PictureBox();
+            this.Mainbar4image = new System.Windows.Forms.PictureBox();
+            this.BestMoviePicture1 = new System.Windows.Forms.PictureBox();
+            this.BestMoviePicture2 = new System.Windows.Forms.PictureBox();
+            this.BestMoviePicture3 = new System.Windows.Forms.PictureBox();
+            this.BestMoviePicture4 = new System.Windows.Forms.PictureBox();
+            this.Mainbar1image = new System.Windows.Forms.PictureBox();
+            this.Mainbar2image = new System.Windows.Forms.PictureBox();
+            this.Mainbar3image = new System.Windows.Forms.PictureBox();
             this.onpanel.SuspendLayout();
             this.Mainbar1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Mainbar1image)).BeginInit();
             this.Mainbar2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Mainbar2image)).BeginInit();
             this.Mainbar3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Mainbar3image)).BeginInit();
             this.underpanel.SuspendLayout();
             this.BestMoviePanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture4)).BeginInit();
             this.BestMoviePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture3)).BeginInit();
             this.BestMoviePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture2)).BeginInit();
             this.BestMoviePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture1)).BeginInit();
             this.BestMovieFLPanel1.SuspendLayout();
+            this.Mainbar4.SuspendLayout();
+            this.Mainbar5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar5image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar4image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar1image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar2image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar3image)).BeginInit();
             this.SuspendLayout();
             // 
             // onpanel
             // 
+            this.onpanel.Controls.Add(this.Mainbar5);
+            this.onpanel.Controls.Add(this.Mainbar4);
             this.onpanel.Controls.Add(this.Mainbar1);
             this.onpanel.Controls.Add(this.Mainbar2);
             this.onpanel.Controls.Add(this.Mainbar3);
             this.onpanel.Location = new System.Drawing.Point(3, 3);
             this.onpanel.Name = "onpanel";
-            this.onpanel.Size = new System.Drawing.Size(905, 258);
+            this.onpanel.Size = new System.Drawing.Size(905, 250);
             this.onpanel.TabIndex = 13;
             // 
             // Mainbar1
             // 
-            this.Mainbar1.Controls.Add(this.fistmoviename);
+            this.Mainbar1.Controls.Add(this.firstmoviename);
             this.Mainbar1.Controls.Add(this.Mainbar1image);
-            this.Mainbar1.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar1.Location = new System.Drawing.Point(3, 0);
             this.Mainbar1.Name = "Mainbar1";
-            this.Mainbar1.Size = new System.Drawing.Size(900, 250);
+            this.Mainbar1.Size = new System.Drawing.Size(899, 250);
             this.Mainbar1.TabIndex = 14;
             // 
-            // fistmoviename
+            // firstmoviename
             // 
-            this.fistmoviename.AutoSize = true;
-            this.fistmoviename.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold);
-            this.fistmoviename.Location = new System.Drawing.Point(359, 1);
-            this.fistmoviename.Name = "fistmoviename";
-            this.fistmoviename.Size = new System.Drawing.Size(436, 29);
-            this.fistmoviename.TabIndex = 13;
-            this.fistmoviename.Text = "베를린 필하모닉 유로파 콘서트";
-            // 
-            // Mainbar1image
-            // 
-            this.Mainbar1image.BackColor = System.Drawing.Color.Transparent;
-            this.Mainbar1image.ErrorImage = null;
-            this.Mainbar1image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar1image.Image")));
-            this.Mainbar1image.Location = new System.Drawing.Point(3, 3);
-            this.Mainbar1image.Name = "Mainbar1image";
-            this.Mainbar1image.Size = new System.Drawing.Size(251, 244);
-            this.Mainbar1image.TabIndex = 9;
-            this.Mainbar1image.TabStop = false;
-            this.Mainbar1image.Click += new System.EventHandler(this.FirstPage_CheckedChanged);
+            this.firstmoviename.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold);
+            this.firstmoviename.Location = new System.Drawing.Point(401, 6);
+            this.firstmoviename.Name = "firstmoviename";
+            this.firstmoviename.Size = new System.Drawing.Size(391, 29);
+            this.firstmoviename.TabIndex = 13;
+            this.firstmoviename.Text = "베를린 필하모닉 유로파 콘서트";
             // 
             // Mainbar2
             // 
             this.Mainbar2.Controls.Add(this.Thirdmoviename);
             this.Mainbar2.Controls.Add(this.Mainbar2image);
-            this.Mainbar2.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar2.Location = new System.Drawing.Point(3, 0);
             this.Mainbar2.Name = "Mainbar2";
-            this.Mainbar2.Size = new System.Drawing.Size(900, 250);
+            this.Mainbar2.Size = new System.Drawing.Size(899, 250);
             this.Mainbar2.TabIndex = 16;
             this.Mainbar2.Visible = false;
             this.Mainbar2.Click += new System.EventHandler(this.SecondPage_CheckedChanged);
             // 
             // Thirdmoviename
             // 
-            this.Thirdmoviename.AutoSize = true;
             this.Thirdmoviename.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Thirdmoviename.Location = new System.Drawing.Point(506, 3);
+            this.Thirdmoviename.Location = new System.Drawing.Point(401, 6);
             this.Thirdmoviename.Name = "Thirdmoviename";
-            this.Thirdmoviename.Size = new System.Drawing.Size(133, 29);
+            this.Thirdmoviename.Size = new System.Drawing.Size(391, 29);
             this.Thirdmoviename.TabIndex = 15;
             this.Thirdmoviename.Text = "어벤져스";
-            // 
-            // Mainbar2image
-            // 
-            this.Mainbar2image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar2image.Image")));
-            this.Mainbar2image.Location = new System.Drawing.Point(3, 6);
-            this.Mainbar2image.Name = "Mainbar2image";
-            this.Mainbar2image.Size = new System.Drawing.Size(251, 244);
-            this.Mainbar2image.TabIndex = 10;
-            this.Mainbar2image.TabStop = false;
-            this.Mainbar2image.Click += new System.EventHandler(this.SecondPage_CheckedChanged);
             // 
             // Mainbar3
             // 
             this.Mainbar3.Controls.Add(this.secondmoviename);
             this.Mainbar3.Controls.Add(this.Mainbar3image);
-            this.Mainbar3.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar3.Location = new System.Drawing.Point(3, 0);
             this.Mainbar3.Name = "Mainbar3";
-            this.Mainbar3.Size = new System.Drawing.Size(900, 250);
+            this.Mainbar3.Size = new System.Drawing.Size(899, 250);
             this.Mainbar3.TabIndex = 18;
             this.Mainbar3.Visible = false;
             this.Mainbar3.Click += new System.EventHandler(this.ThirdPage_CheckedChanged);
             // 
             // secondmoviename
             // 
-            this.secondmoviename.AutoSize = true;
             this.secondmoviename.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold);
-            this.secondmoviename.Location = new System.Drawing.Point(509, 3);
+            this.secondmoviename.Location = new System.Drawing.Point(401, 6);
             this.secondmoviename.Name = "secondmoviename";
-            this.secondmoviename.Size = new System.Drawing.Size(144, 29);
+            this.secondmoviename.Size = new System.Drawing.Size(391, 29);
             this.secondmoviename.TabIndex = 17;
             this.secondmoviename.Text = "램 레이지";
-            // 
-            // Mainbar3image
-            // 
-            this.Mainbar3image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar3image.Image")));
-            this.Mainbar3image.Location = new System.Drawing.Point(3, 3);
-            this.Mainbar3image.Name = "Mainbar3image";
-            this.Mainbar3image.Size = new System.Drawing.Size(251, 244);
-            this.Mainbar3image.TabIndex = 11;
-            this.Mainbar3image.TabStop = false;
-            this.Mainbar3image.Click += new System.EventHandler(this.ThirdPage_CheckedChanged);
             // 
             // FirstPage
             // 
@@ -206,6 +183,7 @@
             this.FifthPage.Size = new System.Drawing.Size(14, 13);
             this.FifthPage.TabIndex = 11;
             this.FifthPage.UseVisualStyleBackColor = true;
+            this.FifthPage.Click += new System.EventHandler(this.FifthPage_CheckedChanged);
             // 
             // SecondPage
             // 
@@ -236,6 +214,7 @@
             this.FourthPage.Size = new System.Drawing.Size(14, 13);
             this.FourthPage.TabIndex = 14;
             this.FourthPage.UseVisualStyleBackColor = true;
+            this.FourthPage.Click += new System.EventHandler(this.FourthPage_CheckedChanged);
             // 
             // underpanel
             // 
@@ -260,14 +239,15 @@
             this.BestMoviePanel4.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel4.TabIndex = 22;
             // 
-            // BestMoviePicture4
+            // BestMoviedirector4
             // 
-            this.BestMoviePicture4.Location = new System.Drawing.Point(0, 0);
-            this.BestMoviePicture4.Margin = new System.Windows.Forms.Padding(0);
-            this.BestMoviePicture4.Name = "BestMoviePicture4";
-            this.BestMoviePicture4.Size = new System.Drawing.Size(174, 182);
-            this.BestMoviePicture4.TabIndex = 6;
-            this.BestMoviePicture4.TabStop = false;
+            this.BestMoviedirector4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BestMoviedirector4.Location = new System.Drawing.Point(3, 220);
+            this.BestMoviedirector4.Name = "BestMoviedirector4";
+            this.BestMoviedirector4.Size = new System.Drawing.Size(168, 13);
+            this.BestMoviedirector4.TabIndex = 8;
+            this.BestMoviedirector4.Text = "스티븐 스필버그";
+            this.BestMoviedirector4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMovieTitle4
             // 
@@ -278,16 +258,6 @@
             this.BestMovieTitle4.TabIndex = 7;
             this.BestMovieTitle4.Text = "레디 플레이어 원";
             this.BestMovieTitle4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // BestMoviedirector4
-            // 
-            this.BestMoviedirector4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BestMoviedirector4.Location = new System.Drawing.Point(3, 220);
-            this.BestMoviedirector4.Name = "BestMoviedirector4";
-            this.BestMoviedirector4.Size = new System.Drawing.Size(168, 13);
-            this.BestMoviedirector4.TabIndex = 8;
-            this.BestMoviedirector4.Text = "스티븐 스필버그";
-            this.BestMoviedirector4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMoviePanel3
             // 
@@ -300,14 +270,15 @@
             this.BestMoviePanel3.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel3.TabIndex = 21;
             // 
-            // BestMoviePicture3
+            // BestMoviedirector3
             // 
-            this.BestMoviePicture3.Location = new System.Drawing.Point(0, 0);
-            this.BestMoviePicture3.Margin = new System.Windows.Forms.Padding(0);
-            this.BestMoviePicture3.Name = "BestMoviePicture3";
-            this.BestMoviePicture3.Size = new System.Drawing.Size(174, 182);
-            this.BestMoviePicture3.TabIndex = 6;
-            this.BestMoviePicture3.TabStop = false;
+            this.BestMoviedirector3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BestMoviedirector3.Location = new System.Drawing.Point(3, 220);
+            this.BestMoviedirector3.Name = "BestMoviedirector3";
+            this.BestMoviedirector3.Size = new System.Drawing.Size(168, 13);
+            this.BestMoviedirector3.TabIndex = 8;
+            this.BestMoviedirector3.Text = "스티븐 스필버그";
+            this.BestMoviedirector3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMovieTitle3
             // 
@@ -318,16 +289,6 @@
             this.BestMovieTitle3.TabIndex = 7;
             this.BestMovieTitle3.Text = "레디 플레이어 원";
             this.BestMovieTitle3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // BestMoviedirector3
-            // 
-            this.BestMoviedirector3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BestMoviedirector3.Location = new System.Drawing.Point(3, 220);
-            this.BestMoviedirector3.Name = "BestMoviedirector3";
-            this.BestMoviedirector3.Size = new System.Drawing.Size(168, 13);
-            this.BestMoviedirector3.TabIndex = 8;
-            this.BestMoviedirector3.Text = "스티븐 스필버그";
-            this.BestMoviedirector3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMoviePanel2
             // 
@@ -340,14 +301,15 @@
             this.BestMoviePanel2.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel2.TabIndex = 20;
             // 
-            // BestMoviePicture2
+            // BestMoviedirector2
             // 
-            this.BestMoviePicture2.Location = new System.Drawing.Point(0, 0);
-            this.BestMoviePicture2.Margin = new System.Windows.Forms.Padding(0);
-            this.BestMoviePicture2.Name = "BestMoviePicture2";
-            this.BestMoviePicture2.Size = new System.Drawing.Size(174, 182);
-            this.BestMoviePicture2.TabIndex = 6;
-            this.BestMoviePicture2.TabStop = false;
+            this.BestMoviedirector2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BestMoviedirector2.Location = new System.Drawing.Point(3, 220);
+            this.BestMoviedirector2.Name = "BestMoviedirector2";
+            this.BestMoviedirector2.Size = new System.Drawing.Size(168, 13);
+            this.BestMoviedirector2.TabIndex = 8;
+            this.BestMoviedirector2.Text = "스티븐 스필버그";
+            this.BestMoviedirector2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMovieTitle2
             // 
@@ -358,16 +320,6 @@
             this.BestMovieTitle2.TabIndex = 7;
             this.BestMovieTitle2.Text = "레디 플레이어 원";
             this.BestMovieTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // BestMoviedirector2
-            // 
-            this.BestMoviedirector2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BestMoviedirector2.Location = new System.Drawing.Point(3, 220);
-            this.BestMoviedirector2.Name = "BestMoviedirector2";
-            this.BestMoviedirector2.Size = new System.Drawing.Size(168, 13);
-            this.BestMoviedirector2.TabIndex = 8;
-            this.BestMoviedirector2.Text = "스티븐 스필버그";
-            this.BestMoviedirector2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMoviePanel1
             // 
@@ -380,14 +332,15 @@
             this.BestMoviePanel1.Size = new System.Drawing.Size(174, 270);
             this.BestMoviePanel1.TabIndex = 19;
             // 
-            // BestMoviePicture1
+            // BestMoviedirector1
             // 
-            this.BestMoviePicture1.Location = new System.Drawing.Point(0, 0);
-            this.BestMoviePicture1.Margin = new System.Windows.Forms.Padding(0);
-            this.BestMoviePicture1.Name = "BestMoviePicture1";
-            this.BestMoviePicture1.Size = new System.Drawing.Size(174, 182);
-            this.BestMoviePicture1.TabIndex = 6;
-            this.BestMoviePicture1.TabStop = false;
+            this.BestMoviedirector1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BestMoviedirector1.Location = new System.Drawing.Point(3, 220);
+            this.BestMoviedirector1.Name = "BestMoviedirector1";
+            this.BestMoviedirector1.Size = new System.Drawing.Size(168, 13);
+            this.BestMoviedirector1.TabIndex = 8;
+            this.BestMoviedirector1.Text = "스티븐 스필버그";
+            this.BestMoviedirector1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BestMovieTitle1
             // 
@@ -399,16 +352,6 @@
             this.BestMovieTitle1.Text = "레디 플레이어 원";
             this.BestMovieTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // BestMoviedirector1
-            // 
-            this.BestMoviedirector1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BestMoviedirector1.Location = new System.Drawing.Point(3, 220);
-            this.BestMoviedirector1.Name = "BestMoviedirector1";
-            this.BestMoviedirector1.Size = new System.Drawing.Size(168, 13);
-            this.BestMoviedirector1.TabIndex = 8;
-            this.BestMoviedirector1.Text = "스티븐 스필버그";
-            this.BestMoviedirector1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // BestMovieFLPanel1
             // 
             this.BestMovieFLPanel1.Controls.Add(this.BestMoviePanel1);
@@ -417,8 +360,142 @@
             this.BestMovieFLPanel1.Controls.Add(this.BestMoviePanel4);
             this.BestMovieFLPanel1.Location = new System.Drawing.Point(3, 289);
             this.BestMovieFLPanel1.Name = "BestMovieFLPanel1";
-            this.BestMovieFLPanel1.Size = new System.Drawing.Size(903, 411);
+            this.BestMovieFLPanel1.Size = new System.Drawing.Size(905, 411);
             this.BestMovieFLPanel1.TabIndex = 15;
+            // 
+            // Mainbar4
+            // 
+            this.Mainbar4.Controls.Add(this.Mainbar4image);
+            this.Mainbar4.Controls.Add(this.fourthmoviename);
+            this.Mainbar4.Location = new System.Drawing.Point(3, 0);
+            this.Mainbar4.Name = "Mainbar4";
+            this.Mainbar4.Size = new System.Drawing.Size(899, 250);
+            this.Mainbar4.TabIndex = 14;
+            this.Mainbar4.Visible = false;
+            this.Mainbar4.Click += new System.EventHandler(this.FourthPage_CheckedChanged);
+            this.Mainbar4.Paint += new System.Windows.Forms.PaintEventHandler(this.Mainbar4_Paint);
+            // 
+            // fourthmoviename
+            // 
+            this.fourthmoviename.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold);
+            this.fourthmoviename.Location = new System.Drawing.Point(401, 6);
+            this.fourthmoviename.Name = "fourthmoviename";
+            this.fourthmoviename.Size = new System.Drawing.Size(391, 29);
+            this.fourthmoviename.TabIndex = 14;
+            this.fourthmoviename.Text = "자서전";
+            // 
+            // Mainbar5
+            // 
+            this.Mainbar5.Controls.Add(this.Mainbar5image);
+            this.Mainbar5.Controls.Add(this.fifthmoviename);
+            this.Mainbar5.Location = new System.Drawing.Point(3, 0);
+            this.Mainbar5.Name = "Mainbar5";
+            this.Mainbar5.Size = new System.Drawing.Size(899, 250);
+            this.Mainbar5.TabIndex = 16;
+            this.Mainbar5.Visible = false;
+            this.Mainbar5.Click += new System.EventHandler(this.FifthPage_CheckedChanged);
+            this.Mainbar5.Paint += new System.Windows.Forms.PaintEventHandler(this.Mainbar5_Paint);
+            // 
+            // fifthmoviename
+            // 
+            this.fifthmoviename.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold);
+            this.fifthmoviename.Location = new System.Drawing.Point(401, 6);
+            this.fifthmoviename.Name = "fifthmoviename";
+            this.fifthmoviename.Size = new System.Drawing.Size(391, 29);
+            this.fifthmoviename.TabIndex = 14;
+            this.fifthmoviename.Text = "퍼시픽림";
+            // 
+            // Mainbar5image
+            // 
+            this.Mainbar5image.BackColor = System.Drawing.Color.Transparent;
+            this.Mainbar5image.ErrorImage = null;
+            this.Mainbar5image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar5image.Image")));
+            this.Mainbar5image.Location = new System.Drawing.Point(6, 3);
+            this.Mainbar5image.Name = "Mainbar5image";
+            this.Mainbar5image.Size = new System.Drawing.Size(251, 244);
+            this.Mainbar5image.TabIndex = 15;
+            this.Mainbar5image.TabStop = false;
+            // 
+            // Mainbar4image
+            // 
+            this.Mainbar4image.BackColor = System.Drawing.Color.Transparent;
+            this.Mainbar4image.ErrorImage = null;
+            this.Mainbar4image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar4image.Image")));
+            this.Mainbar4image.Location = new System.Drawing.Point(6, 3);
+            this.Mainbar4image.Name = "Mainbar4image";
+            this.Mainbar4image.Size = new System.Drawing.Size(251, 244);
+            this.Mainbar4image.TabIndex = 15;
+            this.Mainbar4image.TabStop = false;
+            // 
+            // BestMoviePicture1
+            // 
+            this.BestMoviePicture1.Image = ((System.Drawing.Image)(resources.GetObject("BestMoviePicture1.Image")));
+            this.BestMoviePicture1.Location = new System.Drawing.Point(0, 0);
+            this.BestMoviePicture1.Margin = new System.Windows.Forms.Padding(0);
+            this.BestMoviePicture1.Name = "BestMoviePicture1";
+            this.BestMoviePicture1.Size = new System.Drawing.Size(174, 182);
+            this.BestMoviePicture1.TabIndex = 6;
+            this.BestMoviePicture1.TabStop = false;
+            // 
+            // BestMoviePicture2
+            // 
+            this.BestMoviePicture2.Image = ((System.Drawing.Image)(resources.GetObject("BestMoviePicture2.Image")));
+            this.BestMoviePicture2.Location = new System.Drawing.Point(0, 0);
+            this.BestMoviePicture2.Margin = new System.Windows.Forms.Padding(0);
+            this.BestMoviePicture2.Name = "BestMoviePicture2";
+            this.BestMoviePicture2.Size = new System.Drawing.Size(174, 182);
+            this.BestMoviePicture2.TabIndex = 6;
+            this.BestMoviePicture2.TabStop = false;
+            // 
+            // BestMoviePicture3
+            // 
+            this.BestMoviePicture3.Location = new System.Drawing.Point(0, 0);
+            this.BestMoviePicture3.Margin = new System.Windows.Forms.Padding(0);
+            this.BestMoviePicture3.Name = "BestMoviePicture3";
+            this.BestMoviePicture3.Size = new System.Drawing.Size(174, 182);
+            this.BestMoviePicture3.TabIndex = 6;
+            this.BestMoviePicture3.TabStop = false;
+            // 
+            // BestMoviePicture4
+            // 
+            this.BestMoviePicture4.Location = new System.Drawing.Point(0, 0);
+            this.BestMoviePicture4.Margin = new System.Windows.Forms.Padding(0);
+            this.BestMoviePicture4.Name = "BestMoviePicture4";
+            this.BestMoviePicture4.Size = new System.Drawing.Size(174, 182);
+            this.BestMoviePicture4.TabIndex = 6;
+            this.BestMoviePicture4.TabStop = false;
+            // 
+            // Mainbar1image
+            // 
+            this.Mainbar1image.BackColor = System.Drawing.Color.Transparent;
+            this.Mainbar1image.ErrorImage = null;
+            this.Mainbar1image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar1image.Image")));
+            this.Mainbar1image.Location = new System.Drawing.Point(6, 3);
+            this.Mainbar1image.Name = "Mainbar1image";
+            this.Mainbar1image.Size = new System.Drawing.Size(251, 244);
+            this.Mainbar1image.TabIndex = 9;
+            this.Mainbar1image.TabStop = false;
+            this.Mainbar1image.Click += new System.EventHandler(this.FirstPage_CheckedChanged);
+            // 
+            // Mainbar2image
+            // 
+            this.Mainbar2image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar2image.Image")));
+            this.Mainbar2image.Location = new System.Drawing.Point(6, 3);
+            this.Mainbar2image.Name = "Mainbar2image";
+            this.Mainbar2image.Size = new System.Drawing.Size(251, 244);
+            this.Mainbar2image.TabIndex = 10;
+            this.Mainbar2image.TabStop = false;
+            this.Mainbar2image.Click += new System.EventHandler(this.SecondPage_CheckedChanged);
+            // 
+            // Mainbar3image
+            // 
+            this.Mainbar3image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar3image.Image")));
+            this.Mainbar3image.Location = new System.Drawing.Point(6, 3);
+            this.Mainbar3image.Name = "Mainbar3image";
+            this.Mainbar3image.Size = new System.Drawing.Size(251, 244);
+            this.Mainbar3image.TabIndex = 11;
+            this.Mainbar3image.TabStop = false;
+            this.Mainbar3image.Click += new System.EventHandler(this.ThirdPage_CheckedChanged);
             // 
             // MainPanel
             // 
@@ -433,25 +510,26 @@
             this.Load += new System.EventHandler(this.MainPanel_Load);
             this.onpanel.ResumeLayout(false);
             this.Mainbar1.ResumeLayout(false);
-            this.Mainbar1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Mainbar1image)).EndInit();
             this.Mainbar2.ResumeLayout(false);
-            this.Mainbar2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Mainbar2image)).EndInit();
             this.Mainbar3.ResumeLayout(false);
-            this.Mainbar3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Mainbar3image)).EndInit();
             this.underpanel.ResumeLayout(false);
             this.underpanel.PerformLayout();
             this.BestMoviePanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture4)).EndInit();
             this.BestMoviePanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture3)).EndInit();
             this.BestMoviePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture2)).EndInit();
             this.BestMoviePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture1)).EndInit();
             this.BestMovieFLPanel1.ResumeLayout(false);
+            this.Mainbar4.ResumeLayout(false);
+            this.Mainbar5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar5image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar4image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BestMoviePicture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar1image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar2image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mainbar3image)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,7 +542,7 @@
         private System.Windows.Forms.Panel Mainbar2;
         private System.Windows.Forms.Panel Mainbar1;
         private System.Windows.Forms.Panel Mainbar3;
-        private System.Windows.Forms.Label fistmoviename;
+        private System.Windows.Forms.Label firstmoviename;
         private System.Windows.Forms.Label Thirdmoviename;
         private System.Windows.Forms.Label secondmoviename;
         private System.Windows.Forms.RadioButton FirstPage;
@@ -490,5 +568,11 @@
         private System.Windows.Forms.Label BestMovieTitle1;
         private System.Windows.Forms.PictureBox BestMoviePicture1;
         private System.Windows.Forms.FlowLayoutPanel BestMovieFLPanel1;
+        private System.Windows.Forms.Panel Mainbar4;
+        private System.Windows.Forms.Label fourthmoviename;
+        private System.Windows.Forms.PictureBox Mainbar4image;
+        private System.Windows.Forms.Panel Mainbar5;
+        private System.Windows.Forms.PictureBox Mainbar5image;
+        private System.Windows.Forms.Label fifthmoviename;
     }
 }

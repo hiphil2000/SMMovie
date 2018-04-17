@@ -106,6 +106,12 @@
     <Compile Include="SettingPanel.Designer.cs">
       <DependentUpon>SettingPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="movieinformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="movieinformation.Designer.cs">
+      <DependentUpon>movieinformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DBUtil.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -135,6 +141,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="movieinformation.resx">
+      <DependentUpon>movieinformation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,9 +157,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Assets\Icons\movie.png" />
     <Content Include="Assets\Icons\exit.png" />
@@ -159,7 +166,9 @@
     <Content Include="Assets\Icons\minimize.png" />
     <Content Include="Assets\Icons\restore.png" />
     <Content Include="Assets\Icons\setting.png" />
+    <Content Include="Assets\Icons\underscore.png" />
     <Content Include="Assets\Icons\user.png" />
+    <None Include="Assets\Images\underscore.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
