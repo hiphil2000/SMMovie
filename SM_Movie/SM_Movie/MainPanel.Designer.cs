@@ -93,6 +93,8 @@
             // 
             // onpanel
             // 
+            this.onpanel.Controls.Add(this.Mainbar5);
+            this.onpanel.Controls.Add(this.Mainbar4);
             this.onpanel.Controls.Add(this.Mainbar1);
             this.onpanel.Controls.Add(this.Mainbar2);
             this.onpanel.Controls.Add(this.Mainbar3);
@@ -105,9 +107,9 @@
             // 
             this.Mainbar1.Controls.Add(this.firstmoviename);
             this.Mainbar1.Controls.Add(this.Mainbar1image);
-            this.Mainbar1.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar1.Location = new System.Drawing.Point(3, 0);
             this.Mainbar1.Name = "Mainbar1";
-            this.Mainbar1.Size = new System.Drawing.Size(905, 250);
+            this.Mainbar1.Size = new System.Drawing.Size(899, 250);
             this.Mainbar1.TabIndex = 14;
             // 
             // firstmoviename
@@ -123,9 +125,9 @@
             // 
             this.Mainbar2.Controls.Add(this.Thirdmoviename);
             this.Mainbar2.Controls.Add(this.Mainbar2image);
-            this.Mainbar2.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar2.Location = new System.Drawing.Point(3, 0);
             this.Mainbar2.Name = "Mainbar2";
-            this.Mainbar2.Size = new System.Drawing.Size(905, 250);
+            this.Mainbar2.Size = new System.Drawing.Size(899, 250);
             this.Mainbar2.TabIndex = 16;
             this.Mainbar2.Visible = false;
             this.Mainbar2.Click += new System.EventHandler(this.SecondPage_CheckedChanged);
@@ -143,9 +145,9 @@
             // 
             this.Mainbar3.Controls.Add(this.secondmoviename);
             this.Mainbar3.Controls.Add(this.Mainbar3image);
-            this.Mainbar3.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar3.Location = new System.Drawing.Point(3, 0);
             this.Mainbar3.Name = "Mainbar3";
-            this.Mainbar3.Size = new System.Drawing.Size(905, 250);
+            this.Mainbar3.Size = new System.Drawing.Size(899, 250);
             this.Mainbar3.TabIndex = 18;
             this.Mainbar3.Visible = false;
             this.Mainbar3.Click += new System.EventHandler(this.ThirdPage_CheckedChanged);
@@ -365,9 +367,9 @@
             // 
             this.Mainbar4.Controls.Add(this.Mainbar4image);
             this.Mainbar4.Controls.Add(this.fourthmoviename);
-            this.Mainbar4.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar4.Location = new System.Drawing.Point(3, 0);
             this.Mainbar4.Name = "Mainbar4";
-            this.Mainbar4.Size = new System.Drawing.Size(905, 250);
+            this.Mainbar4.Size = new System.Drawing.Size(899, 250);
             this.Mainbar4.TabIndex = 14;
             this.Mainbar4.Visible = false;
             this.Mainbar4.Click += new System.EventHandler(this.FourthPage_CheckedChanged);
@@ -386,9 +388,9 @@
             // 
             this.Mainbar5.Controls.Add(this.Mainbar5image);
             this.Mainbar5.Controls.Add(this.fifthmoviename);
-            this.Mainbar5.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar5.Location = new System.Drawing.Point(3, 0);
             this.Mainbar5.Name = "Mainbar5";
-            this.Mainbar5.Size = new System.Drawing.Size(905, 250);
+            this.Mainbar5.Size = new System.Drawing.Size(899, 250);
             this.Mainbar5.TabIndex = 16;
             this.Mainbar5.Visible = false;
             this.Mainbar5.Click += new System.EventHandler(this.FifthPage_CheckedChanged);
@@ -498,8 +500,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.Mainbar5);
-            this.Controls.Add(this.Mainbar4);
             this.Controls.Add(this.BestMovieFLPanel1);
             this.Controls.Add(this.onpanel);
             this.Controls.Add(this.underpanel);

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.MovieContents = new System.Windows.Forms.Panel();
-            this.movieTitle = new System.Windows.Forms.Label();
-            this.MovieSummary = new System.Windows.Forms.Label();
-            this.movieDirector = new System.Windows.Forms.Label();
-            this.movieMainActor = new System.Windows.Forms.Label();
-            this.movieAgeLimit = new System.Windows.Forms.Label();
             this.genreSeq = new System.Windows.Forms.Label();
-            this.movieReleaseDate = new System.Windows.Forms.Label();
             this.movieRunningTime = new System.Windows.Forms.Label();
-            this.Summary = new System.Windows.Forms.Label();
+            this.movieReleaseDate = new System.Windows.Forms.Label();
+            this.movieDirector = new System.Windows.Forms.Label();
+            this.movieAgeLimit = new System.Windows.Forms.Label();
+            this.movieMainActor = new System.Windows.Forms.Label();
+            this.movieTitle = new System.Windows.Forms.Label();
             this.underscore = new System.Windows.Forms.PictureBox();
+            this.Summary = new System.Windows.Forms.Label();
+            this.MovieSummary = new System.Windows.Forms.Label();
             this.moviePoster = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MovieContents.SuspendLayout();
@@ -67,55 +67,6 @@
             this.MovieContents.Size = new System.Drawing.Size(897, 647);
             this.MovieContents.TabIndex = 0;
             // 
-            // movieTitle
-            // 
-            this.movieTitle.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.movieTitle.Location = new System.Drawing.Point(277, 52);
-            this.movieTitle.Name = "movieTitle";
-            this.movieTitle.Size = new System.Drawing.Size(386, 23);
-            this.movieTitle.TabIndex = 1;
-            this.movieTitle.Text = "영화 제목";
-            // 
-            // MovieSummary
-            // 
-            this.MovieSummary.AutoSize = true;
-            this.MovieSummary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieSummary.Location = new System.Drawing.Point(14, 403);
-            this.MovieSummary.Name = "MovieSummary";
-            this.MovieSummary.Size = new System.Drawing.Size(59, 16);
-            this.MovieSummary.TabIndex = 2;
-            this.MovieSummary.Text = "줄거리";
-            // 
-            // movieDirector
-            // 
-            this.movieDirector.AutoSize = true;
-            this.movieDirector.Location = new System.Drawing.Point(279, 158);
-            this.movieDirector.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieDirector.Name = "movieDirector";
-            this.movieDirector.Size = new System.Drawing.Size(41, 12);
-            this.movieDirector.TabIndex = 3;
-            this.movieDirector.Text = "감독  :";
-            // 
-            // movieMainActor
-            // 
-            this.movieMainActor.AutoSize = true;
-            this.movieMainActor.Location = new System.Drawing.Point(279, 180);
-            this.movieMainActor.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieMainActor.Name = "movieMainActor";
-            this.movieMainActor.Size = new System.Drawing.Size(41, 12);
-            this.movieMainActor.TabIndex = 4;
-            this.movieMainActor.Text = "배우  :";
-            // 
-            // movieAgeLimit
-            // 
-            this.movieAgeLimit.AutoSize = true;
-            this.movieAgeLimit.Location = new System.Drawing.Point(279, 202);
-            this.movieAgeLimit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieAgeLimit.Name = "movieAgeLimit";
-            this.movieAgeLimit.Size = new System.Drawing.Size(53, 12);
-            this.movieAgeLimit.TabIndex = 5;
-            this.movieAgeLimit.Text = "관람가  :";
-            // 
             // genreSeq
             // 
             this.genreSeq.AutoSize = true;
@@ -125,16 +76,6 @@
             this.genreSeq.Size = new System.Drawing.Size(41, 12);
             this.genreSeq.TabIndex = 6;
             this.genreSeq.Text = "장르  :";
-            // 
-            // movieReleaseDate
-            // 
-            this.movieReleaseDate.AutoSize = true;
-            this.movieReleaseDate.Location = new System.Drawing.Point(279, 136);
-            this.movieReleaseDate.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieReleaseDate.Name = "movieReleaseDate";
-            this.movieReleaseDate.Size = new System.Drawing.Size(53, 12);
-            this.movieReleaseDate.TabIndex = 7;
-            this.movieReleaseDate.Text = "개봉일  :";
             // 
             // movieRunningTime
             // 
@@ -146,14 +87,54 @@
             this.movieRunningTime.TabIndex = 8;
             this.movieRunningTime.Text = "상영시간  :";
             // 
-            // Summary
+            // movieReleaseDate
             // 
-            this.Summary.AutoSize = true;
-            this.Summary.Location = new System.Drawing.Point(15, 434);
-            this.Summary.Name = "Summary";
-            this.Summary.Size = new System.Drawing.Size(73, 12);
-            this.Summary.TabIndex = 9;
-            this.Summary.Text = "사라진 20분 ";
+            this.movieReleaseDate.AutoSize = true;
+            this.movieReleaseDate.Location = new System.Drawing.Point(279, 136);
+            this.movieReleaseDate.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieReleaseDate.Name = "movieReleaseDate";
+            this.movieReleaseDate.Size = new System.Drawing.Size(53, 12);
+            this.movieReleaseDate.TabIndex = 7;
+            this.movieReleaseDate.Text = "개봉일  :";
+            // 
+            // movieDirector
+            // 
+            this.movieDirector.AutoSize = true;
+            this.movieDirector.Location = new System.Drawing.Point(279, 158);
+            this.movieDirector.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieDirector.Name = "movieDirector";
+            this.movieDirector.Size = new System.Drawing.Size(41, 12);
+            this.movieDirector.TabIndex = 3;
+            this.movieDirector.Text = "감독  :";
+            // 
+            // movieAgeLimit
+            // 
+            this.movieAgeLimit.AutoSize = true;
+            this.movieAgeLimit.Location = new System.Drawing.Point(279, 202);
+            this.movieAgeLimit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieAgeLimit.Name = "movieAgeLimit";
+            this.movieAgeLimit.Size = new System.Drawing.Size(53, 12);
+            this.movieAgeLimit.TabIndex = 5;
+            this.movieAgeLimit.Text = "관람가  :";
+            // 
+            // movieMainActor
+            // 
+            this.movieMainActor.AutoSize = true;
+            this.movieMainActor.Location = new System.Drawing.Point(279, 180);
+            this.movieMainActor.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieMainActor.Name = "movieMainActor";
+            this.movieMainActor.Size = new System.Drawing.Size(41, 12);
+            this.movieMainActor.TabIndex = 4;
+            this.movieMainActor.Text = "배우  :";
+            // 
+            // movieTitle
+            // 
+            this.movieTitle.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movieTitle.Location = new System.Drawing.Point(277, 52);
+            this.movieTitle.Name = "movieTitle";
+            this.movieTitle.Size = new System.Drawing.Size(576, 23);
+            this.movieTitle.TabIndex = 1;
+            this.movieTitle.Text = "영화 제목";
             // 
             // underscore
             // 
@@ -164,6 +145,26 @@
             this.underscore.Size = new System.Drawing.Size(591, 106);
             this.underscore.TabIndex = 10;
             this.underscore.TabStop = false;
+            // 
+            // Summary
+            // 
+            this.Summary.AutoSize = true;
+            this.Summary.Location = new System.Drawing.Point(15, 439);
+            this.Summary.Name = "Summary";
+            this.Summary.Size = new System.Drawing.Size(73, 12);
+            this.Summary.TabIndex = 9;
+            this.Summary.Text = "사라진 20분 ";
+            // 
+            // MovieSummary
+            // 
+            this.MovieSummary.AutoSize = true;
+            this.MovieSummary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieSummary.Location = new System.Drawing.Point(15, 403);
+            this.MovieSummary.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.MovieSummary.Name = "MovieSummary";
+            this.MovieSummary.Size = new System.Drawing.Size(59, 16);
+            this.MovieSummary.TabIndex = 2;
+            this.MovieSummary.Text = "줄거리";
             // 
             // moviePoster
             // 
