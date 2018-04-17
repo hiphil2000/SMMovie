@@ -125,7 +125,7 @@
             this.Mainbar1image.BackColor = System.Drawing.Color.Transparent;
             this.Mainbar1image.ErrorImage = null;
             this.Mainbar1image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar1image.Image")));
-            this.Mainbar1image.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar1image.Location = new System.Drawing.Point(6, 3);
             this.Mainbar1image.Name = "Mainbar1image";
             this.Mainbar1image.Size = new System.Drawing.Size(251, 244);
             this.Mainbar1image.TabIndex = 9;
@@ -156,7 +156,7 @@
             // Mainbar2image
             // 
             this.Mainbar2image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar2image.Image")));
-            this.Mainbar2image.Location = new System.Drawing.Point(3, 6);
+            this.Mainbar2image.Location = new System.Drawing.Point(6, 3);
             this.Mainbar2image.Name = "Mainbar2image";
             this.Mainbar2image.Size = new System.Drawing.Size(251, 244);
             this.Mainbar2image.TabIndex = 10;
@@ -187,7 +187,7 @@
             // Mainbar3image
             // 
             this.Mainbar3image.Image = ((System.Drawing.Image)(resources.GetObject("Mainbar3image.Image")));
-            this.Mainbar3image.Location = new System.Drawing.Point(3, 3);
+            this.Mainbar3image.Location = new System.Drawing.Point(6, 3);
             this.Mainbar3image.Name = "Mainbar3image";
             this.Mainbar3image.Size = new System.Drawing.Size(251, 244);
             this.Mainbar3image.TabIndex = 11;
