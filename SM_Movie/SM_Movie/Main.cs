@@ -14,36 +14,70 @@ namespace SM_Movie
 {
     public partial class Main : Form
     {
-        class ButtonGeneric <Pic, Pa, La, Uc, Hi>
+
+        class ButtonInfo
         {
-            public Pic buttonIcon;
-            public Pa buttonPanel;
-            public La buttonTitle;
-            public Uc buttonPage;
-            public Hi highLight;
+            private PictureBox buttonIcon;
+            public PictureBox Get_buttonIcon()
+            { return buttonIcon; }
+            public void Set_buttonIcon(PictureBox value)
+            { buttonIcon = Get_buttonIcon(); }
 
-            public ButtonGeneric()
+            private Panel buttonPanel;
+            public Panel Get_buttonPanel()
+            { return buttonPanel; ; }
+            public void Set_buttonPanel(Panel value)
+            { buttonPanel = value; }
+
+            private Label buttonTitle;
+            public Label Get_buttonTitle()
+            { return buttonTitle; }
+            public void Set_buttonTitle(Label value)
+            { buttonTitle = value; }
+
+            private UserControl buttonBindPage;
+            public UserControl Get_buttonBindPage()
+            { return buttonBindPage; }
+            public void Set_buttonBindPage(UserControl value)
+            { buttonBindPage = value; }
+
+            private Panel buttonHighLight;
+            public Panel Get_buttonHighLight()
+            { return buttonHighLight; }
+            public void Set_buttonHighLight(Panel value)
+            { buttonHighLight = value; }
+
+            ButtonInfo()
             {
-            }
 
-            public ButtonGeneric(Pic buttonIcon, Pa buttonPanel, La buttonTitle, Uc buttonPage, Hi highLight)
+            }
+            
+            public ButtonInfo(PictureBox buttonIcon, Panel buttonPanel)
             {
                 this.buttonIcon = buttonIcon;
                 this.buttonPanel = buttonPanel;
+            }
+
+            public ButtonInfo(PictureBox buttonIcon, Panel buttonPanel, Label buttonTitle, UserControl buttonBindPage, Panel buttonHighLight)
+                : this(buttonIcon, buttonPanel)
+            {
                 this.buttonTitle = buttonTitle;
-                this.buttonPage = buttonPage;
-                this.highLight = highLight;
+                this.buttonHighLight = buttonHighLight;
+                this.buttonBindPage = buttonBindPage;
             }
         }
 
 
         Model.User currentUser;
+        string currentPage;
         Point mousePos = new Point();
         bool menuState = false;
-        Dictionary<PictureBox, Panel> buttonDictionary = new Dictionary<PictureBox, Panel>();
-        Dictionary<PictureBox, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>> buttonGeneric
-            = new Dictionary<PictureBox, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>>();
-        PictureBox currentPage;
+
+        Dictionary<string, ButtonInfo> buttonInfoDic = new Dictionary<string, ButtonInfo>();
+
+        //Dictionary<string, Panel> buttonDictionary = new Dictionary<string, Panel>();
+        //Dictionary<string, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>> buttonGeneric
+        //    = new Dictionary<string, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>>();
         
         public Main()
         {
@@ -64,42 +98,28 @@ namespace SM_Movie
             programIcon.MouseMove += moveForm;
             taskBar.MouseMove += moveForm;
 
-            menuButtonIcon.MouseEnter += buttonFocus;
-            menuButtonIcon.MouseLeave += buttonLostFocus;
-            menuButtonIcon.MouseClick += openMenu;
-            buttonDictionary.Add(menuButtonIcon, menuButtonPane);
-            closeButtonIcon.MouseEnter += buttonFocus;
-            closeButtonIcon.MouseLeave += buttonLostFocus;
-            closeButtonIcon.MouseClick += exitApp;
-            buttonDictionary.Add(closeButtonIcon, closeButtonPane);
-            recoverButtonIcon.MouseEnter += buttonFocus;
-            recoverButtonIcon.MouseLeave += buttonLostFocus;
-            recoverButtonIcon.MouseClick += recoverApp;
-            buttonDictionary.Add(recoverButtonIcon, recoverButtonPane);
-            minButtonIcon.MouseEnter += buttonFocus;
-            minButtonIcon.MouseLeave += buttonLostFocus;
-            minButtonIcon.MouseClick += minimizeApp;
-            buttonDictionary.Add(minButtonIcon, minButtonPane);
-            homeMenuIcon.MouseEnter += buttonFocus;
-            homeMenuIcon.MouseLeave += buttonLostFocus;
-            homeMenuIcon.MouseClick += openPage;
-            buttonDictionary.Add(homeMenuIcon, homeMenuPane);
-            buttonGeneric.Add(homeMenuIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(homeMenuIcon, homeMenuPane, homeMenuLabel, mainPanel1, homeMenuHighLight));
-            movieMenuIcon.MouseEnter += buttonFocus;
-            movieMenuIcon.MouseLeave += buttonLostFocus;
-            movieMenuIcon.MouseClick += openPage;
-            buttonDictionary.Add(movieMenuIcon, movieMenuPane);
-            buttonGeneric.Add(movieMenuIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(movieMenuIcon, movieMenuPane, movieMenuLabel, movieSearch1, movieButtonHighLight));
-            userButtonIcon.MouseEnter += buttonFocus;
-            userButtonIcon.MouseLeave += buttonLostFocus;
-            userButtonIcon.MouseClick += openPage;
-            buttonDictionary.Add(userButtonIcon, userButtonPane);
-            buttonGeneric.Add(userButtonIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(userButtonIcon, userButtonPane, userButtonLabel, mainPanel1, userButtonHighLight));
-            settingButtonIcon.MouseEnter += buttonFocus;
-            settingButtonIcon.MouseLeave += buttonLostFocus;
-            settingButtonIcon.MouseClick += openPage;
-            buttonDictionary.Add(settingButtonIcon, settingButtonPane);
-            buttonGeneric.Add(settingButtonIcon, new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(settingButtonIcon, settingButtonPane, settingButtonLabel, mainPanel1, settingButtonHighLight));
+            buttonInfoDic.Add("menuButton", new ButtonInfo(menuButtonIcon, menuButtonPane));
+            buttonInfoDic.Add("minButton", new ButtonInfo(minButtonIcon, minButtonPane));
+            buttonInfoDic.Add("recoverButton", new ButtonInfo(recoverButtonIcon, recoverButtonPane));
+            buttonInfoDic.Add("closeButton", new ButtonInfo(closeButtonIcon, closeButtonPane));
+
+            buttonInfoDic.Add("homeButton", new ButtonInfo(homeButtonIcon, homeButtonPane, homeButtonLabel, mainPanel, homeButtonHighLight));
+            buttonInfoDic.Add("movieButton", new ButtonInfo(movieButtonIcon, movieButtonPane, movieButtonLabel, movieSearch, movieButtonHighLight));
+            buttonInfoDic.Add("userButton", new ButtonInfo(userButtonIcon, userButtonPane, userButtonLabel, mainPanel, userButtonHighLight));
+            buttonInfoDic.Add("settingButton", new ButtonInfo(settingButtonIcon, settingButtonPane, settingButtonLabel, settingPanel, settingButtonHighLight));
+
+            //buttonDictionary.Add("menuButton", menuButtonPane);
+            //buttonDictionary.Add("closeButton", closeButtonPane);
+            //buttonDictionary.Add("recoverButton", recoverButtonPane);
+            //buttonDictionary.Add("minButton", minButtonPane);
+            //buttonDictionary.Add("homeMenu", homeMenuPane);
+            //buttonGeneric.Add("homeMenu", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(homeMenuIcon, homeMenuPane, homeMenuLabel, mainPanel, homeMenuHighLight));
+            //buttonDictionary.Add("movieMenu", movieMenuPane);
+            //buttonGeneric.Add("movieMenu", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(movieMenuIcon, movieMenuPane, movieMenuLabel, movieSearch, movieButtonHighLight));
+            //buttonDictionary.Add("userButton", userButtonPane);
+            //buttonGeneric.Add("userButton", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(userButtonIcon, userButtonPane, userButtonLabel, mainPanel, userButtonHighLight));
+            //buttonDictionary.Add("settingButton", settingButtonPane);
+            //buttonGeneric.Add("settingButton", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(settingButtonIcon, settingButtonPane, settingButtonLabel, mainPanel, settingButtonHighLight));
 
             openPage(null, new EventArgs());
         }
@@ -123,8 +143,8 @@ namespace SM_Movie
 
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
-                movieSearch1.Size = new Size(this.Width - 52, this.Height - 78);
-                mainPanel1.Size = new Size(this.Width - 52, this.Height - 78);
+                movieSearch.Size = new Size(this.Width - 52, this.Height - 78);
+                mainPanel.Size = new Size(this.Width - 52, this.Height - 78);
                 menuTitle.Width = mainPane.Width;
             }
             else
@@ -144,10 +164,10 @@ namespace SM_Movie
 
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
-                movieSearch1.Size = new Size(this.Width - 48, this.Height - 74);
-                mainPanel1.Size = new Size(this.Width - 48, this.Height - 74);
+                movieSearch.Size = new Size(this.Width - 48, this.Height - 74);
+                mainPanel.Size = new Size(this.Width - 48, this.Height - 74);
 
-                mainPanel1.Size = this.Size;
+                mainPanel.Size = this.Size;
 
                 menuTitle.Width = mainPane.Width;
             }
@@ -274,7 +294,7 @@ namespace SM_Movie
 
         private void setMousePos(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && this.WindowState == FormWindowState.Normal)
+            if (e.Button == MouseButtons.Left)
             {
                 mousePos.X = e.X;
                 mousePos.Y = e.Y;
@@ -286,22 +306,29 @@ namespace SM_Movie
             if (e.Button == MouseButtons.Left && this.WindowState == FormWindowState.Normal)
             {
                 this.Location = new Point(this.Location.X + (e.X - mousePos.X), this.Location.Y + (e.Y - mousePos.Y));
+            } else if (e.Button == MouseButtons.Left && this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Location = new Point(this.Location.X + (e.X - mousePos.X), this.Location.Y + (e.Y - mousePos.Y));
             }
         }
 
         private void buttonFocus(object sender, EventArgs e)
         {
             Color color = Color.FromArgb(50,255,255,255);
-            PictureBox pic = (PictureBox)sender;
-            buttonDictionary[pic].BackColor = color;
+            Control con = (Control)sender;
+            string name = con.Name.Split(new[] { "Label", "Icon", "HighLight" }, StringSplitOptions.None)[0];
+            buttonInfoDic[name].Get_buttonPanel().BackColor = color;
+
 
         }
 
         private void buttonLostFocus(object sender, EventArgs e)
         {
             Color color = Color.FromArgb(0, 0, 0, 0);
-            PictureBox pic = (PictureBox)sender;
-            buttonDictionary[pic].BackColor = color;
+            Control con = (Control)sender;
+            string name = con.Name.Split(new[] { "Label", "Icon", "HighLight" }, StringSplitOptions.None)[0];
+            buttonInfoDic[name].Get_buttonPanel().BackColor = color;
         }
 
         private void exitApp(object sender, EventArgs e)
@@ -316,40 +343,39 @@ namespace SM_Movie
 
         private void recoverApp(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
-                this.WindowState = FormWindowState.Normal;
-            else
+            if (this.WindowState == FormWindowState.Normal)
                 this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
         }
 
         private void openPage(object sender, EventArgs e)
         {
             if(sender == null)
             {
-                mainPanel1.Visible = true;
-                titleLabel.Text = homeMenuLabel.Text;
-                title.Text = homeMenuLabel.Text;
-                homeMenuHighLight.BackColor = Color.FromArgb(255, 0, 0);
-                currentPage = homeMenuIcon;
+                mainPanel.Visible = true;
+                titleLabel.Text = homeButtonLabel.Text;
+                title.Text = homeButtonLabel.Text;
+                homeButtonHighLight.BackColor = Color.FromArgb(255, 0, 0);
+                currentPage = "homeButton";
                 return;
             }
 
-            PictureBox pic = (PictureBox) sender;
-            Panel pane = buttonDictionary[pic];
-            ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel> button = buttonGeneric[pic];
+            
+            Control con = (Control) sender;
+            string name = con.Name.Split(new[] { "Label", "Icon", "HighLight" }, StringSplitOptions.None)[0];
+            ButtonInfo button = buttonInfoDic[name];
 
-            if (title.Equals(button.buttonTitle.Text))
+            if (currentPage.Equals(name))
                 return;
 
-            title.Text = button.buttonTitle.Text;
-            titleLabel.Text = button.buttonTitle.Text;
-            buttonGeneric[currentPage].highLight.BackColor = Color.Transparent;
-            buttonGeneric[currentPage].buttonPage.Visible = false;
-            currentPage = button.buttonIcon;
-            button.highLight.BackColor = Color.Red;
-            button.buttonPage.Visible = true;
-
-
+            title.Text = button.Get_buttonTitle().Text;
+            titleLabel.Text = button.Get_buttonTitle().Text;
+            buttonInfoDic[currentPage].Get_buttonHighLight().BackColor = Color.Transparent;
+            buttonInfoDic[currentPage].Get_buttonBindPage().Visible = false;
+            currentPage = name;
+            buttonInfoDic[name].Get_buttonHighLight().BackColor = Color.Red;
+            buttonInfoDic[name].Get_buttonHighLight().Visible = true;
             
         }
 
@@ -384,7 +410,7 @@ namespace SM_Movie
 
         }
 
-        private void userSettingIcon_Click(object sender, EventArgs e)
+        private void openLogin(object sender, EventArgs e)
         {
             if(currentUser == null)
             {
@@ -393,9 +419,29 @@ namespace SM_Movie
             }
         }
 
-        private void mainPanel1_Load(object sender, EventArgs e)
+        private void openMypage(object sender, EventArgs e)
         {
 
+        }
+
+        private void mainPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_Paint(object sender, PaintEventArgs e)
+        {
+            if(currentUser == null && !(userButtonLabel.Text.Equals("로그인")))
+            {
+                userButtonLabel.Text = "로그인";
+                userButtonLabel.Click += openLogin;
+                userButtonLabel.Click -= openMypage;
+            } else if(currentUser != null && !(userButtonLabel.Text.Equals("마이페이지")))
+            {
+                userButtonLabel.Text = "마이페이지";
+                userButtonLabel.Click -= openLogin;
+                userButtonLabel.Click += openMypage;
+            }
         }
     }
 }

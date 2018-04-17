@@ -61,7 +61,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(707, 479);
-            this.splitContainer1.SplitterDistance = 158;
+            this.splitContainer1.SplitterDistance = 120;
             this.splitContainer1.TabIndex = 3;
             // 
             // titlePane
@@ -71,7 +71,7 @@
             this.titlePane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.titlePane.Location = new System.Drawing.Point(0, 0);
             this.titlePane.Name = "titlePane";
-            this.titlePane.Size = new System.Drawing.Size(707, 158);
+            this.titlePane.Size = new System.Drawing.Size(707, 120);
             this.titlePane.TabIndex = 2;
             // 
             // searchBox
@@ -106,8 +106,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.resultPane);
-            this.splitContainer2.Size = new System.Drawing.Size(707, 317);
-            this.splitContainer2.SplitterDistance = 200;
+            this.splitContainer2.Size = new System.Drawing.Size(707, 355);
+            this.splitContainer2.SplitterDistance = 134;
             this.splitContainer2.TabIndex = 0;
             // 
             // searchMenuPane
@@ -115,7 +115,7 @@
             this.searchMenuPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchMenuPane.Location = new System.Drawing.Point(0, 0);
             this.searchMenuPane.Name = "searchMenuPane";
-            this.searchMenuPane.Size = new System.Drawing.Size(200, 317);
+            this.searchMenuPane.Size = new System.Drawing.Size(134, 355);
             this.searchMenuPane.TabIndex = 0;
             // 
             // resultPane
@@ -123,7 +123,7 @@
             this.resultPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.resultPane.Location = new System.Drawing.Point(0, 0);
             this.resultPane.Name = "resultPane";
-            this.resultPane.Size = new System.Drawing.Size(503, 317);
+            this.resultPane.Size = new System.Drawing.Size(569, 355);
             this.resultPane.TabIndex = 0;
             // 
             // movieSearch

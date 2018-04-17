@@ -20,6 +20,8 @@ namespace SM_Movie
         private void movieSearch_SizeChanged(object sender, EventArgs e)
         {
             searchBox.Width = this.Width - 64;
+            splitContainer1.SplitterDistance = 150;
+            splitContainer2.SplitterDistance = 200;
         }
     }
 }
