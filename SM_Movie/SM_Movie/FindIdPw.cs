@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace SM_Movie
 {
-    public partial class SettingPanel : UserControl
+    public partial class FindIdPw : UserControl
     {
-        public SettingPanel()
+        public FindIdPw()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void FindIdPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

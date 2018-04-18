@@ -16,5 +16,10 @@ namespace SM_Movie
         {
             InitializeComponent();
         }
+
+        private void genreSeq_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

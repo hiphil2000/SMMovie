@@ -35,7 +35,6 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.closeButtonPane = new System.Windows.Forms.Panel();
             this.closeButtonIcon = new System.Windows.Forms.PictureBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.userId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.SkipLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -84,8 +84,8 @@
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.rightPanel.Controls.Add(this.SkipLogin);
             this.rightPanel.Controls.Add(this.closeButtonPane);
-            this.rightPanel.Controls.Add(this.linkLabel3);
             this.rightPanel.Controls.Add(this.linkLabel2);
             this.rightPanel.Controls.Add(this.linkLabel1);
             this.rightPanel.Controls.Add(this.button1);
@@ -125,23 +125,11 @@
             this.closeButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.closeButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(48, 409);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(93, 12);
-            this.linkLabel3.TabIndex = 9;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "로그인 건너뛰기";
-            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(48, 379);
+            this.linkLabel2.Location = new System.Drawing.Point(145, 369);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(123, 12);
             this.linkLabel2.TabIndex = 8;
@@ -153,13 +141,14 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(48, 351);
+            this.linkLabel1.Location = new System.Drawing.Point(86, 369);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(53, 12);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "회원가입";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button1
             // 
@@ -218,6 +207,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "로그인";
             // 
+            // SkipLogin
+            // 
+            this.SkipLogin.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold);
+            this.SkipLogin.Location = new System.Drawing.Point(50, 337);
+            this.SkipLogin.Name = "SkipLogin";
+            this.SkipLogin.Size = new System.Drawing.Size(218, 29);
+            this.SkipLogin.TabIndex = 11;
+            this.SkipLogin.Text = "로그인 건너뛰기";
+            this.SkipLogin.UseVisualStyleBackColor = true;
+            // 
             // log
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -245,7 +244,6 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel closeButtonPane;
         private System.Windows.Forms.PictureBox closeButtonIcon;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
@@ -254,5 +252,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox userId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SkipLogin;
     }
 }

@@ -118,6 +118,12 @@
     <Compile Include="movieinformation.Designer.cs">
       <DependentUpon>movieinformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindIdPw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FindIdPw.Designer.cs">
+      <DependentUpon>FindIdPw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DBUtil.cs" />
     <Compile Include="signup.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindIdPw.resx">
+      <DependentUpon>FindIdPw.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BackLogin = new System.Windows.Forms.LinkLabel();
             this.Login = new System.Windows.Forms.LinkLabel();
@@ -49,8 +48,6 @@
             this.userEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.userBirthday = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,10 +58,15 @@
             this.userName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.rightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.closeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,18 +91,10 @@
             this.leftPanel.Size = new System.Drawing.Size(210, 900);
             this.leftPanel.TabIndex = 6;
             // 
-            // logo
-            // 
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(12, 12);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(192, 59);
-            this.logo.TabIndex = 0;
-            this.logo.TabStop = false;
-            // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.rightPanel.Controls.Add(this.closeButtonPane);
             this.rightPanel.Controls.Add(this.BackLogin);
             this.rightPanel.Controls.Add(this.Login);
             this.rightPanel.Controls.Add(this.button1);
@@ -117,8 +111,6 @@
             this.rightPanel.Controls.Add(this.userEmail);
             this.rightPanel.Controls.Add(this.label8);
             this.rightPanel.Controls.Add(this.userBirthday);
-            this.rightPanel.Controls.Add(this.label7);
-            this.rightPanel.Controls.Add(this.textBox5);
             this.rightPanel.Controls.Add(this.label6);
             this.rightPanel.Controls.Add(this.label4);
             this.rightPanel.Controls.Add(this.label3);
@@ -140,7 +132,7 @@
             // 
             this.BackLogin.AutoSize = true;
             this.BackLogin.LinkColor = System.Drawing.Color.Black;
-            this.BackLogin.Location = new System.Drawing.Point(268, 815);
+            this.BackLogin.Location = new System.Drawing.Point(177, 743);
             this.BackLogin.Name = "BackLogin";
             this.BackLogin.Size = new System.Drawing.Size(53, 12);
             this.BackLogin.TabIndex = 30;
@@ -152,7 +144,7 @@
             // 
             this.Login.AutoSize = true;
             this.Login.LinkColor = System.Drawing.Color.Black;
-            this.Login.Location = new System.Drawing.Point(221, 815);
+            this.Login.Location = new System.Drawing.Point(130, 743);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(41, 12);
             this.Login.TabIndex = 29;
@@ -163,16 +155,16 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(15, 774);
+            this.button1.Location = new System.Drawing.Point(15, 702);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(306, 28);
+            this.button1.Size = new System.Drawing.Size(218, 29);
             this.button1.TabIndex = 28;
             this.button1.Text = "회원가입";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // IdCheck
             // 
-            this.IdCheck.Location = new System.Drawing.Point(244, 157);
+            this.IdCheck.Location = new System.Drawing.Point(234, 163);
             this.IdCheck.Name = "IdCheck";
             this.IdCheck.Size = new System.Drawing.Size(77, 30);
             this.IdCheck.TabIndex = 27;
@@ -184,6 +176,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.Location = new System.Drawing.Point(11, 262);
+            this.label13.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 26;
@@ -192,10 +185,10 @@
             // userPasswordCheck
             // 
             this.userPasswordCheck.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userPasswordCheck.Location = new System.Drawing.Point(15, 278);
+            this.userPasswordCheck.Location = new System.Drawing.Point(14, 283);
             this.userPasswordCheck.Name = "userPasswordCheck";
             this.userPasswordCheck.PasswordChar = '●';
-            this.userPasswordCheck.Size = new System.Drawing.Size(306, 30);
+            this.userPasswordCheck.Size = new System.Drawing.Size(218, 30);
             this.userPasswordCheck.TabIndex = 25;
             // 
             // genreSeq
@@ -203,16 +196,18 @@
             this.genreSeq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genreSeq.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.genreSeq.FormattingEnabled = true;
-            this.genreSeq.Location = new System.Drawing.Point(15, 731);
+            this.genreSeq.Location = new System.Drawing.Point(15, 664);
             this.genreSeq.Name = "genreSeq";
-            this.genreSeq.Size = new System.Drawing.Size(306, 28);
+            this.genreSeq.Size = new System.Drawing.Size(218, 28);
             this.genreSeq.TabIndex = 24;
+            this.genreSeq.SelectedIndexChanged += new System.EventHandler(this.genreSeq_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(12, 715);
+            this.label12.Location = new System.Drawing.Point(12, 643);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 13);
             this.label12.TabIndex = 23;
@@ -222,7 +217,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(12, 650);
+            this.label11.Location = new System.Drawing.Point(12, 578);
+            this.label11.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 21;
@@ -231,16 +227,17 @@
             // userAddress
             // 
             this.userAddress.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userAddress.Location = new System.Drawing.Point(15, 667);
+            this.userAddress.Location = new System.Drawing.Point(15, 599);
             this.userAddress.Name = "userAddress";
-            this.userAddress.Size = new System.Drawing.Size(306, 30);
+            this.userAddress.Size = new System.Drawing.Size(218, 30);
             this.userAddress.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(12, 584);
+            this.label10.Location = new System.Drawing.Point(12, 512);
+            this.label10.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 13);
             this.label10.TabIndex = 19;
@@ -249,16 +246,17 @@
             // userPhone
             // 
             this.userPhone.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userPhone.Location = new System.Drawing.Point(15, 601);
+            this.userPhone.Location = new System.Drawing.Point(15, 533);
             this.userPhone.Name = "userPhone";
-            this.userPhone.Size = new System.Drawing.Size(306, 30);
+            this.userPhone.Size = new System.Drawing.Size(218, 30);
             this.userPhone.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(12, 517);
+            this.label9.Location = new System.Drawing.Point(12, 445);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 17;
@@ -267,16 +265,17 @@
             // userEmail
             // 
             this.userEmail.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userEmail.Location = new System.Drawing.Point(15, 534);
+            this.userEmail.Location = new System.Drawing.Point(15, 466);
             this.userEmail.Name = "userEmail";
-            this.userEmail.Size = new System.Drawing.Size(306, 30);
+            this.userEmail.Size = new System.Drawing.Size(218, 30);
             this.userEmail.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(11, 451);
+            this.label8.Location = new System.Drawing.Point(11, 379);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 15;
@@ -285,34 +284,17 @@
             // userBirthday
             // 
             this.userBirthday.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userBirthday.Location = new System.Drawing.Point(14, 468);
+            this.userBirthday.Location = new System.Drawing.Point(15, 400);
             this.userBirthday.Name = "userBirthday";
-            this.userBirthday.Size = new System.Drawing.Size(307, 30);
+            this.userBirthday.Size = new System.Drawing.Size(218, 30);
             this.userBirthday.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(12, 385);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "생년월일";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(15, 402);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(306, 30);
-            this.textBox5.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 321);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 11;
@@ -323,6 +305,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(12, 202);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 10;
@@ -333,6 +316,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(12, 141);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 9;
@@ -343,7 +327,7 @@
             this.userNickname.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.userNickname.Location = new System.Drawing.Point(15, 338);
             this.userNickname.Name = "userNickname";
-            this.userNickname.Size = new System.Drawing.Size(306, 30);
+            this.userNickname.Size = new System.Drawing.Size(218, 30);
             this.userNickname.TabIndex = 8;
             // 
             // label5
@@ -358,33 +342,34 @@
             // userPassword
             // 
             this.userPassword.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userPassword.Location = new System.Drawing.Point(15, 218);
+            this.userPassword.Location = new System.Drawing.Point(15, 223);
             this.userPassword.Name = "userPassword";
             this.userPassword.PasswordChar = '●';
-            this.userPassword.Size = new System.Drawing.Size(306, 30);
+            this.userPassword.Size = new System.Drawing.Size(218, 30);
             this.userPassword.TabIndex = 6;
             // 
             // userId
             // 
             this.userId.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userId.Location = new System.Drawing.Point(15, 157);
+            this.userId.Location = new System.Drawing.Point(15, 162);
             this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(223, 30);
+            this.userId.Size = new System.Drawing.Size(218, 30);
             this.userId.TabIndex = 4;
             // 
             // userName
             // 
             this.userName.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userName.Location = new System.Drawing.Point(15, 93);
+            this.userName.Location = new System.Drawing.Point(14, 98);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(306, 30);
+            this.userName.Size = new System.Drawing.Size(218, 30);
             this.userName.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(11, 70);
+            this.label2.Location = new System.Drawing.Point(11, 77);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -394,11 +379,42 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(9, 12);
+            this.label1.Location = new System.Drawing.Point(23, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "회원가입";
+            // 
+            // logo
+            // 
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(12, 12);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(192, 59);
+            this.logo.TabIndex = 0;
+            this.logo.TabStop = false;
+            // 
+            // closeButtonPane
+            // 
+            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
+            this.closeButtonPane.Location = new System.Drawing.Point(294, 0);
+            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonPane.Name = "closeButtonPane";
+            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonPane.TabIndex = 31;
+            // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
             // 
             // signup
             // 
@@ -410,9 +426,11 @@
             this.Size = new System.Drawing.Size(554, 900);
             this.panel1.ResumeLayout(false);
             this.leftPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.rightPanel.ResumeLayout(false);
             this.rightPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.closeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,8 +457,6 @@
         private System.Windows.Forms.TextBox userEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox userBirthday;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -451,5 +467,7 @@
         private System.Windows.Forms.TextBox userName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel closeButtonPane;
+        private System.Windows.Forms.PictureBox closeButtonIcon;
     }
 }
