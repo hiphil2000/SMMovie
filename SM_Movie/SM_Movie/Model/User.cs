@@ -6,30 +6,150 @@ using System.Threading.Tasks;
 
 namespace SM_Movie.Model
 {
-    class User
+    public class User
     {
         //사용자 고유번호
-        private int userSeq { get; set; }
+        private int userSeq;
+        public int _userSeq
+        {
+            get
+            {
+                return userSeq;
+            }
+            set
+            {
+                userSeq = _userSeq;
+            }
+        }
         //사용자 이름
-        private string userName { get; set; }
+        private string userName;
+        public string _userName
+        {
+            get
+            {
+                return userName;
+            }
+            set
+            {
+                userName = _userName;
+            }
+        }
         //사용자 생일
-        private DateTime userBirthday { get; set; }
+        private DateTime userBirthday;
+        public DateTime _userBirthday
+        {
+            get
+            {
+                return userBirthday;
+            }
+            set
+            {
+                userBirthday = _userBirthday;
+            }
+        }
         //아이디
-        private string userId { get; set; }
+        private string userId;
+        public string _userId
+        {
+            get
+            {
+                return userId;
+            }
+            set
+            {
+                userId = _userId;
+            }
+        }
         //비밀번호
-        private string userPassword { get; set; }
+        private string userPassword;
+        public string _userPassword
+        {
+            get
+            {
+                return userPassword;
+            }
+            set
+            {
+                userPassword = _userPassword;
+            }
+        }
         //별명
-        private string userNickname { get; set; }
+        private string userNickname;
+        public string _userNickname
+        {
+            get
+            {
+                return userNickname;
+            }
+            set
+            {
+                userNickname = _userNickname;
+            }
+        }
         //이메일
-        private string userEmail { get; set; }
+        private string userEmail;
+        public string _userEmail
+        {
+            get
+            {
+                return userEmail;
+            }
+            set
+            {
+                userEmail = _userEmail;
+            }
+        }
         //전화번호
-        private string userPhone { get; set; }
+        private string userPhone;
+        public string _userPhone
+        {
+            get
+            {
+                return userPhone;
+            }
+            set
+            {
+                userPhone = _userPhone;
+            }
+        }
         //주소
-        private string userAddress { get; set; }
+        private string userAddress;
+        public string _userAddress
+        {
+            get
+            {
+                return userAddress;
+            } set
+            {
+                userAddress = _userAddress;
+            }
+        }
         //장르 고유번호
-        private int genreSeq { get; set; }
+        private int genreSeq;
+        public int _genreSeq
+        {
+            get
+            {
+                return genreSeq;
+            }
+            set
+            {
+                genreSeq = _genreSeq;
+            }
+        }
         //맴버쉽 고유번호
-        private int memberShipSeq { get; set; }
+        private int memberShipSeq;
+        public int _memberShipSeq
+        {
+            get
+            {
+                return memberShipSeq;
+            }
+            set
+            {
+                memberShipSeq = _memberShipSeq;
+            }
+        }
 
         public User() : this(0, null, default(DateTime), null, null, null, null, null, null, 0, 0)
         {
@@ -50,6 +170,21 @@ namespace SM_Movie.Model
             this.userAddress = userAddress;
             this.genreSeq = genreSeq;
             this.memberShipSeq = memberShipSeq;
+        }
+
+        public User(User user)
+        {
+            this.userSeq = user.userSeq;
+            this.userName = user.userName;
+            this.userBirthday = user.userBirthday;
+            this.userId = user.userId;
+            this.userPassword = user.userPassword;
+            this.userNickname = user.userNickname;
+            this.userEmail = user.userEmail;
+            this.userPhone = user.userPhone;
+            this.userAddress = user.userAddress;
+            this.genreSeq = user.genreSeq;
+            this.memberShipSeq = user.memberShipSeq;
         }
 
     }

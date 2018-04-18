@@ -15,76 +15,31 @@ namespace SM_Movie
         public MainPanel()
         {
             InitializeComponent();
-          //  FirstPage.Parent = Mainbar1;
-        }
-
-        private void FirstPage_CheckedChanged(object sender, EventArgs e)
-        {
-            
-            Mainbar1.Visible = true;
-            Mainbar2.Visible = false;
-            Mainbar3.Visible = false;
-            Mainbar4.Visible = false;
-            Mainbar5.Visible = false;
-        }
-
-        private void SecondPage_CheckedChanged(object sender, EventArgs e)
-        {
-            Mainbar1.Visible = false;
-            Mainbar2.Visible = true;
-            Mainbar3.Visible = false;
-            Mainbar4.Visible = false;
-            Mainbar5.Visible = false;
-        }
-        private void ThirdPage_CheckedChanged(object sender, EventArgs e)
-        {
-            Mainbar1.Visible = false;
-            Mainbar2.Visible = false;
-            Mainbar3.Visible = true;
-            Mainbar4.Visible = false;
-            Mainbar5.Visible = false;
-        }
-        private void FifthPage_CheckedChanged(object sender, EventArgs e)
-        {
-            Mainbar1.Visible = false;
-            Mainbar2.Visible = false;
-            Mainbar3.Visible = false;
-            Mainbar4.Visible = false;
-            Mainbar5.Visible = true;
-        }
-
-        private void FourthPage_CheckedChanged(object sender, EventArgs e)
-        {
-            Mainbar1.Visible = false;
-            Mainbar2.Visible = false;
-            Mainbar3.Visible = false;
-            Mainbar4.Visible = true;
-            Mainbar5.Visible = false;
+            //  FirstPage.Parent = Mainbar1;
         }
 
         private void MainPanel_Load(object sender, EventArgs e)
         {
-
+            //Utils.ImgurUtil imgur = new Utils.ImgurUtil();
+            //imgur.uploadImage(BestMoviePanel1.BackgroundImage);
         }
 
-        private void fistmoviename_TextChanged(object sender, EventArgs e)
+        private void MainPanel_Resize(object sender, EventArgs e)
         {
+            onpanel.Size = this.Size;
+            mainMovieIcon.Location = new Point(0, 0);
+            mainMovieIconBack.Width = this.Width / 3 * 2;
+            mainMovieSummaryBack.Location = new Point(this.Width / 3 * 2, 0);
+            mainMovieSummaryBack.Width = this.Width / 3;
+            mainMovieSummaryContent.Width = mainMovieSummaryBack.Width;
+            mainMovieSummaryTitle.Width = mainMovieSummaryBack.Width;
 
+            BestMovieFlow.Size = new Size(this.Width, this.Height - 274);
+            
         }
 
-        private void BestMovieFLPanel1_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void Mainbar4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Mainbar5_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

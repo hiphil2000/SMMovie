@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SM_Movie.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,64 +15,10 @@ namespace SM_Movie
 {
     public partial class Main : Form
     {
-
-        class ButtonInfo
-        {
-            private PictureBox buttonIcon;
-            public PictureBox Get_buttonIcon()
-            { return buttonIcon; }
-            public void Set_buttonIcon(PictureBox value)
-            { buttonIcon = Get_buttonIcon(); }
-
-            private Panel buttonPanel;
-            public Panel Get_buttonPanel()
-            { return buttonPanel; ; }
-            public void Set_buttonPanel(Panel value)
-            { buttonPanel = value; }
-
-            private Label buttonTitle;
-            public Label Get_buttonTitle()
-            { return buttonTitle; }
-            public void Set_buttonTitle(Label value)
-            { buttonTitle = value; }
-
-            private UserControl buttonBindPage;
-            public UserControl Get_buttonBindPage()
-            { return buttonBindPage; }
-            public void Set_buttonBindPage(UserControl value)
-            { buttonBindPage = value; }
-
-            private Panel buttonHighLight;
-            public Panel Get_buttonHighLight()
-            { return buttonHighLight; }
-            public void Set_buttonHighLight(Panel value)
-            { buttonHighLight = value; }
-
-            ButtonInfo()
-            {
-
-            }
-            
-            public ButtonInfo(PictureBox buttonIcon, Panel buttonPanel)
-            {
-                this.buttonIcon = buttonIcon;
-                this.buttonPanel = buttonPanel;
-            }
-
-            public ButtonInfo(PictureBox buttonIcon, Panel buttonPanel, Label buttonTitle, UserControl buttonBindPage, Panel buttonHighLight)
-                : this(buttonIcon, buttonPanel)
-            {
-                this.buttonTitle = buttonTitle;
-                this.buttonHighLight = buttonHighLight;
-                this.buttonBindPage = buttonBindPage;
-            }
-        }
-
-
-        Model.User currentUser;
-        string currentPage;
-        Point mousePos = new Point();
-        bool menuState = false;
+        private User currentUser;
+        private string currentPage;
+        private Point mousePos = new Point();
+        private bool menuState = false;
 
         Dictionary<string, ButtonInfo> buttonInfoDic = new Dictionary<string, ButtonInfo>();
 
@@ -401,6 +348,8 @@ namespace SM_Movie
                 for (int i = menuFlowWrap.Width; i >= 48; i -= 2)
                 {
                     menuFlowWrap.Width = i;
+                    homeButtonPane.Width = i;
+
                     Thread.Sleep(1);
                 }
             } else
@@ -409,24 +358,29 @@ namespace SM_Movie
                 for (int i = menuFlowWrap.Width; i <= 250; i += 2)
                 {
                     menuFlowWrap.Width = i;
+                    homeButtonPane.Width = i;
                     Thread.Sleep(1);
                 }
             }
         }
 
-        private void mainPane_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void programSettingIcon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void openLogin(object sender, EventArgs e)
         {
             login login = new login();
+            login.setMain(this);
             login.ShowDialog();
+        }
+
+        public void setCurrentUser(User user)
+        {
+            this.currentUser = user;
+            setUserButton();
+
+        }
+
+        public User getCurrentUser()
+        {
+            return currentUser;
         }
 
         private void openMypage(object sender, EventArgs e)
@@ -434,19 +388,15 @@ namespace SM_Movie
 
         }
 
-        private void mainPanel_Load(object sender, EventArgs e)
+        private void setUserButton()
         {
-
-        }
-
-        private void Main_Paint(object sender, PaintEventArgs e)
-        {
-            if(currentUser == null && !(userButtonLabel.Text.Equals("로그인")))
+            if (currentUser == null && !(userButtonLabel.Text.Equals("로그인")))
             {
                 userButtonLabel.Text = "로그인";
                 userButtonLabel.Click += openLogin;
                 userButtonLabel.Click -= openMypage;
-            } else if(currentUser != null && !(userButtonLabel.Text.Equals("마이페이지")))
+            }
+            else if (currentUser != null && !(userButtonLabel.Text.Equals("마이페이지")))
             {
                 userButtonLabel.Text = "마이페이지";
                 userButtonLabel.Click -= openLogin;

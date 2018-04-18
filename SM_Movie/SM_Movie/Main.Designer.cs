@@ -194,6 +194,7 @@
             // 
             // title
             // 
+            this.title.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.title.Location = new System.Drawing.Point(39, 3);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(587, 23);
@@ -241,7 +242,7 @@
             // 
             // titleLabel
             // 
-            this.titleLabel.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.titleLabel.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.titleLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.titleLabel.Location = new System.Drawing.Point(3, 0);
             this.titleLabel.Name = "titleLabel";
@@ -334,7 +335,7 @@
             // homeButtonLabel
             // 
             this.homeButtonLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeButtonLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.homeButtonLabel.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.homeButtonLabel.ForeColor = System.Drawing.Color.White;
             this.homeButtonLabel.Location = new System.Drawing.Point(48, 0);
             this.homeButtonLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
@@ -404,7 +405,7 @@
             // movieButtonLabel
             // 
             this.movieButtonLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.movieButtonLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movieButtonLabel.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.movieButtonLabel.ForeColor = System.Drawing.Color.White;
             this.movieButtonLabel.Location = new System.Drawing.Point(48, 0);
             this.movieButtonLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
@@ -470,7 +471,7 @@
             // userButtonLabel
             // 
             this.userButtonLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userButtonLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.userButtonLabel.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.userButtonLabel.ForeColor = System.Drawing.Color.White;
             this.userButtonLabel.Location = new System.Drawing.Point(48, 0);
             this.userButtonLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
@@ -524,7 +525,7 @@
             // 
             // settingButtonLabel
             // 
-            this.settingButtonLabel.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.settingButtonLabel.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.settingButtonLabel.ForeColor = System.Drawing.Color.White;
             this.settingButtonLabel.Location = new System.Drawing.Point(48, 0);
             this.settingButtonLabel.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
@@ -588,7 +589,6 @@
             this.Name = "Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Paint);
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.taskBar.ResumeLayout(false);
             this.buttonFlow.ResumeLayout(false);
@@ -636,7 +636,6 @@
         private System.Windows.Forms.Panel menuButtonPane;
         private System.Windows.Forms.TableLayoutPanel menuTitle;
         private System.Windows.Forms.PictureBox menuButtonIcon;
-        private movieSearch movieSearch1;
         private System.Windows.Forms.Panel menuButtonBack;
         private System.Windows.Forms.Panel menuPane;
         private System.Windows.Forms.FlowLayoutPanel menuBarFlow;
@@ -659,7 +658,6 @@
         private System.Windows.Forms.Panel homeButtonHighLight;
         private System.Windows.Forms.Panel movieButtonHighLight;
         private System.Windows.Forms.Label titleLabel;
-        private MainPanel mainPanel1;
         private MainPanel mainPanel;
         private movieSearch movieSearch;
         private SettingPanel settingPanel;

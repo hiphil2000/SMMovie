@@ -2,15 +2,15 @@
 {
     partial class signup
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// 필수 디자이너 변수입니다.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// 사용 중인 모든 리소스를 정리합니다.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,18 +20,23 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region 구성 요소 디자이너에서 생성한 코드
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// 디자이너 지원에 필요한 메서드입니다. 
+        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.rightPanel = new System.Windows.Forms.Panel();
+            this.BackLogin = new System.Windows.Forms.LinkLabel();
+            this.Login = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.IdCheck = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.userPasswordCheck = new System.Windows.Forms.TextBox();
             this.genreSeq = new System.Windows.Forms.ComboBox();
@@ -56,71 +61,123 @@
             this.userName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.IdCheck = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Login = new System.Windows.Forms.LinkLabel();
-            this.BackLogin = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.leftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.rightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Controls.Add(this.leftPanel);
+            this.panel1.Controls.Add(this.rightPanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 861);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(554, 900);
+            this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
+            // leftPanel
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 59);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.leftPanel.BackColor = System.Drawing.Color.Red;
+            this.leftPanel.Controls.Add(this.logo);
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(210, 900);
+            this.leftPanel.TabIndex = 6;
             // 
-            // panel2
+            // logo
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.BackLogin);
-            this.panel2.Controls.Add(this.Login);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.IdCheck);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.userPasswordCheck);
-            this.panel2.Controls.Add(this.genreSeq);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.userAddress);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.userPhone);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.userEmail);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.userBirthday);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.userNickname);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.userPassword);
-            this.panel2.Controls.Add(this.userId);
-            this.panel2.Controls.Add(this.userName);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(248, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(386, 861);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(12, 12);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(192, 59);
+            this.logo.TabIndex = 0;
+            this.logo.TabStop = false;
+            // 
+            // rightPanel
+            // 
+            this.rightPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.rightPanel.Controls.Add(this.BackLogin);
+            this.rightPanel.Controls.Add(this.Login);
+            this.rightPanel.Controls.Add(this.button1);
+            this.rightPanel.Controls.Add(this.IdCheck);
+            this.rightPanel.Controls.Add(this.label13);
+            this.rightPanel.Controls.Add(this.userPasswordCheck);
+            this.rightPanel.Controls.Add(this.genreSeq);
+            this.rightPanel.Controls.Add(this.label12);
+            this.rightPanel.Controls.Add(this.label11);
+            this.rightPanel.Controls.Add(this.userAddress);
+            this.rightPanel.Controls.Add(this.label10);
+            this.rightPanel.Controls.Add(this.userPhone);
+            this.rightPanel.Controls.Add(this.label9);
+            this.rightPanel.Controls.Add(this.userEmail);
+            this.rightPanel.Controls.Add(this.label8);
+            this.rightPanel.Controls.Add(this.userBirthday);
+            this.rightPanel.Controls.Add(this.label7);
+            this.rightPanel.Controls.Add(this.textBox5);
+            this.rightPanel.Controls.Add(this.label6);
+            this.rightPanel.Controls.Add(this.label4);
+            this.rightPanel.Controls.Add(this.label3);
+            this.rightPanel.Controls.Add(this.userNickname);
+            this.rightPanel.Controls.Add(this.label5);
+            this.rightPanel.Controls.Add(this.userPassword);
+            this.rightPanel.Controls.Add(this.userId);
+            this.rightPanel.Controls.Add(this.userName);
+            this.rightPanel.Controls.Add(this.label2);
+            this.rightPanel.Controls.Add(this.label1);
+            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightPanel.Location = new System.Drawing.Point(210, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(344, 900);
+            this.rightPanel.TabIndex = 5;
+            // 
+            // BackLogin
+            // 
+            this.BackLogin.AutoSize = true;
+            this.BackLogin.LinkColor = System.Drawing.Color.Black;
+            this.BackLogin.Location = new System.Drawing.Point(268, 815);
+            this.BackLogin.Name = "BackLogin";
+            this.BackLogin.Size = new System.Drawing.Size(53, 12);
+            this.BackLogin.TabIndex = 30;
+            this.BackLogin.TabStop = true;
+            this.BackLogin.Text = "뒤로가기";
+            this.BackLogin.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // Login
+            // 
+            this.Login.AutoSize = true;
+            this.Login.LinkColor = System.Drawing.Color.Black;
+            this.Login.Location = new System.Drawing.Point(221, 815);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(41, 12);
+            this.Login.TabIndex = 29;
+            this.Login.TabStop = true;
+            this.Login.Text = "로그인";
+            this.Login.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Location = new System.Drawing.Point(15, 774);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(306, 28);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "회원가입";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // IdCheck
+            // 
+            this.IdCheck.Location = new System.Drawing.Point(244, 157);
+            this.IdCheck.Name = "IdCheck";
+            this.IdCheck.Size = new System.Drawing.Size(77, 30);
+            this.IdCheck.TabIndex = 27;
+            this.IdCheck.Text = "중복확인";
+            this.IdCheck.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -150,7 +207,6 @@
             this.genreSeq.Name = "genreSeq";
             this.genreSeq.Size = new System.Drawing.Size(306, 28);
             this.genreSeq.TabIndex = 24;
-            this.genreSeq.SelectedIndexChanged += new System.EventHandler(this.genreSeq_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -315,7 +371,6 @@
             this.userId.Name = "userId";
             this.userId.Size = new System.Drawing.Size(223, 30);
             this.userId.TabIndex = 4;
-            this.userId.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // userName
             // 
@@ -339,68 +394,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Location = new System.Drawing.Point(9, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "회원가입";
             // 
-            // IdCheck
-            // 
-            this.IdCheck.Location = new System.Drawing.Point(244, 157);
-            this.IdCheck.Name = "IdCheck";
-            this.IdCheck.Size = new System.Drawing.Size(77, 30);
-            this.IdCheck.TabIndex = 27;
-            this.IdCheck.Text = "중복확인";
-            this.IdCheck.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(15, 774);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(306, 28);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "회원가입";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Login
-            // 
-            this.Login.AutoSize = true;
-            this.Login.LinkColor = System.Drawing.Color.Black;
-            this.Login.Location = new System.Drawing.Point(221, 815);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(41, 12);
-            this.Login.TabIndex = 29;
-            this.Login.TabStop = true;
-            this.Login.Text = "로그인";
-            this.Login.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
-            // BackLogin
-            // 
-            this.BackLogin.AutoSize = true;
-            this.BackLogin.LinkColor = System.Drawing.Color.Black;
-            this.BackLogin.Location = new System.Drawing.Point(268, 815);
-            this.BackLogin.Name = "BackLogin";
-            this.BackLogin.Size = new System.Drawing.Size(53, 12);
-            this.BackLogin.TabIndex = 30;
-            this.BackLogin.TabStop = true;
-            this.BackLogin.Text = "뒤로가기";
-            this.BackLogin.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 861);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.panel1);
             this.Name = "signup";
-            this.Text = "Sign Up";
+            this.Size = new System.Drawing.Size(554, 900);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.leftPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.rightPanel.ResumeLayout(false);
+            this.rightPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -408,13 +420,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox userName;
-        private System.Windows.Forms.TextBox userId;
-        private System.Windows.Forms.TextBox userPassword;
+        private System.Windows.Forms.Panel leftPanel;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Panel rightPanel;
+        private System.Windows.Forms.LinkLabel BackLogin;
+        private System.Windows.Forms.LinkLabel Login;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button IdCheck;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox userPasswordCheck;
+        private System.Windows.Forms.ComboBox genreSeq;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox userAddress;
@@ -431,12 +446,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox userNickname;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox genreSeq;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox userPasswordCheck;
-        private System.Windows.Forms.Button IdCheck;
-        private System.Windows.Forms.LinkLabel BackLogin;
-        private System.Windows.Forms.LinkLabel Login;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox userPassword;
+        private System.Windows.Forms.TextBox userId;
+        private System.Windows.Forms.TextBox userName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

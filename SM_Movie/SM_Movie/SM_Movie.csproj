@@ -52,9 +52,17 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Imgur.API, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Imgur.API.4.0.1\lib\net45\Imgur.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SM_Movie">
+      <HintPath>obj\Debug\SM_Movie.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="log.Designer.cs">
+      <DependentUpon>log.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +98,7 @@
     <Compile Include="MainPanel.Designer.cs">
       <DependentUpon>MainPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ButtonInfo.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="movieSearch.cs">
@@ -91,12 +106,6 @@
     </Compile>
     <Compile Include="movieSearch.designer.cs">
       <DependentUpon>movieSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="signup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="signup.Designer.cs">
-      <DependentUpon>signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +122,15 @@
       <DependentUpon>movieinformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\DBUtil.cs" />
+    <Compile Include="signup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="signup.Designer.cs">
+      <DependentUpon>signup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="log.resx">
+      <DependentUpon>log.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,9 +146,6 @@
     <EmbeddedResource Include="SettingPanel.resx">
       <DependentUpon>SettingPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="signup.resx">
-      <DependentUpon>signup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -144,6 +159,10 @@
     <EmbeddedResource Include="movieinformation.resx">
       <DependentUpon>movieinformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

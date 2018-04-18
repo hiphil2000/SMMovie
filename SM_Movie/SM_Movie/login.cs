@@ -17,22 +17,13 @@ namespace SM_Movie
 
         Point mousePos = new Point();
         Utils.DBUtil db;
+        private Main main;
 
         public login()
         {
             InitializeComponent();
 
             db = new Utils.DBUtil();
-
-            leftPanel.MouseDown += setMousePos;
-            leftPanel.MouseMove += moveForm;
-            rightPanel.MouseDown += setMousePos;
-            rightPanel.MouseMove += moveForm;
-            logo.MouseDown += setMousePos;
-            logo.MouseMove += moveForm;
-            closeButtonIcon.MouseEnter += buttonFocus;
-            closeButtonIcon.MouseLeave += buttonLostFocus;
-            closeButtonIcon.MouseClick += close;
         }
 
         #region formMove
@@ -54,74 +45,15 @@ namespace SM_Movie
         }
         #endregion
 
-        #region buttonFocus
-        private void buttonFocus(object sender, EventArgs e)
-        {
-            Color color = Color.FromArgb(100, 255, 0, 0);
-            PictureBox pic = (PictureBox)sender;
-            if (pic.Name.Contains("close"))
-                closeButtonPane.BackColor = color;
-
-        }
-
-        private void buttonLostFocus(object sender, EventArgs e)
-        {
-            Color color = Color.FromArgb(0, 0, 0, 0);
-            PictureBox pic = (PictureBox)sender;
-            if (pic.Name.Contains("close"))
-                closeButtonPane.BackColor = color;
-        }
-
-        private void exitApp(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        #endregion
-
-        private void close(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void setMain(Main main)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(db.LoginAttempt(userId.Text, userPassword.Text))
-            {
-                MessageBox.Show("성공");
-            } else
-            {
-                MessageBox.Show("실패");
-            }
+            this.main = main;
         }
     }
 }
