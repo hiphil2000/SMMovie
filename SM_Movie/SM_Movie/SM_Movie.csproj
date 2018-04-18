@@ -71,10 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="log.cs">
+    <Compile Include="Views\log.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="log.Designer.cs">
+    <Compile Include="Views\log.Designer.cs">
       <DependentUpon>log.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -89,49 +89,49 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPanel.cs">
+    <Compile Include="Views\MainPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainPanel.Designer.cs">
+    <Compile Include="Views\MainPanel.Designer.cs">
       <DependentUpon>MainPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ButtonInfo.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="movieSearch.cs">
+    <Compile Include="Views\movieSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="movieSearch.designer.cs">
+    <Compile Include="Views\movieSearch.designer.cs">
       <DependentUpon>movieSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingPanel.cs">
+    <Compile Include="Views\SettingPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingPanel.Designer.cs">
+    <Compile Include="Views\SettingPanel.Designer.cs">
       <DependentUpon>SettingPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="movieinformation.cs">
+    <Compile Include="Views\movieinformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="movieinformation.Designer.cs">
+    <Compile Include="Views\movieinformation.Designer.cs">
       <DependentUpon>movieinformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindIdPw.cs">
+    <Compile Include="Views\FindIdPw.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FindIdPw.Designer.cs">
+    <Compile Include="Views\FindIdPw.Designer.cs">
       <DependentUpon>FindIdPw.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\DBUtil.cs" />
-    <Compile Include="signup.cs">
+    <Compile Include="Views\signup.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="signup.Designer.cs">
+    <Compile Include="Views\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="log.resx">
+    <EmbeddedResource Include="Views\log.resx">
       <DependentUpon>log.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
@@ -140,13 +140,13 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPanel.resx">
+    <EmbeddedResource Include="Views\MainPanel.resx">
       <DependentUpon>MainPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="movieSearch.resx">
+    <EmbeddedResource Include="Views\movieSearch.resx">
       <DependentUpon>movieSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingPanel.resx">
+    <EmbeddedResource Include="Views\SettingPanel.resx">
       <DependentUpon>SettingPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -159,13 +159,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="movieinformation.resx">
+    <EmbeddedResource Include="Views\movieinformation.resx">
       <DependentUpon>movieinformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="signup.resx">
+    <EmbeddedResource Include="Views\signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindIdPw.resx">
+    <EmbeddedResource Include="Views\FindIdPw.resx">
       <DependentUpon>FindIdPw.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

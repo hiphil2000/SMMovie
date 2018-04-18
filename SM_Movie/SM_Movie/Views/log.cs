@@ -14,11 +14,17 @@ namespace SM_Movie
     public partial class log : UserControl
     {
         Dictionary<string, ButtonInfo> buttonDictionary = new Dictionary<string, ButtonInfo>();
+        login login;
 
         public log()
         {
             InitializeComponent();
             buttonDictionary.Add("closeButton", new ButtonInfo(closeButtonIcon, closeButtonPane));
+        }
+
+        public void setLogin(login login)
+        {
+            this.login = login;
         }
 
         private void buttonFocus(object sender, EventArgs e)
@@ -45,7 +51,7 @@ namespace SM_Movie
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            
         }
     }
 }

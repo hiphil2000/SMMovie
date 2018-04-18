@@ -40,6 +40,7 @@
             this.log1.Name = "log1";
             this.log1.Size = new System.Drawing.Size(538, 515);
             this.log1.TabIndex = 0;
+            this.log1.Load += new System.EventHandler(this.log1_Load);
             // 
             // signup1
             // 

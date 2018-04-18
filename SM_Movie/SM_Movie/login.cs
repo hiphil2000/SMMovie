@@ -55,5 +55,10 @@ namespace SM_Movie
         {
             this.main = main;
         }
+
+        private void log1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
