@@ -71,6 +71,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\LnbButtonInfo.cs" />
+    <Compile Include="Views\admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\log.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +138,9 @@
     <Compile Include="Views\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\log.resx">
       <DependentUpon>log.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +194,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\Icons\admin.png" />
     <Content Include="Assets\Icons\movie.png" />
     <Content Include="Assets\Icons\exit.png" />
     <Content Include="Assets\Icons\home.png" />
@@ -191,7 +202,6 @@
     <Content Include="Assets\Icons\minimize.png" />
     <Content Include="Assets\Icons\restore.png" />
     <Content Include="Assets\Icons\setting.png" />
-    <Content Include="Assets\Icons\underscore.png" />
     <Content Include="Assets\Icons\user.png" />
     <None Include="Assets\Images\underscore.png" />
   </ItemGroup>

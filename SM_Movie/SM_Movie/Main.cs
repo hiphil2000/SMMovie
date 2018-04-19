@@ -22,10 +22,6 @@ namespace SM_Movie
 
         Dictionary<string, ButtonInfo> buttonInfoDic = new Dictionary<string, ButtonInfo>();
 
-        //Dictionary<string, Panel> buttonDictionary = new Dictionary<string, Panel>();
-        //Dictionary<string, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>> buttonGeneric
-        //    = new Dictionary<string, ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>>();
-        
         public Main()
         {
             InitializeComponent();
@@ -54,21 +50,9 @@ namespace SM_Movie
             buttonInfoDic.Add("movieButton", new ButtonInfo(movieButtonIcon, movieButtonPane, movieButtonLabel, movieSearch, movieButtonHighLight));
             buttonInfoDic.Add("userButton", new ButtonInfo(userButtonIcon, userButtonPane, userButtonLabel, mainPanel, userButtonHighLight));
             buttonInfoDic.Add("settingButton", new ButtonInfo(settingButtonIcon, settingButtonPane, settingButtonLabel, settingPanel, settingButtonHighLight));
+			buttonInfoDic.Add("adminButton", new ButtonInfo(adminButtonIcon, adminButtonPane, adminButtonLabel, adminPanel, adminButtonHighLight));
 
-            //buttonDictionary.Add("menuButton", menuButtonPane);
-            //buttonDictionary.Add("closeButton", closeButtonPane);
-            //buttonDictionary.Add("recoverButton", recoverButtonPane);
-            //buttonDictionary.Add("minButton", minButtonPane);
-            //buttonDictionary.Add("homeMenu", homeMenuPane);
-            //buttonGeneric.Add("homeMenu", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(homeMenuIcon, homeMenuPane, homeMenuLabel, mainPanel, homeMenuHighLight));
-            //buttonDictionary.Add("movieMenu", movieMenuPane);
-            //buttonGeneric.Add("movieMenu", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(movieMenuIcon, movieMenuPane, movieMenuLabel, movieSearch, movieButtonHighLight));
-            //buttonDictionary.Add("userButton", userButtonPane);
-            //buttonGeneric.Add("userButton", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(userButtonIcon, userButtonPane, userButtonLabel, mainPanel, userButtonHighLight));
-            //buttonDictionary.Add("settingButton", settingButtonPane);
-            //buttonGeneric.Add("settingButton", new ButtonGeneric<PictureBox, Panel, Label, UserControl, Panel>(settingButtonIcon, settingButtonPane, settingButtonLabel, mainPanel, settingButtonHighLight));
-
-            openPage(null, new EventArgs());
+			openPage(null, new EventArgs());
         }
 
         public void resize()
@@ -93,8 +77,9 @@ namespace SM_Movie
                 movieSearch.Size = new Size(this.Width - 52, this.Height - 78);
                 mainPanel.Size = new Size(this.Width - 52, this.Height - 78);
                 settingPanel.Size = mainPanel.Size;
-                movieSearch.Size = settingPanel.Size;
-                menuTitle.Width = mainPane.Width;
+                movieSearch.Size = mainPanel.Size;
+				adminPanel.Size = mainPanel.Size;
+				menuTitle.Width = mainPane.Width;
             }
             else
             {
@@ -119,7 +104,8 @@ namespace SM_Movie
                 mainPanel.Size = this.Size;
                 settingPanel.Size = mainPanel.Size;
                 movieSearch.Size = settingPanel.Size;
-                menuTitle.Width = mainPane.Width;
+				adminPanel.Size = mainPanel.Size;
+				menuTitle.Width = mainPane.Width;
             }
 
         }
@@ -319,6 +305,7 @@ namespace SM_Movie
 
             if (clickedButton.Get_buttonTitle().Equals(prevButton.Get_buttonTitle()))
                 return;
+
             if(name.Equals("userButton"))
             {
                 if(currentUser == null)
@@ -383,10 +370,10 @@ namespace SM_Movie
             return currentUser;
         }
 
-        private void openMypage(object sender, EventArgs e)
-        {
+		private void openMyPage(object sender, EventArgs e)
+		{
 
-        }
+		}
 
         private void setUserButton()
         {
@@ -394,14 +381,20 @@ namespace SM_Movie
             {
                 userButtonLabel.Text = "로그인";
                 userButtonLabel.Click += openLogin;
-                userButtonLabel.Click -= openMypage;
+                userButtonLabel.Click -= openMyPage;
             }
             else if (currentUser != null && !(userButtonLabel.Text.Equals("마이페이지")))
             {
                 userButtonLabel.Text = "마이페이지";
                 userButtonLabel.Click -= openLogin;
-                userButtonLabel.Click += openMypage;
+                userButtonLabel.Click += openMyPage;
             }
         }
-    }
+
+		private void adminPanel_VisibleChanged(object sender, EventArgs e)
+		{
+			//수정필요
+			adminPanel.refreshData("userTbl");
+		}
+	}
 }

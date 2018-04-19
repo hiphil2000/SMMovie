@@ -29,7 +29,7 @@ namespace SM_Movie
 
         private void buttonFocus(object sender, EventArgs e)
         {
-            Color color = Color.FromArgb(50, 255, 255, 255);
+            Color color = Color.FromArgb(125, 255, 0, 0);
             Control con = (Control)sender;
             string name = con.Name.Split(new[] { "Label", "Icon", "HighLight" }, StringSplitOptions.None)[0];
             buttonDictionary[name].Get_buttonPanel().BackColor = color;
@@ -46,12 +46,22 @@ namespace SM_Movie
 
         private void exitApp(object sender, EventArgs e)
         {
-            Application.Exit();
+			login.Dispose();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+			login.openPage("signUp");
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			login.loginAttempt();
+		}
+
+		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			login.openPage("findIdPw");
+		}
+	}
 }

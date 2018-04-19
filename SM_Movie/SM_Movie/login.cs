@@ -58,7 +58,46 @@ namespace SM_Movie
 
         private void log1_Load(object sender, EventArgs e)
         {
-
+			log1.setLogin(this);
         }
-    }
+
+		private void signup1_Load(object sender, EventArgs e)
+		{
+			signup1.setLogin(this);
+		}
+
+		internal void openSignup()
+		{
+			log1.Visible = false;
+			signup1.Visible = true;
+			this.Width = signup1.Width + 10;
+			this.AutoScroll = true;
+		}
+
+		internal void loginAttempt()
+		{
+			throw new NotImplementedException();
+		}
+
+		internal void openPage(string pageName)
+		{
+			switch(pageName)
+			{
+				case "signUp":
+					openSignup();
+				break;
+				case "login":
+					openLogin();
+				break;
+			}
+		}
+
+		private void openLogin()
+		{
+			log1.Visible = true;
+			signup1.Visible = false;
+			this.AutoScroll = false;
+			this.Width = log1.Width;
+		}
+	}
 }
