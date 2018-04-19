@@ -28,62 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FindPanel = new System.Windows.Forms.Panel();
+            this.FindLable = new System.Windows.Forms.Label();
+            this.FindPWDpanel = new System.Windows.Forms.Panel();
+            this.FindButtonPW = new System.Windows.Forms.Button();
+            this.SearchID = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.FindIdPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FindButtonID = new System.Windows.Forms.Button();
             this.SearchPhoneNum = new System.Windows.Forms.TextBox();
             this.PhoneNum = new System.Windows.Forms.Label();
             this.SearchName = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.Label();
             this.FindId = new System.Windows.Forms.Label();
-            this.FindLable = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SearchID = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.Label();
-            this.closeButtonPane = new System.Windows.Forms.Panel();
-            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
-            this.FindPanel.SuspendLayout();
-            this.FindIdPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.IDFind = new System.Windows.Forms.Button();
+            this.FindPanel = new System.Windows.Forms.Panel();
+            this.PwFind = new System.Windows.Forms.Button();
+            this.FindPWDpanel.SuspendLayout();
             this.closeButtonPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
+            this.FindIdPanel.SuspendLayout();
+            this.FindPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // FindPanel
+            // FindLable
             // 
-            this.FindPanel.Controls.Add(this.closeButtonPane);
-            this.FindPanel.Controls.Add(this.panel1);
-            this.FindPanel.Controls.Add(this.FindIdPanel);
-            this.FindPanel.Controls.Add(this.FindLable);
-            this.FindPanel.Location = new System.Drawing.Point(3, 3);
-            this.FindPanel.Name = "FindPanel";
-            this.FindPanel.Size = new System.Drawing.Size(761, 541);
-            this.FindPanel.TabIndex = 0;
+            this.FindLable.AutoSize = true;
+            this.FindLable.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FindLable.Location = new System.Drawing.Point(0, 0);
+            this.FindLable.Name = "FindLable";
+            this.FindLable.Size = new System.Drawing.Size(307, 29);
+            this.FindLable.TabIndex = 0;
+            this.FindLable.Text = "아이디/패스워드 찾기";
+            // 
+            // FindPWDpanel
+            // 
+            this.FindPWDpanel.Controls.Add(this.FindButtonPW);
+            this.FindPWDpanel.Controls.Add(this.SearchID);
+            this.FindPWDpanel.Controls.Add(this.ID);
+            this.FindPWDpanel.Controls.Add(this.label1);
+            this.FindPWDpanel.Location = new System.Drawing.Point(7, 274);
+            this.FindPWDpanel.Name = "FindPWDpanel";
+            this.FindPWDpanel.Size = new System.Drawing.Size(747, 258);
+            this.FindPWDpanel.TabIndex = 2;
+            // 
+            // FindButtonPW
+            // 
+            this.FindButtonPW.Location = new System.Drawing.Point(302, 203);
+            this.FindButtonPW.Name = "FindButtonPW";
+            this.FindButtonPW.Size = new System.Drawing.Size(108, 23);
+            this.FindButtonPW.TabIndex = 11;
+            this.FindButtonPW.Text = "찾기";
+            this.FindButtonPW.UseVisualStyleBackColor = true;
+            // 
+            // SearchID
+            // 
+            this.SearchID.Location = new System.Drawing.Point(216, 88);
+            this.SearchID.Name = "SearchID";
+            this.SearchID.Size = new System.Drawing.Size(278, 21);
+            this.SearchID.TabIndex = 8;
+            // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ID.Location = new System.Drawing.Point(122, 91);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(89, 16);
+            this.ID.TabIndex = 7;
+            this.ID.Text = "아이디    :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "패스워드 찾기";
+            // 
+            // closeButtonPane
+            // 
+            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
+            this.closeButtonPane.Location = new System.Drawing.Point(710, 0);
+            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonPane.Name = "closeButtonPane";
+            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonPane.TabIndex = 11;
+            // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
+            this.closeButtonIcon.Click += new System.EventHandler(this.closeButtonIcon_Click);
             // 
             // FindIdPanel
             // 
-            this.FindIdPanel.Controls.Add(this.button1);
+            this.FindIdPanel.Controls.Add(this.FindButtonID);
             this.FindIdPanel.Controls.Add(this.SearchPhoneNum);
             this.FindIdPanel.Controls.Add(this.PhoneNum);
             this.FindIdPanel.Controls.Add(this.SearchName);
             this.FindIdPanel.Controls.Add(this.name);
             this.FindIdPanel.Controls.Add(this.FindId);
-            this.FindIdPanel.Location = new System.Drawing.Point(5, 89);
+            this.FindIdPanel.Location = new System.Drawing.Point(7, 274);
             this.FindIdPanel.Name = "FindIdPanel";
-            this.FindIdPanel.Size = new System.Drawing.Size(756, 258);
+            this.FindIdPanel.Size = new System.Drawing.Size(747, 258);
             this.FindIdPanel.TabIndex = 1;
             this.FindIdPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FindIdPanel_Paint);
             // 
-            // button1
+            // FindButtonID
             // 
-            this.button1.Location = new System.Drawing.Point(302, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FindButtonID.Location = new System.Drawing.Point(302, 203);
+            this.FindButtonID.Name = "FindButtonID";
+            this.FindButtonID.Size = new System.Drawing.Size(108, 23);
+            this.FindButtonID.TabIndex = 6;
+            this.FindButtonID.Text = "찾기";
+            this.FindButtonID.UseVisualStyleBackColor = true;
             // 
             // SearchPhoneNum
             // 
@@ -129,121 +200,88 @@
             this.FindId.TabIndex = 0;
             this.FindId.Text = "아이디 찾기";
             // 
-            // FindLable
+            // IDFind
             // 
-            this.FindLable.AutoSize = true;
-            this.FindLable.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindLable.Location = new System.Drawing.Point(0, 0);
-            this.FindLable.Name = "FindLable";
-            this.FindLable.Size = new System.Drawing.Size(307, 29);
-            this.FindLable.TabIndex = 0;
-            this.FindLable.Text = "아이디/패스워드 찾기";
+            this.IDFind.BackColor = System.Drawing.Color.Red;
+            this.IDFind.FlatAppearance.BorderSize = 0;
+            this.IDFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IDFind.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.IDFind.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IDFind.Location = new System.Drawing.Point(7, 220);
+            this.IDFind.Name = "IDFind";
+            this.IDFind.Size = new System.Drawing.Size(369, 48);
+            this.IDFind.TabIndex = 14;
+            this.IDFind.Text = " 아이디 찾기";
+            this.IDFind.UseCompatibleTextRendering = true;
+            this.IDFind.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // FindPanel
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.SearchID);
-            this.panel1.Controls.Add(this.ID);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 353);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 258);
-            this.panel1.TabIndex = 2;
+            this.FindPanel.Controls.Add(this.FindPWDpanel);
+            this.FindPanel.Controls.Add(this.PwFind);
+            this.FindPanel.Controls.Add(this.IDFind);
+            this.FindPanel.Controls.Add(this.FindIdPanel);
+            this.FindPanel.Controls.Add(this.closeButtonPane);
+            this.FindPanel.Controls.Add(this.FindLable);
+            this.FindPanel.Location = new System.Drawing.Point(3, 3);
+            this.FindPanel.Name = "FindPanel";
+            this.FindPanel.Size = new System.Drawing.Size(761, 541);
+            this.FindPanel.TabIndex = 0;
             // 
-            // label1
+            // PwFind
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "패스워드 찾기";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(314, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // SearchID
-            // 
-            this.SearchID.Location = new System.Drawing.Point(287, 61);
-            this.SearchID.Name = "SearchID";
-            this.SearchID.Size = new System.Drawing.Size(278, 21);
-            this.SearchID.TabIndex = 8;
-            // 
-            // ID
-            // 
-            this.ID.AutoSize = true;
-            this.ID.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ID.Location = new System.Drawing.Point(192, 64);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(89, 16);
-            this.ID.TabIndex = 7;
-            this.ID.Text = "아이디    :";
-            // 
-            // closeButtonPane
-            // 
-            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
-            this.closeButtonPane.Location = new System.Drawing.Point(710, 0);
-            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonPane.Name = "closeButtonPane";
-            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonPane.TabIndex = 11;
-            // 
-            // closeButtonIcon
-            // 
-            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
-            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonIcon.Name = "closeButtonIcon";
-            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeButtonIcon.TabIndex = 1;
-            this.closeButtonIcon.TabStop = false;
+            this.PwFind.BackColor = System.Drawing.Color.Red;
+            this.PwFind.FlatAppearance.BorderSize = 0;
+            this.PwFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PwFind.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PwFind.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.PwFind.Location = new System.Drawing.Point(384, 220);
+            this.PwFind.Name = "PwFind";
+            this.PwFind.Size = new System.Drawing.Size(369, 48);
+            this.PwFind.TabIndex = 15;
+            this.PwFind.Text = " 비밀번호 찾기";
+            this.PwFind.UseCompatibleTextRendering = true;
+            this.PwFind.UseVisualStyleBackColor = false;
             // 
             // FindIdPw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.FindPanel);
             this.Name = "FindIdPw";
             this.Size = new System.Drawing.Size(767, 547);
-            this.FindPanel.ResumeLayout(false);
-            this.FindPanel.PerformLayout();
-            this.FindIdPanel.ResumeLayout(false);
-            this.FindIdPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.FindPWDpanel.ResumeLayout(false);
+            this.FindPWDpanel.PerformLayout();
             this.closeButtonPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
+            this.FindIdPanel.ResumeLayout(false);
+            this.FindIdPanel.PerformLayout();
+            this.FindPanel.ResumeLayout(false);
+            this.FindPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel FindPanel;
-        private System.Windows.Forms.Panel FindIdPanel;
-        private System.Windows.Forms.Label FindId;
         private System.Windows.Forms.Label FindLable;
-        private System.Windows.Forms.TextBox SearchPhoneNum;
-        private System.Windows.Forms.Label PhoneNum;
-        private System.Windows.Forms.TextBox SearchName;
-        private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel FindPWDpanel;
+        private System.Windows.Forms.Button FindButtonPW;
         private System.Windows.Forms.TextBox SearchID;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel closeButtonPane;
         private System.Windows.Forms.PictureBox closeButtonIcon;
+        private System.Windows.Forms.Panel FindIdPanel;
+        private System.Windows.Forms.Button FindButtonID;
+        private System.Windows.Forms.TextBox SearchPhoneNum;
+        private System.Windows.Forms.Label PhoneNum;
+        private System.Windows.Forms.TextBox SearchName;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label FindId;
+        private System.Windows.Forms.Button IDFind;
+        private System.Windows.Forms.Panel FindPanel;
+        private System.Windows.Forms.Button PwFind;
     }
 }

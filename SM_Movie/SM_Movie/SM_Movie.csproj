@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\reservation.Designer.cs">
+      <DependentUpon>reservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SettingPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\movieSearch.resx">
       <DependentUpon>movieSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\reservation.resx">
+      <DependentUpon>reservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SettingPanel.resx">
       <DependentUpon>SettingPanel.cs</DependentUpon>
