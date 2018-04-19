@@ -53,5 +53,15 @@ namespace SM_Movie
         {
             
         }
+
+        private void closeButtonPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rightPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -26,5 +26,15 @@ namespace SM_Movie
         {
 
         }
+
+        private void FindIdButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeButtonIcon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
