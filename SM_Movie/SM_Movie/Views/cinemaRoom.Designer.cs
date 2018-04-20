@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.CinemaRoomLabel);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1046, 497);
+            this.panel1.Size = new System.Drawing.Size(909, 499);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -86,7 +86,7 @@
             this.CinemaRoomsetting.Controls.Add(this.address);
             this.CinemaRoomsetting.Controls.Add(this.CityLabel);
             this.CinemaRoomsetting.Controls.Add(this.city);
-            this.CinemaRoomsetting.Location = new System.Drawing.Point(199, 124);
+            this.CinemaRoomsetting.Location = new System.Drawing.Point(182, 118);
             this.CinemaRoomsetting.Name = "CinemaRoomsetting";
             this.CinemaRoomsetting.Size = new System.Drawing.Size(549, 98);
             this.CinemaRoomsetting.TabIndex = 26;
@@ -161,7 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "cinemaRoom";
-            this.Size = new System.Drawing.Size(1052, 503);
+            this.Size = new System.Drawing.Size(915, 505);
             this.panel1.ResumeLayout(false);
             this.CinemaRoomsetting.ResumeLayout(false);
             this.CinemaRoomsetting.PerformLayout();
