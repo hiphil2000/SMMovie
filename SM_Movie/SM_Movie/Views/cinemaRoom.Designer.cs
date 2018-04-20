@@ -29,15 +29,131 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CinemaRoomLabel = new System.Windows.Forms.Label();
+            this.genreSeq = new System.Windows.Forms.ComboBox();
+            this.CinemaRoomsetting = new System.Windows.Forms.Panel();
+            this.CityLabel = new System.Windows.Forms.Label();
+            this.Address = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.GoReservation = new System.Windows.Forms.Button();
+            this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            this.CinemaRoomsetting.SuspendLayout();
+            this.closeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.closeButtonPane);
+            this.panel1.Controls.Add(this.CinemaRoomsetting);
+            this.panel1.Controls.Add(this.CinemaRoomLabel);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1046, 497);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // CinemaRoomLabel
+            // 
+            this.CinemaRoomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CinemaRoomLabel.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CinemaRoomLabel.Location = new System.Drawing.Point(-4, 0);
+            this.CinemaRoomLabel.Margin = new System.Windows.Forms.Padding(30, 0, 3, 0);
+            this.CinemaRoomLabel.Name = "CinemaRoomLabel";
+            this.CinemaRoomLabel.Size = new System.Drawing.Size(176, 24);
+            this.CinemaRoomLabel.TabIndex = 2;
+            this.CinemaRoomLabel.Text = "상영관 선택";
+            this.CinemaRoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // genreSeq
+            // 
+            this.genreSeq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genreSeq.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.genreSeq.FormattingEnabled = true;
+            this.genreSeq.Location = new System.Drawing.Point(17, 39);
+            this.genreSeq.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.genreSeq.Name = "genreSeq";
+            this.genreSeq.Size = new System.Drawing.Size(153, 28);
+            this.genreSeq.TabIndex = 25;
+            // 
+            // CinemaRoomsetting
+            // 
+            this.CinemaRoomsetting.Controls.Add(this.GoReservation);
+            this.CinemaRoomsetting.Controls.Add(this.Address);
+            this.CinemaRoomsetting.Controls.Add(this.comboBox1);
+            this.CinemaRoomsetting.Controls.Add(this.CityLabel);
+            this.CinemaRoomsetting.Controls.Add(this.genreSeq);
+            this.CinemaRoomsetting.Location = new System.Drawing.Point(199, 124);
+            this.CinemaRoomsetting.Name = "CinemaRoomsetting";
+            this.CinemaRoomsetting.Size = new System.Drawing.Size(549, 98);
+            this.CinemaRoomsetting.TabIndex = 26;
+            // 
+            // CityLabel
+            // 
+            this.CityLabel.AutoSize = true;
+            this.CityLabel.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CityLabel.Location = new System.Drawing.Point(60, 15);
+            this.CityLabel.Margin = new System.Windows.Forms.Padding(60, 0, 3, 0);
+            this.CityLabel.Name = "CityLabel";
+            this.CityLabel.Size = new System.Drawing.Size(64, 21);
+            this.CityLabel.TabIndex = 26;
+            this.CityLabel.Text = "시/도";
+            // 
+            // Address
+            // 
+            this.Address.AutoSize = true;
+            this.Address.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Address.Location = new System.Drawing.Point(242, 15);
+            this.Address.Margin = new System.Windows.Forms.Padding(115, 0, 3, 0);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(54, 21);
+            this.Address.TabIndex = 28;
+            this.Address.Text = "지역";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(193, 39);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 28);
+            this.comboBox1.TabIndex = 27;
+            // 
+            // GoReservation
+            // 
+            this.GoReservation.Location = new System.Drawing.Point(369, 39);
+            this.GoReservation.Name = "GoReservation";
+            this.GoReservation.Size = new System.Drawing.Size(153, 28);
+            this.GoReservation.TabIndex = 29;
+            this.GoReservation.Text = "좌석선택";
+            this.GoReservation.UseVisualStyleBackColor = true;
+            // 
+            // closeButtonPane
+            // 
+            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
+            this.closeButtonPane.Location = new System.Drawing.Point(998, 0);
+            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonPane.Name = "closeButtonPane";
+            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonPane.TabIndex = 32;
+            // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
             // 
             // cinemaRoom
             // 
@@ -46,6 +162,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "cinemaRoom";
             this.Size = new System.Drawing.Size(1052, 503);
+            this.panel1.ResumeLayout(false);
+            this.CinemaRoomsetting.ResumeLayout(false);
+            this.CinemaRoomsetting.PerformLayout();
+            this.closeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -53,5 +174,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label CinemaRoomLabel;
+        private System.Windows.Forms.Panel CinemaRoomsetting;
+        private System.Windows.Forms.ComboBox genreSeq;
+        private System.Windows.Forms.Button GoReservation;
+        private System.Windows.Forms.Label Address;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label CityLabel;
+        private System.Windows.Forms.Panel closeButtonPane;
+        private System.Windows.Forms.PictureBox closeButtonIcon;
     }
 }

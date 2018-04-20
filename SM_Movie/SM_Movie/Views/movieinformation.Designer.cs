@@ -36,6 +36,9 @@
             this.TrailerVideoFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ReviewFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Reviewpanel = new System.Windows.Forms.Panel();
+            this.reviewTitle = new System.Windows.Forms.TextBox();
+            this.reviewContent = new System.Windows.Forms.TextBox();
+            this.reviewinsert = new System.Windows.Forms.Button();
             this.userNickname = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,6 +70,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.genreSeq = new System.Windows.Forms.Label();
             this.movieRunningTime = new System.Windows.Forms.Label();
             this.movieReleaseDate = new System.Windows.Forms.Label();
@@ -79,15 +88,8 @@
             this.MovieSummary = new System.Windows.Forms.Label();
             this.moviePoster = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.reviewinsert = new System.Windows.Forms.Button();
-            this.reviewContent = new System.Windows.Forms.TextBox();
-            this.reviewTitle = new System.Windows.Forms.TextBox();
+            this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.MovieContents.SuspendLayout();
             this.ReviewFlowPanel.SuspendLayout();
             this.Reviewpanel.SuspendLayout();
@@ -96,15 +98,18 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.underscore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.closeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // MovieContents
             // 
             this.MovieContents.BackColor = System.Drawing.SystemColors.Window;
+            this.MovieContents.Controls.Add(this.closeButtonPane);
             this.MovieContents.Controls.Add(this.ReservationButton);
             this.MovieContents.Controls.Add(this.label2);
             this.MovieContents.Controls.Add(this.label1);
@@ -197,6 +202,29 @@
             this.Reviewpanel.Name = "Reviewpanel";
             this.Reviewpanel.Size = new System.Drawing.Size(840, 149);
             this.Reviewpanel.TabIndex = 0;
+            // 
+            // reviewTitle
+            // 
+            this.reviewTitle.Location = new System.Drawing.Point(7, 38);
+            this.reviewTitle.Name = "reviewTitle";
+            this.reviewTitle.Size = new System.Drawing.Size(684, 21);
+            this.reviewTitle.TabIndex = 14;
+            // 
+            // reviewContent
+            // 
+            this.reviewContent.Location = new System.Drawing.Point(7, 65);
+            this.reviewContent.Name = "reviewContent";
+            this.reviewContent.Size = new System.Drawing.Size(684, 21);
+            this.reviewContent.TabIndex = 13;
+            // 
+            // reviewinsert
+            // 
+            this.reviewinsert.Location = new System.Drawing.Point(703, 3);
+            this.reviewinsert.Name = "reviewinsert";
+            this.reviewinsert.Size = new System.Drawing.Size(134, 143);
+            this.reviewinsert.TabIndex = 12;
+            this.reviewinsert.Text = "등록";
+            this.reviewinsert.UseVisualStyleBackColor = true;
             // 
             // userNickname
             // 
@@ -543,124 +571,6 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "ksc5348";
             // 
-            // genreSeq
-            // 
-            this.genreSeq.AutoSize = true;
-            this.genreSeq.Location = new System.Drawing.Point(279, 224);
-            this.genreSeq.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.genreSeq.Name = "genreSeq";
-            this.genreSeq.Size = new System.Drawing.Size(41, 12);
-            this.genreSeq.TabIndex = 6;
-            this.genreSeq.Text = "장르  :";
-            // 
-            // movieRunningTime
-            // 
-            this.movieRunningTime.AutoSize = true;
-            this.movieRunningTime.Location = new System.Drawing.Point(275, 246);
-            this.movieRunningTime.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieRunningTime.Name = "movieRunningTime";
-            this.movieRunningTime.Size = new System.Drawing.Size(65, 12);
-            this.movieRunningTime.TabIndex = 8;
-            this.movieRunningTime.Text = "상영시간  :";
-            // 
-            // movieReleaseDate
-            // 
-            this.movieReleaseDate.AutoSize = true;
-            this.movieReleaseDate.Location = new System.Drawing.Point(279, 136);
-            this.movieReleaseDate.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieReleaseDate.Name = "movieReleaseDate";
-            this.movieReleaseDate.Size = new System.Drawing.Size(53, 12);
-            this.movieReleaseDate.TabIndex = 7;
-            this.movieReleaseDate.Text = "개봉일  :";
-            // 
-            // movieDirector
-            // 
-            this.movieDirector.AutoSize = true;
-            this.movieDirector.Location = new System.Drawing.Point(279, 158);
-            this.movieDirector.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieDirector.Name = "movieDirector";
-            this.movieDirector.Size = new System.Drawing.Size(41, 12);
-            this.movieDirector.TabIndex = 3;
-            this.movieDirector.Text = "감독  :";
-            // 
-            // movieAgeLimit
-            // 
-            this.movieAgeLimit.AutoSize = true;
-            this.movieAgeLimit.Location = new System.Drawing.Point(279, 202);
-            this.movieAgeLimit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieAgeLimit.Name = "movieAgeLimit";
-            this.movieAgeLimit.Size = new System.Drawing.Size(53, 12);
-            this.movieAgeLimit.TabIndex = 5;
-            this.movieAgeLimit.Text = "관람가  :";
-            // 
-            // movieMainActor
-            // 
-            this.movieMainActor.AutoSize = true;
-            this.movieMainActor.Location = new System.Drawing.Point(279, 180);
-            this.movieMainActor.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.movieMainActor.Name = "movieMainActor";
-            this.movieMainActor.Size = new System.Drawing.Size(41, 12);
-            this.movieMainActor.TabIndex = 4;
-            this.movieMainActor.Text = "배우  :";
-            // 
-            // movieTitle
-            // 
-            this.movieTitle.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.movieTitle.Location = new System.Drawing.Point(277, 52);
-            this.movieTitle.Name = "movieTitle";
-            this.movieTitle.Size = new System.Drawing.Size(576, 23);
-            this.movieTitle.TabIndex = 1;
-            this.movieTitle.Text = "영화 제목";
-            // 
-            // underscore
-            // 
-            this.underscore.BackColor = System.Drawing.Color.Transparent;
-            this.underscore.Image = global::SM_Movie.Properties.Resources.underscore;
-            this.underscore.Location = new System.Drawing.Point(277, 27);
-            this.underscore.Name = "underscore";
-            this.underscore.Size = new System.Drawing.Size(591, 106);
-            this.underscore.TabIndex = 10;
-            this.underscore.TabStop = false;
-            // 
-            // Summary
-            // 
-            this.Summary.AutoSize = true;
-            this.Summary.Location = new System.Drawing.Point(15, 452);
-            this.Summary.Name = "Summary";
-            this.Summary.Size = new System.Drawing.Size(73, 12);
-            this.Summary.TabIndex = 9;
-            this.Summary.Text = "사라진 20분 ";
-            // 
-            // MovieSummary
-            // 
-            this.MovieSummary.AutoSize = true;
-            this.MovieSummary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieSummary.Location = new System.Drawing.Point(15, 416);
-            this.MovieSummary.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
-            this.MovieSummary.Name = "MovieSummary";
-            this.MovieSummary.Size = new System.Drawing.Size(59, 16);
-            this.MovieSummary.TabIndex = 2;
-            this.MovieSummary.Text = "줄거리";
-            // 
-            // moviePoster
-            // 
-            this.moviePoster.Image = ((System.Drawing.Image)(resources.GetObject("moviePoster.Image")));
-            this.moviePoster.Location = new System.Drawing.Point(32, 52);
-            this.moviePoster.Name = "moviePoster";
-            this.moviePoster.Size = new System.Drawing.Size(225, 318);
-            this.moviePoster.TabIndex = 0;
-            this.moviePoster.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SM_Movie.Properties.Resources.underscore;
-            this.pictureBox1.Location = new System.Drawing.Point(277, 291);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(591, 106);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label24);
@@ -728,28 +638,143 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "ksc5348";
             // 
-            // reviewinsert
+            // genreSeq
             // 
-            this.reviewinsert.Location = new System.Drawing.Point(703, 3);
-            this.reviewinsert.Name = "reviewinsert";
-            this.reviewinsert.Size = new System.Drawing.Size(134, 143);
-            this.reviewinsert.TabIndex = 12;
-            this.reviewinsert.Text = "등록";
-            this.reviewinsert.UseVisualStyleBackColor = true;
+            this.genreSeq.AutoSize = true;
+            this.genreSeq.Location = new System.Drawing.Point(279, 224);
+            this.genreSeq.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.genreSeq.Name = "genreSeq";
+            this.genreSeq.Size = new System.Drawing.Size(41, 12);
+            this.genreSeq.TabIndex = 6;
+            this.genreSeq.Text = "장르  :";
             // 
-            // reviewContent
+            // movieRunningTime
             // 
-            this.reviewContent.Location = new System.Drawing.Point(7, 65);
-            this.reviewContent.Name = "reviewContent";
-            this.reviewContent.Size = new System.Drawing.Size(684, 21);
-            this.reviewContent.TabIndex = 13;
+            this.movieRunningTime.AutoSize = true;
+            this.movieRunningTime.Location = new System.Drawing.Point(275, 246);
+            this.movieRunningTime.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieRunningTime.Name = "movieRunningTime";
+            this.movieRunningTime.Size = new System.Drawing.Size(65, 12);
+            this.movieRunningTime.TabIndex = 8;
+            this.movieRunningTime.Text = "상영시간  :";
             // 
-            // reviewTitle
+            // movieReleaseDate
             // 
-            this.reviewTitle.Location = new System.Drawing.Point(7, 38);
-            this.reviewTitle.Name = "reviewTitle";
-            this.reviewTitle.Size = new System.Drawing.Size(684, 21);
-            this.reviewTitle.TabIndex = 14;
+            this.movieReleaseDate.AutoSize = true;
+            this.movieReleaseDate.Location = new System.Drawing.Point(279, 136);
+            this.movieReleaseDate.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieReleaseDate.Name = "movieReleaseDate";
+            this.movieReleaseDate.Size = new System.Drawing.Size(53, 12);
+            this.movieReleaseDate.TabIndex = 7;
+            this.movieReleaseDate.Text = "개봉일  :";
+            // 
+            // movieDirector
+            // 
+            this.movieDirector.AutoSize = true;
+            this.movieDirector.Location = new System.Drawing.Point(279, 158);
+            this.movieDirector.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieDirector.Name = "movieDirector";
+            this.movieDirector.Size = new System.Drawing.Size(41, 12);
+            this.movieDirector.TabIndex = 3;
+            this.movieDirector.Text = "감독  :";
+            // 
+            // movieAgeLimit
+            // 
+            this.movieAgeLimit.AutoSize = true;
+            this.movieAgeLimit.Location = new System.Drawing.Point(279, 202);
+            this.movieAgeLimit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieAgeLimit.Name = "movieAgeLimit";
+            this.movieAgeLimit.Size = new System.Drawing.Size(53, 12);
+            this.movieAgeLimit.TabIndex = 5;
+            this.movieAgeLimit.Text = "관람가  :";
+            // 
+            // movieMainActor
+            // 
+            this.movieMainActor.AutoSize = true;
+            this.movieMainActor.Location = new System.Drawing.Point(279, 180);
+            this.movieMainActor.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.movieMainActor.Name = "movieMainActor";
+            this.movieMainActor.Size = new System.Drawing.Size(41, 12);
+            this.movieMainActor.TabIndex = 4;
+            this.movieMainActor.Text = "배우  :";
+            // 
+            // movieTitle
+            // 
+            this.movieTitle.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movieTitle.Location = new System.Drawing.Point(277, 52);
+            this.movieTitle.Name = "movieTitle";
+            this.movieTitle.Size = new System.Drawing.Size(576, 51);
+            this.movieTitle.TabIndex = 1;
+            this.movieTitle.Text = "영화 제목";
+            // 
+            // underscore
+            // 
+            this.underscore.BackColor = System.Drawing.Color.Transparent;
+            this.underscore.Location = new System.Drawing.Point(277, 27);
+            this.underscore.Name = "underscore";
+            this.underscore.Size = new System.Drawing.Size(591, 106);
+            this.underscore.TabIndex = 10;
+            this.underscore.TabStop = false;
+            // 
+            // Summary
+            // 
+            this.Summary.AutoSize = true;
+            this.Summary.Location = new System.Drawing.Point(15, 452);
+            this.Summary.Name = "Summary";
+            this.Summary.Size = new System.Drawing.Size(73, 12);
+            this.Summary.TabIndex = 9;
+            this.Summary.Text = "사라진 20분 ";
+            // 
+            // MovieSummary
+            // 
+            this.MovieSummary.AutoSize = true;
+            this.MovieSummary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieSummary.Location = new System.Drawing.Point(15, 416);
+            this.MovieSummary.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.MovieSummary.Name = "MovieSummary";
+            this.MovieSummary.Size = new System.Drawing.Size(59, 16);
+            this.MovieSummary.TabIndex = 2;
+            this.MovieSummary.Text = "줄거리";
+            // 
+            // moviePoster
+            // 
+            this.moviePoster.Image = ((System.Drawing.Image)(resources.GetObject("moviePoster.Image")));
+            this.moviePoster.Location = new System.Drawing.Point(32, 52);
+            this.moviePoster.Name = "moviePoster";
+            this.moviePoster.Size = new System.Drawing.Size(225, 318);
+            this.moviePoster.TabIndex = 0;
+            this.moviePoster.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(277, 291);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(591, 106);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // closeButtonPane
+            // 
+            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
+            this.closeButtonPane.Location = new System.Drawing.Point(848, 0);
+            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonPane.Name = "closeButtonPane";
+            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonPane.TabIndex = 32;
+            // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
             // 
             // Movieinformation
             // 
@@ -773,11 +798,13 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.underscore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.closeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -843,5 +870,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox reviewTitle;
         private System.Windows.Forms.TextBox reviewContent;
+        private System.Windows.Forms.Panel closeButtonPane;
+        private System.Windows.Forms.PictureBox closeButtonIcon;
     }
 }
