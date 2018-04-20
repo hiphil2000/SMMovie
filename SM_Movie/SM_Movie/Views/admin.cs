@@ -16,8 +16,7 @@ namespace SM_Movie.Views
 		private Dictionary<string, LnbButtonInfo> buttonDictionary = new Dictionary<string, LnbButtonInfo>();
         private string currentPage;
 		Utils.DBUtil db;
-
-		bool editOnUserTbl;
+        bool currentPageEdited;
 
 		public admin()
 		{
@@ -42,6 +41,8 @@ namespace SM_Movie.Views
 		{
 			Control con = (Control)sender;
 			string name = con.Name.Split(new[] { "Label", "Panel" }, StringSplitOptions.None)[0];
+            if (name.Equals(currentPage))
+                return;
 			buttonDictionary[name]._LnbLabel.Font = new Font(buttonDictionary[name]._LnbLabel.Font.FontFamily, 12, FontStyle.Bold);
 
 		}
@@ -50,8 +51,20 @@ namespace SM_Movie.Views
 		{
 			Control con = (Control)sender;
 			string name = con.Name.Split(new[] { "Label", "Panel" }, StringSplitOptions.None)[0];
-			buttonDictionary[name]._LnbLabel.Font = new Font(buttonDictionary[name]._LnbLabel.Font.FontFamily, 12, FontStyle.Regular);
+            if (name.Equals(currentPage))
+                return;
+            buttonDictionary[name]._LnbLabel.Font = new Font(buttonDictionary[name]._LnbLabel.Font.FontFamily, 12, FontStyle.Regular);
 		}
+
+        private void openPage(object sender, EventArgs e)
+        {
+            Control con = (Control)sender;
+            string name = con.Name.Split(new[] { "Label", "Panel" }, StringSplitOptions.None)[0];
+            buttonDictionary[currentPage]._LnbLabel.Font = new Font(buttonDictionary[name]._LnbLabel.Font.FontFamily, 12, FontStyle.Regular);
+            currentPage = name;
+            buttonDictionary[name]._LnbLabel.Font = new Font(buttonDictionary[name]._LnbLabel.Font.FontFamily, 12, FontStyle.Bold);
+            refreshData();
+        }
 		
 		private void admin_Resize(object sender, EventArgs e)
 		{
@@ -64,6 +77,9 @@ namespace SM_Movie.Views
 
 		public void refreshData()
 		{
+            tableView.DataSource = null;
+            tableView.Rows.Clear();
+            
             if (currentPage.Equals("userSetting"))
             {
                 DataTable dt = db.getUserList();
@@ -72,28 +88,58 @@ namespace SM_Movie.Views
 		}
 
 		private void dataEdited(object sender, DataGridViewCellEventArgs e)
-		{
-			
+        {
+            currentPageEdited = true;
+            dataUpdateButton.Enabled = currentPageEdited;
 		}
 
 		private void dataRevmoeButton_Click(object sender, EventArgs e)
 		{
+            int selectedCellCount =
+                tableView.GetCellCount(DataGridViewElementStates.Selected);
 
+            if(selectedCellCount > 0 && tableView.RowCount > 1)
+            {
+                if(MessageBox.Show("선택하신 항목을 삭제하시겠습니까?", "알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int rowindex = tableView.CurrentCell.RowIndex;
+                    tableView.Rows.RemoveAt(rowindex);
+                    if (tableView.RowCount > 1)
+                    {
+                        dataRemoveButton.Enabled = true;
+                    }
+                    else
+                    {
+                        dataRemoveButton.Enabled = false;
+                    }
+                    currentPageEdited = true;
+                    dataUpdateButton.Enabled = true;
+                }
+            }
 		}
 
 		private void dataUpdateButton_Click(object sender, EventArgs e)
 		{
-
+            db.updateUserList((DataTable)tableView.DataSource);
 		}
 
-		private void dataInsertButton_Click(object sender, EventArgs e)
-		{
-			
-		}
+        private void tableView_SelectionChanged(object sender, EventArgs e)
+        {
+            int selectedCellCount =
+                tableView.GetCellCount(DataGridViewElementStates.Selected);
+            if(selectedCellCount > 0)
+            {
+                dataRemoveButton.Enabled = true;
+            }
+            else
+            {
+                dataRemoveButton.Enabled = false;
+            }
+        }
 
-		private void dataRefreshButton_Click(object sender, EventArgs e)
-		{
-			refreshData();
-		}
-	}
+        private void tableView_DataMemberChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

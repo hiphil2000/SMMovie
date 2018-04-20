@@ -38,9 +38,8 @@
             this.lnbContentPanel = new System.Windows.Forms.Panel();
             this.dataButtonFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.dataRefreshButton = new System.Windows.Forms.Button();
-            this.dataInsertButton = new System.Windows.Forms.Button();
             this.dataUpdateButton = new System.Windows.Forms.Button();
-            this.dataRevmoeButton = new System.Windows.Forms.Button();
+            this.dataRemoveButton = new System.Windows.Forms.Button();
             this.dataTablePanel = new System.Windows.Forms.Panel();
             this.tableView = new System.Windows.Forms.DataGridView();
             this.adminLnb.SuspendLayout();
@@ -86,6 +85,7 @@
             this.userSettingLabel.TabIndex = 0;
             this.userSettingLabel.Text = "회원 관리";
             this.userSettingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.userSettingLabel.Click += new System.EventHandler(this.openPage);
             this.userSettingLabel.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.userSettingLabel.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
@@ -109,6 +109,7 @@
             this.movieSettingLabel.TabIndex = 0;
             this.movieSettingLabel.Text = "영화 관리";
             this.movieSettingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.movieSettingLabel.Click += new System.EventHandler(this.openPage);
             this.movieSettingLabel.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.movieSettingLabel.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
@@ -148,13 +149,12 @@
             // dataButtonFlow
             // 
             this.dataButtonFlow.Controls.Add(this.dataRefreshButton);
-            this.dataButtonFlow.Controls.Add(this.dataInsertButton);
             this.dataButtonFlow.Controls.Add(this.dataUpdateButton);
-            this.dataButtonFlow.Controls.Add(this.dataRevmoeButton);
-            this.dataButtonFlow.Location = new System.Drawing.Point(430, 6);
+            this.dataButtonFlow.Controls.Add(this.dataRemoveButton);
+            this.dataButtonFlow.Location = new System.Drawing.Point(556, 6);
             this.dataButtonFlow.Margin = new System.Windows.Forms.Padding(0);
             this.dataButtonFlow.Name = "dataButtonFlow";
-            this.dataButtonFlow.Size = new System.Drawing.Size(501, 43);
+            this.dataButtonFlow.Size = new System.Drawing.Size(375, 43);
             this.dataButtonFlow.TabIndex = 6;
             // 
             // dataRefreshButton
@@ -167,37 +167,29 @@
             this.dataRefreshButton.Text = "데이터 새로고침";
             this.dataRefreshButton.UseVisualStyleBackColor = true;
             // 
-            // dataInsertButton
-            // 
-            this.dataInsertButton.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dataInsertButton.Location = new System.Drawing.Point(128, 3);
-            this.dataInsertButton.Name = "dataInsertButton";
-            this.dataInsertButton.Size = new System.Drawing.Size(119, 37);
-            this.dataInsertButton.TabIndex = 4;
-            this.dataInsertButton.Text = "데이터 추가";
-            this.dataInsertButton.UseVisualStyleBackColor = true;
-            // 
             // dataUpdateButton
             // 
             this.dataUpdateButton.Enabled = false;
             this.dataUpdateButton.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dataUpdateButton.Location = new System.Drawing.Point(253, 3);
+            this.dataUpdateButton.Location = new System.Drawing.Point(128, 3);
             this.dataUpdateButton.Name = "dataUpdateButton";
             this.dataUpdateButton.Size = new System.Drawing.Size(119, 37);
             this.dataUpdateButton.TabIndex = 5;
-            this.dataUpdateButton.Text = "데이터 수정";
+            this.dataUpdateButton.Text = "변경사항 적용";
             this.dataUpdateButton.UseVisualStyleBackColor = true;
+            this.dataUpdateButton.Click += new System.EventHandler(this.dataUpdateButton_Click);
             // 
-            // dataRevmoeButton
+            // dataRemoveButton
             // 
-            this.dataRevmoeButton.Enabled = false;
-            this.dataRevmoeButton.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dataRevmoeButton.Location = new System.Drawing.Point(378, 3);
-            this.dataRevmoeButton.Name = "dataRevmoeButton";
-            this.dataRevmoeButton.Size = new System.Drawing.Size(119, 37);
-            this.dataRevmoeButton.TabIndex = 6;
-            this.dataRevmoeButton.Text = "데이터 삭제";
-            this.dataRevmoeButton.UseVisualStyleBackColor = true;
+            this.dataRemoveButton.Enabled = false;
+            this.dataRemoveButton.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dataRemoveButton.Location = new System.Drawing.Point(253, 3);
+            this.dataRemoveButton.Name = "dataRemoveButton";
+            this.dataRemoveButton.Size = new System.Drawing.Size(119, 37);
+            this.dataRemoveButton.TabIndex = 6;
+            this.dataRemoveButton.Text = "데이터 삭제";
+            this.dataRemoveButton.UseVisualStyleBackColor = true;
+            this.dataRemoveButton.Click += new System.EventHandler(this.dataRevmoeButton_Click);
             // 
             // dataTablePanel
             // 
@@ -218,6 +210,9 @@
             this.tableView.RowTemplate.Height = 23;
             this.tableView.Size = new System.Drawing.Size(928, 423);
             this.tableView.TabIndex = 0;
+            this.tableView.DataMemberChanged += new System.EventHandler(this.tableView_DataMemberChanged);
+            this.tableView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEdited);
+            this.tableView.SelectionChanged += new System.EventHandler(this.tableView_SelectionChanged);
             // 
             // admin
             // 
@@ -252,9 +247,8 @@
 		private System.Windows.Forms.Panel lnbContentPanel;
         private System.Windows.Forms.FlowLayoutPanel dataButtonFlow;
         private System.Windows.Forms.Button dataRefreshButton;
-        private System.Windows.Forms.Button dataInsertButton;
         private System.Windows.Forms.Button dataUpdateButton;
-        private System.Windows.Forms.Button dataRevmoeButton;
+        private System.Windows.Forms.Button dataRemoveButton;
         private System.Windows.Forms.Panel dataTablePanel;
         private System.Windows.Forms.DataGridView tableView;
     }

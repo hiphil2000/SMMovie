@@ -111,5 +111,111 @@ namespace SM_Movie.Utils
 					conn.Close();
 			}
 		}
+
+        public void updateUserList(DataTable tableViewData)
+        {
+            try
+            {
+                //변경사항 (추가됨)
+                
+                DataTable addedData = tableViewData.GetChanges(DataRowState.Added);
+                DataTable removedData = tableViewData.GetChanges(DataRowState.Deleted);
+                DataTable changedData = tableViewData.GetChanges(DataRowState.Modified);
+                MemberShip mem = new MemberShip();
+                Genre gen = new Genre();
+                conn.Open();
+
+                //추가데이터 처리
+                if (addedData != null)
+                {
+                    string sql = "INSERT INTO userTbl(userName, userBirthday, userId, userPassword, userNickname, userEmail, userPhone, userAddress, genreSeq, memberShipSeq) ";
+                    foreach (DataRow dr in addedData.Rows)
+                    {
+                        string userName = dr["회원 이름"].ToString();
+                        string userBirthday = dr["회원 생일"].ToString();
+                        string userId = dr["아이디"].ToString();
+                        string userPassword = dr["비밀번호"].ToString();
+                        string userNickname = dr["회원 별명"].ToString();
+                        string userEmail = dr["회원 이메일"].ToString();
+                        string userPhone = dr["회원 전화번호"].ToString();
+                        string userAddress = dr["회원 주소"].ToString();
+                        int genreSeq = gen.getGenreSeq(dr["회원 선호장르"].ToString());
+                        int memberShipSeq = mem.getMemberShipSeq(dr["회원 등급"].ToString());
+
+                        string values = "VALUES(':userName', CONVERT(datetime, ':userBirthday', 102), ':userId', ':userPassword', ':userNickname', 'userEmail', 'userPhone', " +
+                            "':userAddress', :genreSeq, :memberShipSeq), ";
+                        values = values.Replace(":userName", userName).Replace(":userBirthday", userBirthday).Replace(":userId", userId).Replace(":userPassword", userPassword)
+                        .Replace(":userNickname", userNickname).Replace(":userEmail", userEmail).Replace(":userPhone", userPhone).Replace(":userAddress", userAddress).Replace(":genreSeq", genreSeq.ToString())
+                        .Replace(":memberShipSeq", memberShipSeq.ToString());
+                        sql += values;
+                    }
+                    sql.TrimEnd();
+                    sql = sql.Substring(0, sql.Length - 2);
+                    SqlCommand com = new SqlCommand(sql, conn);
+                    com.ExecuteNonQuery();
+                }
+
+                if(removedData != null)
+                {
+                    string sql = "DELETE FROM userTbl WHERE ";
+                    foreach (DataRow dr in removedData.Rows)
+                    {
+                        string userSeq = dr["회원 고유번호"].ToString();
+                        string deleteValue = "userSeq = " + userSeq + " OR ";
+                        sql += deleteValue;
+                    }
+                    sql.TrimEnd();
+                    sql = sql.Substring(0, sql.Length - 3);
+                    SqlCommand com = new SqlCommand(sql, conn);
+                    com.ExecuteNonQuery();
+                }
+
+                if(changedData != null)
+                {                    
+                    foreach (DataRow dr in changedData.Rows)
+                    {
+                        string sql = "UPDATE userTbl SET userName = ':userName',  userBirthday = CONVERT(datetime, ':userBirthday', 102), userId = :userId, userPassword = :userPassword, " +
+                        "userNickname = :userNickname, userEmail = :userEmail, userPhone = :userPhone, userAddress = :userAddress, genreSeq = :genreSeq, memberShipSeq = :memberShipSeq " +
+                        "WHERE userSeq = :userSeq";
+                        SqlCommand com = new SqlCommand(sql, conn);
+                        string userSeq = dr["회원 고유번호"].ToString();
+                        string userName = dr["회원 이름"].ToString();
+                        string userBirthday = dr["회원 생일"].ToString();
+                        string userId = dr["아이디"].ToString();
+                        string userPassword = dr["비밀번호"].ToString();
+                        string userNickname = dr["회원 별명"].ToString();
+                        string userEmail = dr["회원 이메일"].ToString();
+                        string userPhone = dr["회원 전화번호"].ToString();
+                        string userAddress = dr["회원 주소"].ToString();
+                        int genreSeq = gen.getGenreSeq(dr["회원 선호장르"].ToString());
+                        int memberShipSeq = mem.getMemberShipSeq(dr["회원 등급"].ToString());
+
+                        com.Parameters.AddWithValue(":userName", userName);
+                        com.Parameters.AddWithValue(":userBirthday", userBirthday);
+                        com.Parameters.AddWithValue(":userId", userId);
+                        com.Parameters.AddWithValue(":userPassword", userPassword);
+                        com.Parameters.AddWithValue(":userNickname", userNickname);
+                        com.Parameters.AddWithValue(":userEmail", userEmail);
+                        com.Parameters.AddWithValue(":userPhone", userPhone);
+                        com.Parameters.AddWithValue(":userAddress", userAddress);
+                        com.Parameters.AddWithValue(":userSeq", userSeq);
+                        com.Parameters.AddWithValue(":genreSeq", genreSeq);
+                        com.Parameters.AddWithValue(":memberShipSeq", memberShipSeq);
+
+                        com.ExecuteNonQuery();
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+            }
+        }
     }
 }

@@ -71,6 +71,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\LnbButtonInfo.cs" />
+    <Compile Include="Model\MemberShip.cs" />
+    <Compile Include="Views\admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\log.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +152,9 @@
     <Compile Include="Views\cinemaRoom.Designer.cs">
       <DependentUpon>cinemaRoom.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\cinemaRoom.resx">
       <DependentUpon>cinemaRoom.cs</DependentUpon>
     </EmbeddedResource>
