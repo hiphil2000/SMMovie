@@ -34,16 +34,16 @@ namespace SM_Movie.Model
 			}
 		}
 
-		private Panel LnbContents;
-		public Panel _LnbContents
+		private string LnbTable;
+		public string _LnbTable
 		{
 			get
 			{
-				return LnbContents;
+				return LnbTable;
 			}
 			set
 			{
-				LnbContents = _LnbContents;
+                LnbTable = _LnbTable;
 			}
 		}
 
@@ -52,11 +52,11 @@ namespace SM_Movie.Model
 
 		}
 
-		public LnbButtonInfo(Panel LnbPanel, Label LnbLabel, Panel LnbContents)
+		public LnbButtonInfo(Panel LnbPanel, Label LnbLabel, string LnbTable)
 		{
 			this.LnbPanel = LnbPanel;
 			this.LnbLabel = LnbLabel;
-			this.LnbContents = LnbContents;
+            this.LnbTable = LnbTable;
 		}
 
 	}

@@ -13,8 +13,8 @@ namespace SM_Movie.Views
 {
 	public partial class admin : UserControl
 	{
-
-		Dictionary<string, LnbButtonInfo> buttonDictionary = new Dictionary<string, LnbButtonInfo>();
+		private Dictionary<string, LnbButtonInfo> buttonDictionary = new Dictionary<string, LnbButtonInfo>();
+        private string currentPage;
 		Utils.DBUtil db;
 
 		bool editOnUserTbl;
@@ -23,16 +23,15 @@ namespace SM_Movie.Views
 		{
 			InitializeComponent();
 
-			buttonDictionary.Add("userSetting", new LnbButtonInfo(userSettingPanel, userSettingLabel, userSettingContents));
-			buttonDictionary.Add("movieSetting", new LnbButtonInfo(movieSettingPanel, movieSettingLabel, userSettingContents));
+			buttonDictionary.Add("userSetting", new LnbButtonInfo(userSettingPanel, userSettingLabel, "userTbl"));
+            buttonDictionary.Add("movieSetting", new LnbButtonInfo(movieSettingPanel, movieSettingLabel, "movieTbl"));
 
-			
-			userTbl.ScrollBars = ScrollBars.Both;
+            tableView.ScrollBars = ScrollBars.Both;
 
 			db = new Utils.DBUtil();
-
+            currentPage = "userSetting";
 			//수정필요
-			refreshData("userTbl");
+			refreshData();
 		}
 
 		private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -60,38 +59,21 @@ namespace SM_Movie.Views
 			lnbContentPanel.Width = this.Width;
 			lnbContentPanel.Height = this.Height - 48;
 			dataTablePanel.Width = this.Width - 6;
+            dataTablePanel.Height = this.Height - 106;
 		}
 
-		public void refreshData(string table)
+		public void refreshData()
 		{
-			DataGridView tab;
-			switch(table)
-			{
-				case "userTbl":
-					tab = userTbl;
-					tab.DataSource = db.getUserList();
-					break;
-				default:
-					return;
-			}
-			tab.Rows[0].Frozen = false;
-			tab.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
-			tab.FirstDisplayedScrollingRowIndex = userTbl.RowCount - 1;
+            if (currentPage.Equals("userSetting"))
+            {
+                DataTable dt = db.getUserList();
+                tableView.DataSource = dt;
+            }
 		}
 
 		private void dataEdited(object sender, DataGridViewCellEventArgs e)
 		{
-			switch(((Control)sender).Name)
-			{
-				case "userTbl":
-					editOnUserTbl = true;
-					break;
-			}
-
-			if(userTbl.Visible == true && editOnUserTbl)
-			{
-				dataUpdateButton.Enabled = true;
-			}
+			
 		}
 
 		private void dataRevmoeButton_Click(object sender, EventArgs e)
@@ -106,17 +88,12 @@ namespace SM_Movie.Views
 
 		private void dataInsertButton_Click(object sender, EventArgs e)
 		{
-			int lastSeq = db.getLastSeq("userTbl");
-			if(lastSeq == -1)
-			{
-				return;
-			}
-			userTbl.Rows.Add(lastSeq, null, null, null, null, null, null, null, null, null);
+			
 		}
 
 		private void dataRefreshButton_Click(object sender, EventArgs e)
 		{
-			refreshData("userTbl");
+			refreshData();
 		}
 	}
 }

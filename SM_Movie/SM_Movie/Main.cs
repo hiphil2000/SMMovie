@@ -393,8 +393,7 @@ namespace SM_Movie
 
 		private void adminPanel_VisibleChanged(object sender, EventArgs e)
 		{
-			//수정필요
-			adminPanel.refreshData("userTbl");
+			adminPanel.refreshData();
 		}
 	}
 }
