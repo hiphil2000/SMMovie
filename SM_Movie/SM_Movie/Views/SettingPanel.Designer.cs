@@ -30,7 +30,6 @@
         {
             this.panelsetting = new System.Windows.Forms.Panel();
             this.closeButtonPane = new System.Windows.Forms.Panel();
-            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.IdSavePanel = new System.Windows.Forms.Panel();
             this.saveID = new System.Windows.Forms.Label();
             this.IdSave = new System.Windows.Forms.CheckBox();
@@ -72,11 +71,12 @@
             this.SettingColor = new System.Windows.Forms.Label();
             this.InputColorCode = new System.Windows.Forms.TextBox();
             this.settinglabel = new System.Windows.Forms.Label();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.panelsetting.SuspendLayout();
             this.closeButtonPane.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.IdSavePanel.SuspendLayout();
             this.colorsetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelsetting
@@ -99,19 +99,6 @@
             this.closeButtonPane.Name = "closeButtonPane";
             this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
             this.closeButtonPane.TabIndex = 11;
-            // 
-            // closeButtonIcon
-            // 
-            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
-            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonIcon.Name = "closeButtonIcon";
-            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeButtonIcon.TabIndex = 1;
-            this.closeButtonIcon.TabStop = false;
             // 
             // IdSavePanel
             // 
@@ -684,6 +671,18 @@
             this.settinglabel.Text = "설정";
             this.settinglabel.Click += new System.EventHandler(this.label1_Click);
             // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
+            // 
             // SettingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -694,11 +693,11 @@
             this.panelsetting.ResumeLayout(false);
             this.panelsetting.PerformLayout();
             this.closeButtonPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.IdSavePanel.ResumeLayout(false);
             this.IdSavePanel.PerformLayout();
             this.colorsetting.ResumeLayout(false);
             this.colorsetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

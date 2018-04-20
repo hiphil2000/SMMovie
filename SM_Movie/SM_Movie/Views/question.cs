@@ -8,22 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SM_Movie
+namespace SM_Movie.Views
 {
-    public partial class Movieinformation : UserControl
+    public partial class question : UserControl
     {
-        public Movieinformation()
+        public question()
         {
             InitializeComponent();
-
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
