@@ -137,6 +137,15 @@
     <Compile Include="Views\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\cinemaRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\cinemaRoom.Designer.cs">
+      <DependentUpon>cinemaRoom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\cinemaRoom.resx">
+      <DependentUpon>cinemaRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\log.resx">
       <DependentUpon>log.cs</DependentUpon>
     </EmbeddedResource>
