@@ -71,12 +71,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Genre.cs" />
     <Compile Include="Model\LnbButtonInfo.cs" />
+    <Compile Include="Model\MemberShip.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ImgurUtil.cs" />
     <Compile Include="Views\admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +113,12 @@
     <Compile Include="Model\ButtonInfo.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Views\movieMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\movieMain.Designer.cs">
+      <DependentUpon>movieMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\movieSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainPanel.resx">
       <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\movieMain.resx">
+      <DependentUpon>movieMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\movieSearch.resx">
       <DependentUpon>movieSearch.cs</DependentUpon>

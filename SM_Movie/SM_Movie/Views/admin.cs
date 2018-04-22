@@ -17,6 +17,7 @@ namespace SM_Movie.Views
         private string currentPage;
 		Utils.DBUtil db;
         bool currentPageEdited;
+        int currentSeq;
 
 		public admin()
 		{
@@ -27,10 +28,13 @@ namespace SM_Movie.Views
 
             tableView.ScrollBars = ScrollBars.Both;
 
-			db = new Utils.DBUtil();
+            if(db == null)
+			    db = new Utils.DBUtil();
             currentPage = "userSetting";
 			//수정필요
 			refreshData();
+
+            currentSeq = db.getLastSeq("userTbl");
 		}
 
 		private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -140,6 +144,11 @@ namespace SM_Movie.Views
         private void tableView_DataMemberChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tableView_CellValueNeeded(object sender, DataGridViewCellValueEventArgs e)
+        {
+            
         }
     }
 }

@@ -78,7 +78,7 @@
             // 
             this.userSettingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userSettingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userSettingLabel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.userSettingLabel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.userSettingLabel.Location = new System.Drawing.Point(0, 0);
             this.userSettingLabel.Name = "userSettingLabel";
             this.userSettingLabel.Size = new System.Drawing.Size(100, 48);
@@ -212,6 +212,7 @@
             this.tableView.TabIndex = 0;
             this.tableView.DataMemberChanged += new System.EventHandler(this.tableView_DataMemberChanged);
             this.tableView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEdited);
+            this.tableView.CellValueNeeded += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.tableView_CellValueNeeded);
             this.tableView.SelectionChanged += new System.EventHandler(this.tableView_SelectionChanged);
             // 
             // admin

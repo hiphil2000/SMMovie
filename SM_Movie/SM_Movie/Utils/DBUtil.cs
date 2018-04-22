@@ -15,7 +15,7 @@ namespace SM_Movie.Utils
 
         public DBUtil()
         {
-            string connectionString = "Data Source=EMT01;Initial Catalog=master;Integrated Security=True;Pooling=False";
+            string connectionString = "Data Source=DESKTOP-HHSGVJH;Initial Catalog=master;Integrated Security=True;Pooling=False";
             conn = new SqlConnection(connectionString);
         }
 

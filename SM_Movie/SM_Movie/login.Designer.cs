@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.log1 = new SM_Movie.log();
-			this.signup1 = new SM_Movie.signup();
-			this.SuspendLayout();
-			// 
-			// log1
-			// 
-			this.log1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.log1.Location = new System.Drawing.Point(0, 0);
-			this.log1.Margin = new System.Windows.Forms.Padding(0);
-			this.log1.Name = "log1";
-			this.log1.Size = new System.Drawing.Size(538, 515);
-			this.log1.TabIndex = 0;
-			this.log1.Load += new System.EventHandler(this.log1_Load);
-			this.log1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.setMousePos);
-			this.log1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveForm);
-			// 
-			// signup1
-			// 
-			this.signup1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.signup1.Location = new System.Drawing.Point(0, 0);
-			this.signup1.Name = "signup1";
-			this.signup1.Size = new System.Drawing.Size(554, 900);
-			this.signup1.TabIndex = 1;
-			this.signup1.Visible = false;
-			this.signup1.Load += new System.EventHandler(this.signup1_Load);
-			// 
-			// login
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(534, 515);
-			this.Controls.Add(this.log1);
-			this.Controls.Add(this.signup1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Name = "login";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Login";
-			this.Load += new System.EventHandler(this.Form1_Load);
-			this.ResumeLayout(false);
+            this.log1 = new SM_Movie.log();
+            this.signup1 = new SM_Movie.signup();
+            this.SuspendLayout();
+            // 
+            // log1
+            // 
+            this.log1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.log1.Location = new System.Drawing.Point(0, 0);
+            this.log1.Margin = new System.Windows.Forms.Padding(0);
+            this.log1.Name = "log1";
+            this.log1.Size = new System.Drawing.Size(538, 515);
+            this.log1.TabIndex = 0;
+            this.log1.Load += new System.EventHandler(this.log1_Load);
+            this.log1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.setMousePos);
+            this.log1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveForm);
+            // 
+            // signup1
+            // 
+            this.signup1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.signup1.Location = new System.Drawing.Point(0, 0);
+            this.signup1.Name = "signup1";
+            this.signup1.Size = new System.Drawing.Size(554, 900);
+            this.signup1.TabIndex = 1;
+            this.signup1.Visible = false;
+            this.signup1.Load += new System.EventHandler(this.signup1_Load);
+            // 
+            // login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(534, 515);
+            this.Controls.Add(this.log1);
+            this.Controls.Add(this.signup1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
 
         }
 
