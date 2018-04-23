@@ -69,17 +69,22 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Genre.cs" />
     <Compile Include="Model\LnbButtonInfo.cs" />
     <Compile Include="Model\MemberShip.cs" />
+    <Compile Include="Model\MovieInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utils\ImgurUtil.cs" />
+    <Compile Include="Utils\StyleUtil.cs" />
     <Compile Include="Views\admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,6 +240,7 @@
     <Folder Include="Assets\Images\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Icons\logo.png" />
     <Content Include="Assets\Icons\movie.png" />
     <Content Include="Assets\Icons\exit.png" />
     <Content Include="Assets\Icons\home.png" />

@@ -9,25 +9,82 @@ namespace SM_Movie.Utils
     class Movie
     {
         //영화 고유번호
-        private int movieSeq{ get; set; }
+        private int movieSeq;
+        public int _movieSeq
+        {
+            get{ return movieSeq; }
+            set { movieSeq = _movieSeq; }
+        }
         //영화 제목
-        private string movieTitle{ get; set; }
+        private string movieTitle;
+        public string _movieTitle
+        {
+            get { return movieTitle; }
+            set { movieTitle = _movieTitle; }
+        }
         //영화 감독
-        private string movieDirector{ get; set; }
+        private string movieDirector;
+        public string _movieDirector
+        {
+            get { return movieDirector; }
+            set { movieDirector = _movieDirector; }
+        }
         //영화 주연
-        private string movieMainActor{ get; set; }
+        private string movieMainActor;
+        public string _movieMainActor
+        {
+            get { return movieMainActor; }
+            set { movieMainActor = _movieMainActor; }
+        }
         //영화 관람가
-        private int movieAgeLimit{ get; set; }
+        private int movieAgeLimit;
+        public int _movieAgeLimit
+        {
+            get { return movieAgeLimit; }
+            set { movieAgeLimit = _movieAgeLimit; }
+        }
         //영화 상영시간
-        private int movieRunningTime{ get; set; }
+        private int movieRunningTime;
+        public int _movieRunningTime
+        {
+            get { return movieRunningTime; }
+            set { movieRunningTime = _movieRunningTime; }
+        }
         //영화 개봉일
-        private DateTime movieReleaseDate{ get; set; }
+        private DateTime movieReleaseDate;
+        public DateTime _movieReleaseDate
+        {
+            get { return movieReleaseDate; }
+            set { movieReleaseDate = _movieReleaseDate; }
+        }
         //영화 트레일려 영상 주소
-        private string movieTrailer{ get; set; }
+        private string movieTrailer;
+        public string _movieTrailer
+        {
+            get { return movieTrailer; }
+            set { movieTrailer = _movieTrailer; }
+        }
+        //영화 줄거리
+        private string movieSummary;
+        public string _movieSummary
+        {
+            get { return movieSummary; }
+            set { movieSummary = _movieSummary; }
+        }
         //영화 포스터 주소
-        private string moviePoster{ get; set; }
+        private string moviePoster;
+        public string _moviePoster
+        {
+            get { return moviePoster; }
+            set { moviePoster = _moviePoster; }
+        }
         //장르 고유번호
-        private int genreSeq{ get; set; }
+        private int genreSeq;
+        public int _genreseq
+        {
+            get { return genreSeq; }
+            set { genreSeq = _movieSeq; }
+        }
 
         
         ///  <summary>
@@ -39,7 +96,7 @@ namespace SM_Movie.Utils
 
         }
 
-        
+
         ///  <summary>
         ///  기본 영화 생성자
         ///  </summary>
@@ -52,10 +109,11 @@ namespace SM_Movie.Utils
         ///  <param name="movieMainActor">영화 주연 (두 명 이상의 주연일 경우, ','를 통해 구분하여 표현함.)</param>
         ///  <param name="movieDirector">영화 감독</param>
         ///  <param name="movieAgeLimit">영화 관람가</param>
+        ///  <param name="movieAgeLimit">영화 줄거리</param>
         ///  <param name="genreSeq">장르 고유번호</param>
         /// 
         public Movie(int movieSeq, string movieTitle, string movieDirector, string movieMainActor, int movieAgeLimit, int movieRunningTime, DateTime movieReleaseDate,
-            string movieTrailer, string moviePoster, int genreSeq)
+            string movieTrailer, string moviePoster, string movieSummary, int genreSeq)
         {
             this.movieSeq = movieSeq;
             this.movieTitle = movieTitle;
@@ -65,6 +123,7 @@ namespace SM_Movie.Utils
             this.movieReleaseDate = movieReleaseDate;
             this.movieTrailer = movieTrailer;
             this.moviePoster = moviePoster;
+            this.movieSummary = movieSummary;
             this.genreSeq = genreSeq;
 
         }

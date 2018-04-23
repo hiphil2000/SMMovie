@@ -39,8 +39,6 @@
             this.title = new System.Windows.Forms.Label();
             this.programIcon = new System.Windows.Forms.PictureBox();
             this.mainPane = new System.Windows.Forms.Panel();
-            this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.menuButtonPane = new System.Windows.Forms.Panel();
             this.menuButtonIcon = new System.Windows.Forms.PictureBox();
             this.menuButtonBack = new System.Windows.Forms.Panel();
@@ -72,6 +70,8 @@
             this.movieSearch = new SM_Movie.movieSearch();
             this.settingPanel = new SM_Movie.SettingPanel();
             this.adminPanel = new SM_Movie.Views.admin();
+            this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
@@ -82,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             this.mainPane.SuspendLayout();
-            this.menuTitle.SuspendLayout();
             this.menuButtonPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).BeginInit();
             this.menuButtonBack.SuspendLayout();
@@ -100,6 +99,7 @@
             this.settingButtonPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).BeginInit();
             this.menuFlowWrap.SuspendLayout();
+            this.menuTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // taskBar
@@ -116,6 +116,7 @@
             // buttonFlow
             // 
             this.buttonFlow.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonFlow.BackColor = System.Drawing.Color.Transparent;
             this.buttonFlow.Controls.Add(this.minButtonPane);
             this.buttonFlow.Controls.Add(this.recoverButtonPane);
             this.buttonFlow.Controls.Add(this.closeButtonPane);
@@ -126,6 +127,7 @@
             // 
             // minButtonPane
             // 
+            this.minButtonPane.BackColor = System.Drawing.Color.Transparent;
             this.minButtonPane.Controls.Add(this.minButtonIcon);
             this.minButtonPane.Location = new System.Drawing.Point(0, 0);
             this.minButtonPane.Margin = new System.Windows.Forms.Padding(0);
@@ -151,6 +153,7 @@
             // 
             // recoverButtonPane
             // 
+            this.recoverButtonPane.BackColor = System.Drawing.Color.Transparent;
             this.recoverButtonPane.Controls.Add(this.recoverButtonIcon);
             this.recoverButtonPane.Location = new System.Drawing.Point(40, 0);
             this.recoverButtonPane.Margin = new System.Windows.Forms.Padding(0);
@@ -185,6 +188,7 @@
             // 
             // closeButtonIcon
             // 
+            this.closeButtonIcon.BackColor = System.Drawing.Color.Transparent;
             this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
@@ -201,16 +205,19 @@
             // 
             // title
             // 
+            this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.title.Location = new System.Drawing.Point(39, 3);
+            this.title.Location = new System.Drawing.Point(36, 0);
+            this.title.Margin = new System.Windows.Forms.Padding(0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(587, 23);
+            this.title.Size = new System.Drawing.Size(806, 26);
             this.title.TabIndex = 1;
             this.title.Text = "Main";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // programIcon
             // 
+            this.programIcon.BackColor = System.Drawing.Color.Transparent;
             this.programIcon.Image = global::SM_Movie.Properties.Resources.minimize;
             this.programIcon.Location = new System.Drawing.Point(10, 0);
             this.programIcon.Margin = new System.Windows.Forms.Padding(0);
@@ -225,43 +232,18 @@
             this.mainPane.AutoScroll = true;
             this.mainPane.BackColor = System.Drawing.SystemColors.Control;
             this.mainPane.Controls.Add(this.mainPanel);
-            this.mainPane.Controls.Add(this.menuTitle);
             this.mainPane.Controls.Add(this.movieSearch);
             this.mainPane.Controls.Add(this.settingPanel);
             this.mainPane.Controls.Add(this.adminPanel);
-            this.mainPane.Location = new System.Drawing.Point(50, 28);
+            this.mainPane.Location = new System.Drawing.Point(50, 72);
             this.mainPane.Margin = new System.Windows.Forms.Padding(0);
             this.mainPane.Name = "mainPane";
-            this.mainPane.Size = new System.Drawing.Size(915, 522);
+            this.mainPane.Size = new System.Drawing.Size(915, 478);
             this.mainPane.TabIndex = 1;
-            // 
-            // menuTitle
-            // 
-            this.menuTitle.BackColor = System.Drawing.Color.White;
-            this.menuTitle.ColumnCount = 1;
-            this.menuTitle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.menuTitle.Controls.Add(this.titleLabel, 0, 0);
-            this.menuTitle.Location = new System.Drawing.Point(0, 0);
-            this.menuTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.menuTitle.Name = "menuTitle";
-            this.menuTitle.RowCount = 1;
-            this.menuTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.menuTitle.Size = new System.Drawing.Size(914, 48);
-            this.menuTitle.TabIndex = 2;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.titleLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.titleLabel.Location = new System.Drawing.Point(3, 0);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(908, 46);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // menuButtonPane
             // 
-            this.menuButtonPane.BackColor = System.Drawing.Color.Red;
+            this.menuButtonPane.BackColor = System.Drawing.Color.Transparent;
             this.menuButtonPane.Controls.Add(this.menuButtonIcon);
             this.menuButtonPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuButtonPane.Location = new System.Drawing.Point(0, 0);
@@ -616,39 +598,64 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.AutoSize = true;
             this.mainPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanel.Location = new System.Drawing.Point(0, 48);
+            this.mainPanel.Location = new System.Drawing.Point(0, 4);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(915, 476);
+            this.mainPanel.Size = new System.Drawing.Size(915, 520);
             this.mainPanel.TabIndex = 3;
             // 
             // movieSearch
             // 
-            this.movieSearch.Location = new System.Drawing.Point(0, 46);
+            this.movieSearch.Location = new System.Drawing.Point(0, 71);
             this.movieSearch.Name = "movieSearch";
-            this.movieSearch.Size = new System.Drawing.Size(915, 479);
+            this.movieSearch.Size = new System.Drawing.Size(915, 454);
             this.movieSearch.TabIndex = 4;
             this.movieSearch.Visible = false;
             // 
             // settingPanel
             // 
-            this.settingPanel.Location = new System.Drawing.Point(0, 48);
+            this.settingPanel.Location = new System.Drawing.Point(0, 68);
             this.settingPanel.Margin = new System.Windows.Forms.Padding(0);
             this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(915, 474);
+            this.settingPanel.Size = new System.Drawing.Size(915, 454);
             this.settingPanel.TabIndex = 5;
             this.settingPanel.Visible = false;
             // 
             // adminPanel
             // 
-            this.adminPanel.Location = new System.Drawing.Point(0, 48);
+            this.adminPanel.Location = new System.Drawing.Point(0, 0);
             this.adminPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(915, 474);
+            this.adminPanel.Size = new System.Drawing.Size(915, 522);
             this.adminPanel.TabIndex = 6;
             this.adminPanel.Visible = false;
             this.adminPanel.VisibleChanged += new System.EventHandler(this.adminPanel_VisibleChanged);
+            // 
+            // menuTitle
+            // 
+            this.menuTitle.BackColor = System.Drawing.Color.White;
+            this.menuTitle.ColumnCount = 1;
+            this.menuTitle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.menuTitle.Controls.Add(this.titleLabel, 0, 0);
+            this.menuTitle.Location = new System.Drawing.Point(50, 26);
+            this.menuTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.menuTitle.Name = "menuTitle";
+            this.menuTitle.RowCount = 1;
+            this.menuTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.menuTitle.Size = new System.Drawing.Size(917, 48);
+            this.menuTitle.TabIndex = 7;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.titleLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titleLabel.Location = new System.Drawing.Point(3, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(911, 46);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Main
             // 
@@ -656,6 +663,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(967, 552);
+            this.Controls.Add(this.menuTitle);
             this.Controls.Add(this.menuFlowWrap);
             this.Controls.Add(this.mainPane);
             this.Controls.Add(this.taskBar);
@@ -676,7 +684,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             this.mainPane.ResumeLayout(false);
-            this.menuTitle.ResumeLayout(false);
+            this.mainPane.PerformLayout();
             this.menuButtonPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).EndInit();
             this.menuButtonBack.ResumeLayout(false);
@@ -694,6 +702,7 @@
             this.settingButtonPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).EndInit();
             this.menuFlowWrap.ResumeLayout(false);
+            this.menuTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -712,7 +721,6 @@
         private System.Windows.Forms.Panel closeButtonPane;
         private System.Windows.Forms.PictureBox closeButtonIcon;
         private System.Windows.Forms.Panel menuButtonPane;
-        private System.Windows.Forms.TableLayoutPanel menuTitle;
         private System.Windows.Forms.PictureBox menuButtonIcon;
         private System.Windows.Forms.Panel menuButtonBack;
         private System.Windows.Forms.Panel menuPane;
@@ -735,7 +743,6 @@
         private System.Windows.Forms.Panel settingButtonHighLight;
         private System.Windows.Forms.Panel homeButtonHighLight;
         private System.Windows.Forms.Panel movieButtonHighLight;
-        private System.Windows.Forms.Label titleLabel;
         private MainPanel mainPanel;
         private movieSearch movieSearch;
         private SettingPanel settingPanel;
@@ -744,5 +751,7 @@
 		private System.Windows.Forms.PictureBox adminButtonIcon;
 		private System.Windows.Forms.Label adminButtonLabel;
 		private Views.admin adminPanel;
+        private System.Windows.Forms.TableLayoutPanel menuTitle;
+        private System.Windows.Forms.Label titleLabel;
     }
 }

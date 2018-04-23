@@ -30,6 +30,7 @@
         {
             this.panelsetting = new System.Windows.Forms.Panel();
             this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.IdSavePanel = new System.Windows.Forms.Panel();
             this.saveID = new System.Windows.Forms.Label();
             this.IdSave = new System.Windows.Forms.CheckBox();
@@ -71,12 +72,13 @@
             this.SettingColor = new System.Windows.Forms.Label();
             this.InputColorCode = new System.Windows.Forms.TextBox();
             this.settinglabel = new System.Windows.Forms.Label();
-            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
+            this.argbSetting = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelsetting.SuspendLayout();
             this.closeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.IdSavePanel.SuspendLayout();
             this.colorsetting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelsetting
@@ -100,13 +102,25 @@
             this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
             this.closeButtonPane.TabIndex = 11;
             // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
+            // 
             // IdSavePanel
             // 
             this.IdSavePanel.Controls.Add(this.saveID);
             this.IdSavePanel.Controls.Add(this.IdSave);
             this.IdSavePanel.Location = new System.Drawing.Point(10, 370);
             this.IdSavePanel.Name = "IdSavePanel";
-            this.IdSavePanel.Size = new System.Drawing.Size(383, 82);
+            this.IdSavePanel.Size = new System.Drawing.Size(551, 82);
             this.IdSavePanel.TabIndex = 5;
             // 
             // saveID
@@ -130,6 +144,8 @@
             // 
             // colorsetting
             // 
+            this.colorsetting.Controls.Add(this.label1);
+            this.colorsetting.Controls.Add(this.argbSetting);
             this.colorsetting.Controls.Add(this.Colortable);
             this.colorsetting.Controls.Add(this.Color32);
             this.colorsetting.Controls.Add(this.Color31);
@@ -169,17 +185,17 @@
             this.colorsetting.Location = new System.Drawing.Point(10, 57);
             this.colorsetting.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
             this.colorsetting.Name = "colorsetting";
-            this.colorsetting.Size = new System.Drawing.Size(383, 311);
+            this.colorsetting.Size = new System.Drawing.Size(551, 311);
             this.colorsetting.TabIndex = 3;
             // 
             // Colortable
             // 
             this.Colortable.AutoSize = true;
-            this.Colortable.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Colortable.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.Colortable.Location = new System.Drawing.Point(8, 37);
             this.Colortable.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.Colortable.Name = "Colortable";
-            this.Colortable.Size = new System.Drawing.Size(55, 15);
+            this.Colortable.Size = new System.Drawing.Size(43, 15);
             this.Colortable.TabIndex = 38;
             this.Colortable.Text = "색상표";
             // 
@@ -410,11 +426,11 @@
             // directlyColortable
             // 
             this.directlyColortable.AutoSize = true;
-            this.directlyColortable.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.directlyColortable.Location = new System.Drawing.Point(8, 256);
+            this.directlyColortable.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold);
+            this.directlyColortable.Location = new System.Drawing.Point(7, 251);
             this.directlyColortable.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.directlyColortable.Name = "directlyColortable";
-            this.directlyColortable.Size = new System.Drawing.Size(131, 15);
+            this.directlyColortable.Size = new System.Drawing.Size(124, 20);
             this.directlyColortable.TabIndex = 21;
             this.directlyColortable.Text = "컬러 코드로 설정";
             // 
@@ -645,10 +661,10 @@
             // SettingColor
             // 
             this.SettingColor.AutoSize = true;
-            this.SettingColor.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SettingColor.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold);
             this.SettingColor.Location = new System.Drawing.Point(3, 0);
             this.SettingColor.Name = "SettingColor";
-            this.SettingColor.Size = new System.Drawing.Size(143, 19);
+            this.SettingColor.Size = new System.Drawing.Size(140, 25);
             this.SettingColor.TabIndex = 4;
             this.SettingColor.Text = "테마 색상 설정";
             // 
@@ -671,17 +687,27 @@
             this.settinglabel.Text = "설정";
             this.settinglabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // closeButtonIcon
+            // argbSetting
             // 
-            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonIcon.Name = "closeButtonIcon";
-            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeButtonIcon.TabIndex = 1;
-            this.closeButtonIcon.TabStop = false;
+            this.argbSetting.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.argbSetting.Location = new System.Drawing.Point(379, 274);
+            this.argbSetting.Name = "argbSetting";
+            this.argbSetting.Size = new System.Drawing.Size(75, 21);
+            this.argbSetting.TabIndex = 39;
+            this.argbSetting.Text = "설정";
+            this.argbSetting.UseVisualStyleBackColor = true;
+            this.argbSetting.Click += new System.EventHandler(this.argbSetting_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(136, 256);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 15);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "형식(#aarrggbb)";
             // 
             // SettingPanel
             // 
@@ -693,11 +719,11 @@
             this.panelsetting.ResumeLayout(false);
             this.panelsetting.PerformLayout();
             this.closeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.IdSavePanel.ResumeLayout(false);
             this.IdSavePanel.PerformLayout();
             this.colorsetting.ResumeLayout(false);
             this.colorsetting.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -748,5 +774,7 @@
         private System.Windows.Forms.Panel IdSavePanel;
         private System.Windows.Forms.Panel closeButtonPane;
         private System.Windows.Forms.PictureBox closeButtonIcon;
+        private System.Windows.Forms.Button argbSetting;
+        private System.Windows.Forms.Label label1;
     }
 }

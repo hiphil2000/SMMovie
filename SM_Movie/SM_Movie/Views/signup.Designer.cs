@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
@@ -148,6 +147,7 @@
             this.BackLogin.TabStop = true;
             this.BackLogin.Text = "뒤로가기";
             this.BackLogin.VisitedLinkColor = System.Drawing.Color.Black;
+            this.BackLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BackLogin_LinkClicked);
             // 
             // Login
             // 
@@ -396,10 +396,10 @@
             // 
             // logo
             // 
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Image = global::SM_Movie.Properties.Resources.logo;
             this.logo.Location = new System.Drawing.Point(12, 12);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(192, 59);
+            this.logo.Size = new System.Drawing.Size(192, 190);
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             // 

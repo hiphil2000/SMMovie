@@ -15,7 +15,7 @@ namespace SM_Movie.Utils
 
         public DBUtil()
         {
-            string connectionString = "Data Source=DESKTOP-HHSGVJH;Initial Catalog=master;Integrated Security=True;Pooling=False";
+            string connectionString = "Data Source=EMT03;Initial Catalog=master;Integrated Security=True;Pooling=False";
             conn = new SqlConnection(connectionString);
         }
 
@@ -54,6 +54,40 @@ namespace SM_Movie.Utils
             
         }
 
+        public void register(User user)
+        {
+            try
+            {
+                String sql = "INSERT INTO userTbl(userName, userBirthday, userId, userPassword, userNickname, userEmail, userPhone, userAddress, genreSeq, memberShipSeq) " +
+                    "VALUES(:userName, CONVERT(datetime, :userBirthday, 102), :userId, :userPassword, :userEmail, :userPhone, :userAddress, :genreSeq, :memberShipSeq)";
+                SqlCommand com = new SqlCommand(sql, conn);
+                com.Parameters.AddWithValue(":userName", user._userName);
+                com.Parameters.AddWithValue(":userBirthday", user._userBirthday);
+                com.Parameters.AddWithValue(":userId", user._userId);
+                com.Parameters.AddWithValue(":userPassword", user._userPassword);
+                com.Parameters.AddWithValue(":userNickname", user._userNickname);
+                com.Parameters.AddWithValue(":userEmail", user._userEmail);
+                com.Parameters.AddWithValue(":userPhone", user._userPhone);
+                com.Parameters.AddWithValue(":userAddress", user._userAddress);
+                com.Parameters.AddWithValue(":genreSeq", user._genreSeq);
+                com.Parameters.AddWithValue(":memberShipSeq", user._memberShipSeq);
+
+                conn.Open();
+                com.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+
+            }
+        }
+
 		public DataTable getUserList()
 		{
 			try
@@ -84,6 +118,36 @@ namespace SM_Movie.Utils
 			}
 		}
 
+        public DataTable getMovieList()
+        {
+            try
+            {
+                String sql = "SELECT movieSeq '영화 고유번호', movieTitle '영화 제목', movieDirector '영화 감독', movieMainActor '영화 주역', movieAgeLimit '관람가', " +
+                            "movieRunningTime '상영시간', CONVERT(varchar, movieReleaseDate, 102) '영화 개봉일', movieTrailer '영화 트레일러', moviePoster '영화 포스터', movieSummary '영화 줄거리', genreName '영화 장르' " +
+                            "FROM movieTbl mt, genreTbl gt" +
+                            "WHERE mt.genreSeq = gt.genreSeq";
+                conn.Open();
+
+                SqlDataAdapter sda = new SqlDataAdapter(sql, conn);
+                SqlCommandBuilder scb = new SqlCommandBuilder(sda);
+
+                DataTable dt = new DataTable();
+                dt.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+            }
+        }
+
 		public int getLastSeq(string table)
 		{
 			try
@@ -111,6 +175,27 @@ namespace SM_Movie.Utils
 					conn.Close();
 			}
 		}
+
+        public void getMainData()
+        {
+            try
+            {
+                string sql = "";
+                conn.Open();
+                SqlCommand scom = new SqlCommand(sql, conn);
+                SqlDataReader sdr = scom.ExecuteReader();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+            }
+        }
 
         public void updateUserList(DataTable tableViewData)
         {

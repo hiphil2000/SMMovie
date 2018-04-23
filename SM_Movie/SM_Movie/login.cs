@@ -54,6 +54,8 @@ namespace SM_Movie
         public void setMain(Main main)
         {
             this.main = main;
+            log1.setColor(main._themeColor);
+            signup1.setColor(main._themeColor);
         }
 
         private void log1_Load(object sender, EventArgs e)
@@ -70,8 +72,7 @@ namespace SM_Movie
 		{
 			log1.Visible = false;
 			signup1.Visible = true;
-			this.Width = signup1.Width + 10;
-			this.AutoScroll = true;
+            this.Size = signup1.Size;
 		}
 
 		internal void loginAttempt()
@@ -96,8 +97,7 @@ namespace SM_Movie
 		{
 			log1.Visible = true;
 			signup1.Visible = false;
-			this.AutoScroll = false;
-			this.Width = log1.Width;
+            this.Size = log1.Size;
 		}
 	}
 }

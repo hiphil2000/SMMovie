@@ -16,5 +16,15 @@ namespace SM_Movie.Views
         {
             InitializeComponent();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void movieMain_Resize(object sender, EventArgs e)
+        {
+            movieCollectionPanel.Width = this.Width;
+        }
     }
 }

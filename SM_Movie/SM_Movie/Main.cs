@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transitions;
 
 namespace SM_Movie
 {
@@ -19,6 +20,11 @@ namespace SM_Movie
         private string currentPage;
         private Point mousePos = new Point();
         private bool menuState = false;
+        private Color themeColor;
+        public Color _themeColor
+        {
+            get { return themeColor; }
+        }
 
         Dictionary<string, ButtonInfo> buttonInfoDic = new Dictionary<string, ButtonInfo>();
 
@@ -27,7 +33,10 @@ namespace SM_Movie
             InitializeComponent();
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            settingPanel.setMain(this);
+            this.HorizontalScroll.Visible = false;
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -52,7 +61,28 @@ namespace SM_Movie
             buttonInfoDic.Add("settingButton", new ButtonInfo(settingButtonIcon, settingButtonPane, settingButtonLabel, settingPanel, settingButtonHighLight));
 			buttonInfoDic.Add("adminButton", new ButtonInfo(adminButtonIcon, adminButtonPane, adminButtonLabel, adminPanel, adminButtonHighLight));
 
-			openPage(null, new EventArgs());
+            themeColor = Utils.StyleUtil.getWindowsThemeColor();
+            setColors();
+            openPage(null, new EventArgs());
+        }
+
+        private void setBestData()
+        {
+
+        }
+
+        public void setThemeColor(Color color)
+        {
+            this.themeColor = color;
+            setColors();
+        }
+
+        private void setColors()
+        {
+            taskBar.BackColor = themeColor;
+            menuButtonBack.BackColor = themeColor;
+            if(currentPage!= null)
+                buttonInfoDic[currentPage].Get_buttonHighLight().BackColor = themeColor;
         }
 
         public void resize()
@@ -62,9 +92,11 @@ namespace SM_Movie
                 taskBar.Width = this.Width - 4;
                 taskBar.Location = new Point(2, 2);
                 buttonFlow.Location = new Point(this.Width - buttonFlow.Width, 0);
+                menuTitle.Location = new Point(50, 28);
                 mainPane.Width = this.Width - 52;
-                mainPane.Height = this.Height - taskBar.Height - 4;
-                mainPane.Location = new Point(50, taskBar.Height + 2);
+                menuTitle.Width = this.Width - 52;
+                mainPane.Height = this.Height - taskBar.Height - menuTitle.Height  - 4;
+                mainPane.Location = new Point(50, taskBar.Height + menuTitle.Height + 2);
                 menuPane.Location = new Point(2, 28);
 
                 menuFlowWrap.Height = this.Height - taskBar.Height - menuButtonBack.Height;
@@ -74,21 +106,28 @@ namespace SM_Movie
 
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
-                movieSearch.Size = new Size(this.Width - 52, this.Height - 78);
-                mainPanel.Size = new Size(this.Width - 52, this.Height - 78);
-                settingPanel.Size = mainPanel.Size;
-                movieSearch.Size = mainPanel.Size;
-				adminPanel.Size = mainPanel.Size;
-				menuTitle.Width = mainPane.Width;
+                // 13 = 스크롤바 너비
+                int pageWidth;
+                if (mainPane.VerticalScroll.Visible == true )
+                    pageWidth = this.Width - 52 - 17;
+                else
+                    pageWidth = this.Width - 52;
+                movieSearch.Width = pageWidth;
+                mainPanel.Width = pageWidth;
+                settingPanel.Width = pageWidth;
+                movieSearch.Width = pageWidth;
+                adminPanel.Width = pageWidth;
             }
             else
             {
                 taskBar.Width = this.Width;
                 taskBar.Location = new Point(0, 0);
                 buttonFlow.Location = new Point(this.Width - buttonFlow.Width, 0);
+                menuTitle.Location = new Point(48, 26);
                 mainPane.Width = this.Width - 48;
-                mainPane.Height = this.Height - taskBar.Height;
-                mainPane.Location = new Point(48, taskBar.Height);
+                menuTitle.Width = this.Width - 48;
+                mainPane.Height = this.Height - taskBar.Height - menuTitle.Height;
+                mainPane.Location = new Point(48, taskBar.Height + menuTitle.Height);
                 menuPane.Location = new Point(0, 26);
 
                 menuFlowWrap.Height = this.Height - taskBar.Height - menuButtonBack.Height;
@@ -98,14 +137,17 @@ namespace SM_Movie
 
                 commonUserMenuFlow.Location = new Point(0, menuBarFlow.Location.Y + menuBarFlow.Height);
 
-                movieSearch.Size = new Size(this.Width - 48, this.Height - 74);
-                mainPanel.Size = new Size(this.Width - 48, this.Height - 74);
-
-                mainPanel.Size = this.Size;
-                settingPanel.Size = mainPanel.Size;
-                movieSearch.Size = settingPanel.Size;
-				adminPanel.Size = mainPanel.Size;
-				menuTitle.Width = mainPane.Width;
+                // 13 = 스크롤바 너비
+                int pageWidth;
+                if (mainPane.VerticalScroll.Visible == true)
+                    pageWidth = this.Width - 52 - 17;
+                else
+                    pageWidth = this.Width - 52;
+                movieSearch.Width = pageWidth;
+                mainPanel.Width = pageWidth;
+                settingPanel.Width = pageWidth;
+                movieSearch.Width = pageWidth;
+                adminPanel.Width = pageWidth;
             }
 
         }
@@ -292,7 +334,7 @@ namespace SM_Movie
                 mainPanel.Visible = true;
                 titleLabel.Text = homeButtonLabel.Text;
                 title.Text = homeButtonLabel.Text;
-                homeButtonHighLight.BackColor = Color.FromArgb(255, 0, 0);
+                homeButtonHighLight.BackColor = themeColor;
                 currentPage = "homeButton";
                 return;
             }
@@ -319,7 +361,7 @@ namespace SM_Movie
             titleLabel.Text = clickedButton.Get_buttonTitle().Text;
             prevButton.Get_buttonHighLight().BackColor = Color.Transparent;
             prevButton.Get_buttonBindPage().Visible = false;
-            clickedButton.Get_buttonHighLight().BackColor = Color.Red;
+            clickedButton.Get_buttonHighLight().BackColor = themeColor;
             clickedButton.Get_buttonBindPage().Visible = true;
 
 
@@ -332,22 +374,13 @@ namespace SM_Movie
             if(menuState)
             {
                 menuState = false;
-                for (int i = menuFlowWrap.Width; i >= 48; i -= 2)
-                {
-                    menuFlowWrap.Width = i;
-                    homeButtonPane.Width = i;
-
-                    Thread.Sleep(1);
-                }
+                Transition.run(menuFlowWrap, "Width", 48, new TransitionType_EaseInEaseOut(150));
+                Transition.run(homeButtonPane, "Width", 48, new TransitionType_EaseInEaseOut(150));
             } else
             {
                 menuState = true;
-                for (int i = menuFlowWrap.Width; i <= 250; i += 2)
-                {
-                    menuFlowWrap.Width = i;
-                    homeButtonPane.Width = i;
-                    Thread.Sleep(1);
-                }
+                Transition.run(menuFlowWrap, "Width", 250, new TransitionType_EaseInEaseOut(150));
+                Transition.run(homeButtonPane, "Width", 250, new TransitionType_EaseInEaseOut(150));
             }
         }
 

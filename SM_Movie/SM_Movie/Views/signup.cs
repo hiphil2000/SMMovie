@@ -32,7 +32,12 @@ namespace SM_Movie
 
 		}
 
-		private void buttonLostFocus(object sender, EventArgs e)
+        internal void setColor(Color themeColor)
+        {
+            leftPanel.BackColor = themeColor;
+        }
+
+        private void buttonLostFocus(object sender, EventArgs e)
 		{
 			Color color = Color.FromArgb(0, 0, 0, 0);
 			Control con = (Control)sender;
@@ -54,5 +59,10 @@ namespace SM_Movie
 		{
 			login.Dispose();
 		}
-	}
+
+        private void BackLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            login.openPage("login");
+        }
+    }
 }

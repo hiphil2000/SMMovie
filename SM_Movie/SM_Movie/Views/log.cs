@@ -22,6 +22,11 @@ namespace SM_Movie
             buttonDictionary.Add("closeButton", new ButtonInfo(closeButtonIcon, closeButtonPane));
         }
 
+        internal void setColor(Color themeColor)
+        {
+            leftPanel.BackColor = themeColor;
+        }
+
         public void setLogin(login login)
         {
             this.login = login;

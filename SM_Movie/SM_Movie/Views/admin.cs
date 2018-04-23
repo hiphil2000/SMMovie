@@ -77,6 +77,7 @@ namespace SM_Movie.Views
 			lnbContentPanel.Height = this.Height - 48;
 			dataTablePanel.Width = this.Width - 6;
             dataTablePanel.Height = this.Height - 106;
+            dataButtonFlow.Location = new Point(this.Width - dataButtonFlow.Width - 6, 6);
 		}
 
 		public void refreshData()
