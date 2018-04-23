@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SM_Movie.Utils
 {
-    class Movie
+    public class Movie
     {
         //영화 고유번호
         private int movieSeq;

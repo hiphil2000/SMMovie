@@ -166,6 +166,7 @@
             this.dataRefreshButton.TabIndex = 3;
             this.dataRefreshButton.Text = "데이터 새로고침";
             this.dataRefreshButton.UseVisualStyleBackColor = true;
+            this.dataRefreshButton.Click += new System.EventHandler(this.dataRefreshButton_Click);
             // 
             // dataUpdateButton
             // 

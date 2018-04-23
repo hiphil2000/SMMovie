@@ -64,6 +64,7 @@ namespace SM_Movie
             themeColor = Utils.StyleUtil.getWindowsThemeColor();
             setColors();
             openPage(null, new EventArgs());
+            mainPanel.setMain(this);
         }
 
         private void setBestData()
@@ -428,5 +429,6 @@ namespace SM_Movie
 		{
 			adminPanel.refreshData();
 		}
+
 	}
 }

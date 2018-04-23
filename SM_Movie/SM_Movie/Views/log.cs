@@ -61,7 +61,7 @@ namespace SM_Movie
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			login.loginAttempt();
+			login.loginAttempt(userId.Text, userPassword.Text);
 		}
 
 		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

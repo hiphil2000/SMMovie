@@ -1,16 +1,16 @@
 ﻿namespace SM_Movie
 {
-    partial class Movieinformation
+    partial class movieInfoWIndow
     {
-        /// <summary> 
-        /// 필수 디자이너 변수입니다.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// 사용 중인 모든 리소스를 정리합니다.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,18 +20,21 @@
             base.Dispose(disposing);
         }
 
-        #region 구성 요소 디자이너에서 생성한 코드
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// 디자이너 지원에 필요한 메서드입니다. 
-        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Movieinformation));
-            this.MovieContents = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(movieInfoWIndow));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ReservationButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MovieSummary = new System.Windows.Forms.Label();
             this.movieRunningTime = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.movieMainActor = new System.Windows.Forms.Label();
             this.movieReleaseDateText = new System.Windows.Forms.Label();
             this.movieDirectorText = new System.Windows.Forms.Label();
@@ -43,101 +46,140 @@
             this.movieDirector = new System.Windows.Forms.Label();
             this.movieAgeLimit = new System.Windows.Forms.Label();
             this.genreName = new System.Windows.Forms.Label();
-            this.ReservationButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TrailerVideoFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.moviePoster = new System.Windows.Forms.PictureBox();
             this.ReviewFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Reviewpanel = new System.Windows.Forms.Panel();
             this.reviewTitle = new System.Windows.Forms.TextBox();
             this.reviewContent = new System.Windows.Forms.TextBox();
             this.reviewinsert = new System.Windows.Forms.Button();
             this.userNickname = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.movieTitle = new System.Windows.Forms.Label();
+            this.underscore = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Summary = new System.Windows.Forms.Label();
-            this.MovieSummary = new System.Windows.Forms.Label();
+            this.MovieContents = new System.Windows.Forms.Panel();
+            this.movieTitle = new System.Windows.Forms.Label();
+            this.taskbar = new System.Windows.Forms.Panel();
             this.closeButtonPane = new System.Windows.Forms.Panel();
             this.closeButtonIcon = new System.Windows.Forms.PictureBox();
-            this.underscore = new System.Windows.Forms.PictureBox();
-            this.moviePoster = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MovieContents.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TrailerVideoFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).BeginInit();
             this.ReviewFlowPanel.SuspendLayout();
             this.Reviewpanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.underscore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MovieContents.SuspendLayout();
+            this.taskbar.SuspendLayout();
             this.closeButtonPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.underscore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // MovieContents
+            // panel1
             // 
-            this.MovieContents.BackColor = System.Drawing.SystemColors.Window;
-            this.MovieContents.Controls.Add(this.tableLayoutPanel1);
-            this.MovieContents.Controls.Add(this.closeButtonPane);
-            this.MovieContents.Controls.Add(this.ReservationButton);
-            this.MovieContents.Controls.Add(this.label2);
-            this.MovieContents.Controls.Add(this.label1);
-            this.MovieContents.Controls.Add(this.TrailerVideoFlowPanel);
-            this.MovieContents.Controls.Add(this.ReviewFlowPanel);
-            this.MovieContents.Controls.Add(this.movieTitle);
-            this.MovieContents.Controls.Add(this.underscore);
-            this.MovieContents.Controls.Add(this.Summary);
-            this.MovieContents.Controls.Add(this.MovieSummary);
-            this.MovieContents.Controls.Add(this.moviePoster);
-            this.MovieContents.Controls.Add(this.pictureBox1);
-            this.MovieContents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MovieContents.Location = new System.Drawing.Point(0, 0);
-            this.MovieContents.Name = "MovieContents";
-            this.MovieContents.Size = new System.Drawing.Size(903, 1893);
-            this.MovieContents.TabIndex = 0;
+            this.panel1.Controls.Add(this.taskbar);
+            this.panel1.Controls.Add(this.MovieContents);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(909, 596);
+            this.panel1.TabIndex = 0;
+            // 
+            // ReservationButton
+            // 
+            this.ReservationButton.BackColor = System.Drawing.Color.DarkCyan;
+            this.ReservationButton.FlatAppearance.BorderSize = 0;
+            this.ReservationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReservationButton.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ReservationButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.ReservationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReservationButton.Location = new System.Drawing.Point(753, 90);
+            this.ReservationButton.Name = "ReservationButton";
+            this.ReservationButton.Size = new System.Drawing.Size(115, 43);
+            this.ReservationButton.TabIndex = 17;
+            this.ReservationButton.Text = " 예매하기";
+            this.ReservationButton.UseCompatibleTextRendering = true;
+            this.ReservationButton.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(15, 1029);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "리뷰";
+            // 
+            // MovieSummary
+            // 
+            this.MovieSummary.AutoSize = true;
+            this.MovieSummary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieSummary.Location = new System.Drawing.Point(15, 416);
+            this.MovieSummary.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.MovieSummary.Name = "MovieSummary";
+            this.MovieSummary.Size = new System.Drawing.Size(59, 16);
+            this.MovieSummary.TabIndex = 2;
+            this.MovieSummary.Text = "줄거리";
+            // 
+            // movieRunningTime
+            // 
+            this.movieRunningTime.AutoSize = true;
+            this.movieRunningTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.movieRunningTime.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movieRunningTime.Location = new System.Drawing.Point(385, 88);
+            this.movieRunningTime.Name = "movieRunningTime";
+            this.movieRunningTime.Size = new System.Drawing.Size(203, 45);
+            this.movieRunningTime.TabIndex = 14;
+            this.movieRunningTime.Text = "label32";
+            this.movieRunningTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel1
             // 
@@ -166,18 +208,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(591, 133);
             this.tableLayoutPanel1.TabIndex = 33;
-            // 
-            // movieRunningTime
-            // 
-            this.movieRunningTime.AutoSize = true;
-            this.movieRunningTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.movieRunningTime.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.movieRunningTime.Location = new System.Drawing.Point(385, 88);
-            this.movieRunningTime.Name = "movieRunningTime";
-            this.movieRunningTime.Size = new System.Drawing.Size(203, 45);
-            this.movieRunningTime.TabIndex = 14;
-            this.movieRunningTime.Text = "label32";
-            this.movieRunningTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // movieMainActor
             // 
@@ -317,33 +347,6 @@
             this.genreName.Text = "label30";
             this.genreName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ReservationButton
-            // 
-            this.ReservationButton.BackColor = System.Drawing.Color.DarkCyan;
-            this.ReservationButton.FlatAppearance.BorderSize = 0;
-            this.ReservationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReservationButton.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ReservationButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ReservationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ReservationButton.Location = new System.Drawing.Point(753, 90);
-            this.ReservationButton.Name = "ReservationButton";
-            this.ReservationButton.Size = new System.Drawing.Size(115, 43);
-            this.ReservationButton.TabIndex = 17;
-            this.ReservationButton.Text = " 예매하기";
-            this.ReservationButton.UseCompatibleTextRendering = true;
-            this.ReservationButton.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(15, 1029);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "리뷰";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -371,17 +374,26 @@
             this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
             this.mediaPlayer.Size = new System.Drawing.Size(857, 377);
             this.mediaPlayer.TabIndex = 0;
-            this.mediaPlayer.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
+            // moviePoster
+            // 
+            this.moviePoster.Image = ((System.Drawing.Image)(resources.GetObject("moviePoster.Image")));
+            this.moviePoster.Location = new System.Drawing.Point(18, 27);
+            this.moviePoster.Name = "moviePoster";
+            this.moviePoster.Size = new System.Drawing.Size(250, 375);
+            this.moviePoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.moviePoster.TabIndex = 0;
+            this.moviePoster.TabStop = false;
             // 
             // ReviewFlowPanel
             // 
             this.ReviewFlowPanel.Controls.Add(this.Reviewpanel);
-            this.ReviewFlowPanel.Controls.Add(this.panel1);
             this.ReviewFlowPanel.Controls.Add(this.panel2);
             this.ReviewFlowPanel.Controls.Add(this.panel3);
             this.ReviewFlowPanel.Controls.Add(this.panel4);
             this.ReviewFlowPanel.Controls.Add(this.panel5);
             this.ReviewFlowPanel.Controls.Add(this.panel6);
+            this.ReviewFlowPanel.Controls.Add(this.panel7);
             this.ReviewFlowPanel.Location = new System.Drawing.Point(18, 1048);
             this.ReviewFlowPanel.Name = "ReviewFlowPanel";
             this.ReviewFlowPanel.Size = new System.Drawing.Size(860, 727);
@@ -417,10 +429,9 @@
             // 
             // reviewinsert
             // 
-            this.reviewinsert.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.reviewinsert.Location = new System.Drawing.Point(703, 38);
+            this.reviewinsert.Location = new System.Drawing.Point(703, 3);
             this.reviewinsert.Name = "reviewinsert";
-            this.reviewinsert.Size = new System.Drawing.Size(134, 108);
+            this.reviewinsert.Size = new System.Drawing.Size(134, 143);
             this.reviewinsert.TabIndex = 12;
             this.reviewinsert.Text = "등록";
             this.reviewinsert.UseVisualStyleBackColor = true;
@@ -435,18 +446,18 @@
             this.userNickname.TabIndex = 0;
             this.userNickname.Text = "로그인한 사용자 별명";
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(10, 179);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 149);
-            this.panel1.TabIndex = 1;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(10, 179);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(410, 149);
+            this.panel2.TabIndex = 1;
             // 
             // label4
             // 
@@ -502,18 +513,18 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "ksc5348";
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(440, 179);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 149);
-            this.panel2.TabIndex = 2;
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(440, 179);
+            this.panel3.Margin = new System.Windows.Forms.Padding(10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(410, 149);
+            this.panel3.TabIndex = 2;
             // 
             // label8
             // 
@@ -569,18 +580,18 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "ksc5348";
             // 
-            // panel3
+            // panel4
             // 
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(10, 348);
-            this.panel3.Margin = new System.Windows.Forms.Padding(10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(410, 149);
-            this.panel3.TabIndex = 3;
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Location = new System.Drawing.Point(10, 348);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(410, 149);
+            this.panel4.TabIndex = 3;
             // 
             // label12
             // 
@@ -636,18 +647,18 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "ksc5348";
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Location = new System.Drawing.Point(440, 348);
-            this.panel4.Margin = new System.Windows.Forms.Padding(10);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(410, 149);
-            this.panel4.TabIndex = 4;
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Location = new System.Drawing.Point(440, 348);
+            this.panel5.Margin = new System.Windows.Forms.Padding(10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(410, 149);
+            this.panel5.TabIndex = 4;
             // 
             // label16
             // 
@@ -703,18 +714,18 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "ksc5348";
             // 
-            // panel5
+            // panel6
             // 
-            this.panel5.Controls.Add(this.label20);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.label22);
-            this.panel5.Location = new System.Drawing.Point(10, 517);
-            this.panel5.Margin = new System.Windows.Forms.Padding(10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(410, 149);
-            this.panel5.TabIndex = 5;
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label19);
+            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.label21);
+            this.panel6.Controls.Add(this.label22);
+            this.panel6.Location = new System.Drawing.Point(10, 517);
+            this.panel6.Margin = new System.Windows.Forms.Padding(10);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(410, 149);
+            this.panel6.TabIndex = 5;
             // 
             // label20
             // 
@@ -770,18 +781,18 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "ksc5348";
             // 
-            // panel6
+            // panel7
             // 
-            this.panel6.Controls.Add(this.label24);
-            this.panel6.Controls.Add(this.label25);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.label26);
-            this.panel6.Controls.Add(this.label27);
-            this.panel6.Location = new System.Drawing.Point(440, 517);
-            this.panel6.Margin = new System.Windows.Forms.Padding(10);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(410, 149);
-            this.panel6.TabIndex = 6;
+            this.panel7.Controls.Add(this.label24);
+            this.panel7.Controls.Add(this.label25);
+            this.panel7.Controls.Add(this.button6);
+            this.panel7.Controls.Add(this.label26);
+            this.panel7.Controls.Add(this.label27);
+            this.panel7.Location = new System.Drawing.Point(440, 517);
+            this.panel7.Margin = new System.Windows.Forms.Padding(10);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(410, 149);
+            this.panel7.TabIndex = 6;
             // 
             // label24
             // 
@@ -837,14 +848,22 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "ksc5348";
             // 
-            // movieTitle
+            // underscore
             // 
-            this.movieTitle.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.movieTitle.Location = new System.Drawing.Point(281, 52);
-            this.movieTitle.Name = "movieTitle";
-            this.movieTitle.Size = new System.Drawing.Size(572, 51);
-            this.movieTitle.TabIndex = 1;
-            this.movieTitle.Text = "영화 제목";
+            this.underscore.BackColor = System.Drawing.Color.Transparent;
+            this.underscore.Location = new System.Drawing.Point(277, 27);
+            this.underscore.Name = "underscore";
+            this.underscore.Size = new System.Drawing.Size(591, 106);
+            this.underscore.TabIndex = 10;
+            this.underscore.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(277, 291);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(591, 106);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // Summary
             // 
@@ -857,29 +876,58 @@
             this.Summary.TabIndex = 9;
             this.Summary.Text = "줄거리";
             // 
-            // MovieSummary
+            // MovieContents
             // 
-            this.MovieSummary.AutoSize = true;
-            this.MovieSummary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieSummary.Location = new System.Drawing.Point(15, 416);
-            this.MovieSummary.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
-            this.MovieSummary.Name = "MovieSummary";
-            this.MovieSummary.Size = new System.Drawing.Size(59, 16);
-            this.MovieSummary.TabIndex = 2;
-            this.MovieSummary.Text = "줄거리";
+            this.MovieContents.AutoScroll = true;
+            this.MovieContents.BackColor = System.Drawing.SystemColors.Window;
+            this.MovieContents.Controls.Add(this.tableLayoutPanel1);
+            this.MovieContents.Controls.Add(this.ReservationButton);
+            this.MovieContents.Controls.Add(this.label2);
+            this.MovieContents.Controls.Add(this.label1);
+            this.MovieContents.Controls.Add(this.TrailerVideoFlowPanel);
+            this.MovieContents.Controls.Add(this.ReviewFlowPanel);
+            this.MovieContents.Controls.Add(this.movieTitle);
+            this.MovieContents.Controls.Add(this.underscore);
+            this.MovieContents.Controls.Add(this.Summary);
+            this.MovieContents.Controls.Add(this.MovieSummary);
+            this.MovieContents.Controls.Add(this.moviePoster);
+            this.MovieContents.Controls.Add(this.pictureBox1);
+            this.MovieContents.Location = new System.Drawing.Point(2, 28);
+            this.MovieContents.Name = "MovieContents";
+            this.MovieContents.Size = new System.Drawing.Size(909, 570);
+            this.MovieContents.TabIndex = 2;
+            // 
+            // movieTitle
+            // 
+            this.movieTitle.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movieTitle.Location = new System.Drawing.Point(281, 52);
+            this.movieTitle.Name = "movieTitle";
+            this.movieTitle.Size = new System.Drawing.Size(572, 51);
+            this.movieTitle.TabIndex = 1;
+            this.movieTitle.Text = "영화 제목";
+            // 
+            // taskbar
+            // 
+            this.taskbar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.taskbar.Controls.Add(this.closeButtonPane);
+            this.taskbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.taskbar.Location = new System.Drawing.Point(0, 0);
+            this.taskbar.Margin = new System.Windows.Forms.Padding(0);
+            this.taskbar.Name = "taskbar";
+            this.taskbar.Size = new System.Drawing.Size(909, 26);
+            this.taskbar.TabIndex = 35;
             // 
             // closeButtonPane
             // 
             this.closeButtonPane.Controls.Add(this.closeButtonIcon);
-            this.closeButtonPane.Location = new System.Drawing.Point(848, 0);
+            this.closeButtonPane.Location = new System.Drawing.Point(838, 0);
             this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
             this.closeButtonPane.Name = "closeButtonPane";
             this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonPane.TabIndex = 32;
+            this.closeButtonPane.TabIndex = 33;
             // 
             // closeButtonIcon
             // 
-            this.closeButtonIcon.BackColor = System.Drawing.Color.Transparent;
             this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
@@ -891,53 +939,28 @@
             this.closeButtonIcon.TabIndex = 1;
             this.closeButtonIcon.TabStop = false;
             this.closeButtonIcon.Click += new System.EventHandler(this.closeButtonIcon_Click);
+            this.closeButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.closeButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
-            // underscore
-            // 
-            this.underscore.BackColor = System.Drawing.Color.Transparent;
-            this.underscore.Location = new System.Drawing.Point(277, 27);
-            this.underscore.Name = "underscore";
-            this.underscore.Size = new System.Drawing.Size(591, 106);
-            this.underscore.TabIndex = 10;
-            this.underscore.TabStop = false;
-            // 
-            // moviePoster
-            // 
-            this.moviePoster.Image = ((System.Drawing.Image)(resources.GetObject("moviePoster.Image")));
-            this.moviePoster.Location = new System.Drawing.Point(18, 27);
-            this.moviePoster.Name = "moviePoster";
-            this.moviePoster.Size = new System.Drawing.Size(250, 375);
-            this.moviePoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.moviePoster.TabIndex = 0;
-            this.moviePoster.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(277, 291);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(591, 106);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // Movieinformation
+            // movieInfoWIndow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.MovieContents);
-            this.Name = "Movieinformation";
-            this.Size = new System.Drawing.Size(903, 1893);
-            this.MovieContents.ResumeLayout(false);
-            this.MovieContents.PerformLayout();
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(913, 600);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "movieInfoWIndow";
+            this.Text = "movieInfoWIndow";
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.TrailerVideoFlowPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).EndInit();
             this.ReviewFlowPanel.ResumeLayout(false);
             this.Reviewpanel.ResumeLayout(false);
             this.Reviewpanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -948,84 +971,90 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.underscore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MovieContents.ResumeLayout(false);
+            this.MovieContents.PerformLayout();
+            this.taskbar.ResumeLayout(false);
             this.closeButtonPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.underscore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel MovieContents;
-        private System.Windows.Forms.PictureBox moviePoster;
-        private System.Windows.Forms.Label movieTitle;
-        private System.Windows.Forms.Label MovieSummary;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label movieRunningTime;
+        private System.Windows.Forms.Label movieMainActor;
         private System.Windows.Forms.Label movieReleaseDateText;
-        private System.Windows.Forms.Label genreSeqText;
-        private System.Windows.Forms.Label movieAgeLimitText;
-        private System.Windows.Forms.Label movieMainActorText;
         private System.Windows.Forms.Label movieDirectorText;
+        private System.Windows.Forms.Label movieMainActorText;
+        private System.Windows.Forms.Label movieAgeLimitText;
+        private System.Windows.Forms.Label genreSeqText;
         private System.Windows.Forms.Label movieRunningTimeText;
-        private System.Windows.Forms.Label Summary;
-        private System.Windows.Forms.PictureBox underscore;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label movieReleaseDate;
+        private System.Windows.Forms.Label movieDirector;
+        private System.Windows.Forms.Label movieAgeLimit;
+        private System.Windows.Forms.Label genreName;
+        private System.Windows.Forms.Button ReservationButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel TrailerVideoFlowPanel;
+        private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
         private System.Windows.Forms.FlowLayoutPanel ReviewFlowPanel;
         private System.Windows.Forms.Panel Reviewpanel;
+        private System.Windows.Forms.TextBox reviewTitle;
+        private System.Windows.Forms.TextBox reviewContent;
+        private System.Windows.Forms.Button reviewinsert;
         private System.Windows.Forms.Label userNickname;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button ReservationButton;
-        private System.Windows.Forms.Button reviewinsert;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox reviewTitle;
-        private System.Windows.Forms.TextBox reviewContent;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label movieRunningTime;
-        private System.Windows.Forms.Label movieMainActor;
-        private System.Windows.Forms.Label movieReleaseDate;
-        private System.Windows.Forms.Label movieDirector;
-        private System.Windows.Forms.Label movieAgeLimit;
-        private System.Windows.Forms.Label genreName;
-        private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
+        private System.Windows.Forms.Label movieTitle;
+        private System.Windows.Forms.PictureBox underscore;
+        private System.Windows.Forms.Label Summary;
+        private System.Windows.Forms.Label MovieSummary;
+        private System.Windows.Forms.PictureBox moviePoster;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel taskbar;
         private System.Windows.Forms.Panel closeButtonPane;
         private System.Windows.Forms.PictureBox closeButtonIcon;
     }

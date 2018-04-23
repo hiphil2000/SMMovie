@@ -18,26 +18,45 @@ namespace SM_Movie
 {
     public partial class MainPanel : UserControl
     {
+        Utils.DBUtil db;
         Dictionary<int, MovieInfo> movieDic = new Dictionary<int, MovieInfo>();
+        Main main;
         public MainPanel()
         {
             InitializeComponent();
             //  FirstPage.Parent = Mainbar1;
+            db = new Utils.DBUtil();
         }
 
         private void MainPanel_Load(object sender, EventArgs e)
         {
-            Utils.DBUtil db = new Utils.DBUtil();
+            refreshMovieTile();
+            refreshBestData();
+        }
+
+        private void refreshMovieTile()
+        {
             Font font = bestMovieTitle.Font;
             BestMovieFlow.Controls.Clear();
+            movieDic.Clear();
             DataTable dt = db.getMovieList();
-            if(dt != null)
-            for(int i = 0; i < dt.Rows.Count; i++)
-            {
-                    Movie movie = new Movie(int.Parse(dt.Rows[i]["영화 고유번호"].ToString()), dt.Rows[i]["영화 제목"].ToString(), dt.Rows[i]["영화 감독"].ToString(), dt.Rows[i]["영화 주역"].ToString(),
-                    int.Parse(dt.Rows[i]["관람가"].ToString()), int.Parse(dt.Rows[i]["상영시간"].ToString()), DateTime.ParseExact(dt.Rows[i]["영화 개봉일"].ToString(), "yyyy.MM.dd", null),
-                    dt.Rows[i]["영화 트레일러"].ToString(), dt.Rows[i]["영화 포스터"].ToString(), dt.Rows[i]["영화 줄거리"].ToString(), int.Parse(dt.Rows[i]["영화 장르"].ToString()));
-                    
+            if (dt != null)
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    int movieSeq = int.Parse(dt.Rows[i]["영화 고유번호"].ToString());
+                    string movieTitle = dt.Rows[i]["영화 제목"].ToString();
+                    string movieDirector = dt.Rows[i]["영화 감독"].ToString();
+                    string movieMainActor = dt.Rows[i]["영화 주역"].ToString();
+                    int movieAgeLimit = int.Parse(dt.Rows[i]["관람가"].ToString());
+                    int movieRunningTime = int.Parse(dt.Rows[i]["상영시간"].ToString());
+                    DateTime movieReleaseDate = DateTime.ParseExact(dt.Rows[i]["영화 개봉일"].ToString(), "yyyy.MM.dd", null);
+                    string movieTrailer = dt.Rows[i]["영화 트레일러"].ToString();
+                    string moviePoster = dt.Rows[i]["영화 포스터"].ToString();
+                    string movieSummary = dt.Rows[i]["영화 줄거리"].ToString();
+                    Genre gen = new Genre();
+                    int genreSeq = gen.getGenreSeq(dt.Rows[i]["영화 장르"].ToString());
+                    Movie movie = new Movie(movieSeq, movieTitle, movieDirector, movieMainActor, movieAgeLimit, movieRunningTime, movieReleaseDate, movieTrailer, moviePoster, movieSummary, genreSeq);
+
                     Panel bestMoviePanel = new Panel();
                     bestMoviePanel.Name = movie._movieSeq + "_Panel";
                     bestMoviePanel.Size = new Size(200, 300);
@@ -48,41 +67,72 @@ namespace SM_Movie
                     bestMoviePanel.BackgroundImageLayout = ImageLayout.Zoom;
                     bestMoviePanel.MouseEnter += transition_enter;
                     bestMoviePanel.MouseLeave += transition_leave;
+                    bestMoviePanel.Click += openMovieInfo;
 
                     Panel bestMovieContentBack = new Panel();
                     bestMovieContentBack.Name = movie._movieSeq + "_ContentBack";
                     bestMovieContentBack.BackColor = Color.Transparent;
                     bestMovieContentBack.MouseEnter += transition_enter;
                     bestMovieContentBack.MouseLeave += transition_leave;
+                    bestMovieContentBack.Click += openMovieInfo;
 
                     Label bestMovieTitle = new Label();
+                    bestMovieTitle.Location = new Point(7, 200);
+                    bestMovieTitle.MaximumSize = new Size(165, 0);
                     bestMovieTitle.Name = movie._movieSeq + "_Title";
                     bestMovieTitle.BackColor = Color.Transparent;
                     bestMovieTitle.Text = movie._movieTitle;
                     bestMovieTitle.Font = font;
+                    bestMovieTitle.BringToFront();
                     bestMovieTitle.MouseEnter += transition_enter;
                     bestMovieTitle.MouseLeave += transition_leave;
+                    bestMovieTitle.Click += openMovieInfo;
 
                     Label bestMovieDirector = new Label();
+                    bestMovieDirector.Location = new Point(9, 235);
+                    bestMovieDirector.MaximumSize = new Size(165, 0);
                     bestMovieDirector.Name = movie._movieSeq + "_Director";
                     bestMovieDirector.BackColor = Color.Transparent;
                     bestMovieDirector.Text = movie._movieDirector;
                     bestMovieDirector.Font = font;
                     bestMovieDirector.MouseEnter += transition_enter;
                     bestMovieDirector.MouseLeave += transition_leave;
+                    bestMovieDirector.Click += openMovieInfo;
 
                     Label bestMovieSummary = new Label();
+                    bestMovieSummary.Location = new Point(9, 300);
+                    bestMovieSummary.MaximumSize = new Size(165, 0);
+                    bestMovieSummary.ForeColor = Color.Black;
+                    bestMovieSummary.Visible = true;
                     bestMovieSummary.Name = movie._movieSeq + "_Summary";
                     bestMovieSummary.BackColor = Color.Transparent;
                     bestMovieSummary.Text = movie._movieSummary;
                     bestMovieSummary.Font = font;
                     bestMovieSummary.MouseEnter += transition_enter;
                     bestMovieSummary.MouseLeave += transition_leave;
+                    bestMovieSummary.Click += openMovieInfo;
+
+                    bestMovieContentBack.Controls.Add(bestMovieTitle);
+                    bestMovieContentBack.Controls.Add(bestMovieDirector);
+                    bestMovieContentBack.Controls.Add(bestMovieSummary);
+                    bestMoviePanel.Controls.Add(bestMovieContentBack);
+                    BestMovieFlow.Controls.Add(bestMoviePanel);
 
                     MovieInfo movieinfo = new MovieInfo(bestMoviePanel, bestMovieContentBack, bestMovieTitle, bestMovieDirector, bestMovieSummary, movie);
                     movieDic.Add(movie._movieSeq, movieinfo);
                 }
+        }
 
+        private void refreshBestData()
+        {
+            DataTable dt = db.getBestMovie(5);
+            if(dt == null)
+            {
+                mainMovieIconBack.BackColor = Color.Gray;
+                mainMovieIcon.Image = Properties.Resources.logo;
+                mainMovieSummaryTitle.Text = "SM_Movie";
+                mainMovieSummaryContent.Text = "SM_Movie에 오신걸 환영합니다!";
+            }
         }
 
         private void transition_enter(object sender, EventArgs e)
@@ -109,6 +159,21 @@ namespace SM_Movie
             Transition.run(movie._bestMovieDirector, "Top", 235, new TransitionType_EaseInEaseOut(250));
             Transition.run(movie._bestMovieSummary, "Top", 300, new TransitionType_EaseInEaseOut(250));
             Transition.run(movie._bestMovieContentBack, "BackColor", Color.FromArgb(0, 255, 255, 255), new TransitionType_EaseInEaseOut(250));
+        }
+
+        public void setMain(Main main)
+        {
+            this.main = main;
+        }
+
+        private void openMovieInfo(object sender, EventArgs e)
+        {
+            Control control = (Control)sender;
+            string movieSeq = control.Name.Split('_')[0];
+            Movie movie = movieDic[int.Parse(movieSeq)]._movie;
+
+            movieInfoWIndow movieinfo = new movieInfoWIndow(movie, main);
+            movieinfo.ShowDialog();
         }
 
         private void MainPanel_Resize(object sender, EventArgs e)

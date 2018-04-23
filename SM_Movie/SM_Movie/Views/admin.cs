@@ -126,7 +126,10 @@ namespace SM_Movie.Views
 		private void dataUpdateButton_Click(object sender, EventArgs e)
 		{
             db.updateUserList((DataTable)tableView.DataSource);
-		}
+            dataUpdateButton.Enabled = false;
+            refreshData();
+
+        }
 
         private void tableView_SelectionChanged(object sender, EventArgs e)
         {
@@ -150,6 +153,13 @@ namespace SM_Movie.Views
         private void tableView_CellValueNeeded(object sender, DataGridViewCellValueEventArgs e)
         {
             
+        }
+
+        private void dataRefreshButton_Click(object sender, EventArgs e)
+        {
+            dataUpdateButton.Enabled = false;
+            refreshData();
+
         }
     }
 }

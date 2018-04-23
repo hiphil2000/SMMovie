@@ -75,9 +75,9 @@ namespace SM_Movie
             this.Size = signup1.Size;
 		}
 
-		internal void loginAttempt()
+		internal void loginAttempt(string id, string password)
 		{
-			throw new NotImplementedException();
+            db.loginAttempt(id, password);
 		}
 
 		internal void openPage(string pageName)

@@ -78,6 +78,12 @@
     <Compile Include="Model\LnbButtonInfo.cs" />
     <Compile Include="Model\MemberShip.cs" />
     <Compile Include="Model\MovieInfo.cs" />
+    <Compile Include="movieInfoWIndow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movieInfoWIndow.Designer.cs">
+      <DependentUpon>movieInfoWIndow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,6 +211,9 @@
     <Compile Include="Views\cinemaRoom.Designer.cs">
       <DependentUpon>cinemaRoom.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="movieInfoWIndow.resx">
+      <DependentUpon>movieInfoWIndow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +303,25 @@
     <Content Include="Assets\Icons\restore.png" />
     <Content Include="Assets\Icons\setting.png" />
     <Content Include="Assets\Icons\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

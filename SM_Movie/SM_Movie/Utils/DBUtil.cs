@@ -15,7 +15,7 @@ namespace SM_Movie.Utils
 
         public DBUtil()
         {
-            string connectionString = "Data Source=EMT03;Initial Catalog=master;Integrated Security=True;Pooling=False";
+            string connectionString = "Data Source=EMT24;Initial Catalog=master;Integrated Security=True;Pooling=False";
             conn = new SqlConnection(connectionString);
         }
 
@@ -51,6 +51,52 @@ namespace SM_Movie.Utils
                     conn.Close();
 
             }
+            
+        }
+
+        /// <summary>
+        /// 최고 인기 영화 조회
+        /// </summary>
+        /// <param name="count">영화 개수</param>
+        public DataTable getBestMovie(int count)
+        {
+
+            try
+            {
+                string sql = @"SELECT TOP(:count) count(cmt.movieSeq)
+                            FROM
+	                            reservationTbl rt, cinemaMovieTbl cmt
+                            WHERE
+	                            rt.cinemaMovieSeq = cmt.cinemaMovieSeq;";
+
+                SqlCommand com = new SqlCommand(sql, conn);
+                com.Parameters.AddWithValue(":count", count);
+                conn.Open();
+                SqlDataReader sdr = com.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("종류");
+                dt.Columns.Add("고유번호");
+
+                if (sdr.Read())
+                {
+                    dt.Rows.Add("영화", sdr.GetString(1));
+                }
+
+                return dt;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return null;
+
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+
+            }
+
             
         }
 
@@ -124,7 +170,7 @@ namespace SM_Movie.Utils
             {
                 String sql = "SELECT movieSeq '영화 고유번호', movieTitle '영화 제목', movieDirector '영화 감독', movieMainActor '영화 주역', movieAgeLimit '관람가', " +
                             "movieRunningTime '상영시간', CONVERT(varchar, movieReleaseDate, 102) '영화 개봉일', movieTrailer '영화 트레일러', moviePoster '영화 포스터', movieSummary '영화 줄거리', genreName '영화 장르' " +
-                            "FROM movieTbl mt, genreTbl gt" +
+                            "FROM movieTbl mt, genreTbl gt " +
                             "WHERE mt.genreSeq = gt.genreSeq";
                 conn.Open();
 
@@ -259,10 +305,9 @@ namespace SM_Movie.Utils
                 {                    
                     foreach (DataRow dr in changedData.Rows)
                     {
-                        string sql = "UPDATE userTbl SET userName = ':userName',  userBirthday = CONVERT(datetime, ':userBirthday', 102), userId = :userId, userPassword = :userPassword, " +
-                        "userNickname = :userNickname, userEmail = :userEmail, userPhone = :userPhone, userAddress = :userAddress, genreSeq = :genreSeq, memberShipSeq = :memberShipSeq " +
+                        string sql = "UPDATE userTbl SET userName = ':userName',  userBirthday = CONVERT(datetime, ':userBirthday', 102), userId = ':userId', userPassword = ':userPassword', " +
+                        "userNickname = ':userNickname', userEmail = ':userEmail', userPhone = ':userPhone', userAddress = ':userAddress', genreSeq = ':genreSeq', memberShipSeq = ':memberShipSeq' " +
                         "WHERE userSeq = :userSeq";
-                        SqlCommand com = new SqlCommand(sql, conn);
                         string userSeq = dr["회원 고유번호"].ToString();
                         string userName = dr["회원 이름"].ToString();
                         string userBirthday = dr["회원 생일"].ToString();
@@ -275,18 +320,10 @@ namespace SM_Movie.Utils
                         int genreSeq = gen.getGenreSeq(dr["회원 선호장르"].ToString());
                         int memberShipSeq = mem.getMemberShipSeq(dr["회원 등급"].ToString());
 
-                        com.Parameters.AddWithValue(":userName", userName);
-                        com.Parameters.AddWithValue(":userBirthday", userBirthday);
-                        com.Parameters.AddWithValue(":userId", userId);
-                        com.Parameters.AddWithValue(":userPassword", userPassword);
-                        com.Parameters.AddWithValue(":userNickname", userNickname);
-                        com.Parameters.AddWithValue(":userEmail", userEmail);
-                        com.Parameters.AddWithValue(":userPhone", userPhone);
-                        com.Parameters.AddWithValue(":userAddress", userAddress);
-                        com.Parameters.AddWithValue(":userSeq", userSeq);
-                        com.Parameters.AddWithValue(":genreSeq", genreSeq);
-                        com.Parameters.AddWithValue(":memberShipSeq", memberShipSeq);
+                        sql = sql.Replace(":userName", userName).Replace(":userBirthday", userBirthday).Replace(":userId", userId).Replace(":userPassword", userPassword).Replace(":userNickname", userNickname)
+                            .Replace(":userEmail", userEmail).Replace(":userPhone", userPhone).Replace(":userAddress", userAddress).Replace(":genreSeq", genreSeq.ToString()).Replace(":memberShipSeq", memberShipSeq.ToString()).Replace(":userSeq", userSeq);
 
+                        SqlCommand com = new SqlCommand(sql, conn);
                         com.ExecuteNonQuery();
                     }
                 }
