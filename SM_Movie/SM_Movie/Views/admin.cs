@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SM_Movie.Model;
+using System.Collections;
 
 namespace SM_Movie.Views
 {
 	public partial class admin : UserControl
 	{
 		private Dictionary<string, LnbButtonInfo> buttonDictionary = new Dictionary<string, LnbButtonInfo>();
+        ArrayList removedUserSeq = new ArrayList();
         private string currentPage;
 		Utils.DBUtil db;
         bool currentPageEdited;
         int currentSeq;
+        Main main;
 
 		public admin()
 		{
@@ -80,7 +83,13 @@ namespace SM_Movie.Views
             dataButtonFlow.Location = new Point(this.Width - dataButtonFlow.Width - 6, 6);
 		}
 
-		public void refreshData()
+        internal void setMain(Main main)
+        {
+
+            this.main = main;
+        }
+
+        public void refreshData()
 		{
             tableView.DataSource = null;
             tableView.Rows.Clear();
@@ -108,6 +117,13 @@ namespace SM_Movie.Views
                 if(MessageBox.Show("선택하신 항목을 삭제하시겠습니까?", "알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     int rowindex = tableView.CurrentCell.RowIndex;
+                    int removedSeq = int.Parse(tableView["회원 고유번호", rowindex].Value.ToString());
+                    if(removedSeq == main.getCurrentUser()._userSeq)
+                    {
+                        MessageBox.Show("관리자 본인의 계정을 삭제할 수 없습니다.", "삭제 실패");
+                        return;
+                    }
+                    removedUserSeq.Add(removedSeq);
                     tableView.Rows.RemoveAt(rowindex);
                     if (tableView.RowCount > 1)
                     {
@@ -125,7 +141,7 @@ namespace SM_Movie.Views
 
 		private void dataUpdateButton_Click(object sender, EventArgs e)
 		{
-            db.updateUserList((DataTable)tableView.DataSource);
+            db.updateUserList((DataTable)tableView.DataSource, removedUserSeq);
             dataUpdateButton.Enabled = false;
             refreshData();
 

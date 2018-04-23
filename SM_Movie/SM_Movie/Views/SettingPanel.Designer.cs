@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panelsetting = new System.Windows.Forms.Panel();
-            this.closeButtonPane = new System.Windows.Forms.Panel();
-            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.IdSavePanel = new System.Windows.Forms.Panel();
             this.saveID = new System.Windows.Forms.Label();
             this.IdSave = new System.Windows.Forms.CheckBox();
             this.colorsetting = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.argbSetting = new System.Windows.Forms.Button();
             this.Colortable = new System.Windows.Forms.Label();
             this.Color32 = new System.Windows.Forms.Button();
             this.Color31 = new System.Windows.Forms.Button();
@@ -71,12 +71,7 @@
             this.Color1 = new System.Windows.Forms.Button();
             this.SettingColor = new System.Windows.Forms.Label();
             this.InputColorCode = new System.Windows.Forms.TextBox();
-            this.settinglabel = new System.Windows.Forms.Label();
-            this.argbSetting = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelsetting.SuspendLayout();
-            this.closeButtonPane.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.IdSavePanel.SuspendLayout();
             this.colorsetting.SuspendLayout();
             this.SuspendLayout();
@@ -84,35 +79,14 @@
             // panelsetting
             // 
             this.panelsetting.BackColor = System.Drawing.SystemColors.Window;
-            this.panelsetting.Controls.Add(this.closeButtonPane);
             this.panelsetting.Controls.Add(this.IdSavePanel);
             this.panelsetting.Controls.Add(this.colorsetting);
-            this.panelsetting.Controls.Add(this.settinglabel);
-            this.panelsetting.Location = new System.Drawing.Point(3, 3);
+            this.panelsetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelsetting.Location = new System.Drawing.Point(0, 0);
+            this.panelsetting.Margin = new System.Windows.Forms.Padding(0);
             this.panelsetting.Name = "panelsetting";
-            this.panelsetting.Size = new System.Drawing.Size(905, 606);
+            this.panelsetting.Size = new System.Drawing.Size(911, 612);
             this.panelsetting.TabIndex = 0;
-            // 
-            // closeButtonPane
-            // 
-            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
-            this.closeButtonPane.Location = new System.Drawing.Point(856, 0);
-            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonPane.Name = "closeButtonPane";
-            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonPane.TabIndex = 11;
-            // 
-            // closeButtonIcon
-            // 
-            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonIcon.Name = "closeButtonIcon";
-            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeButtonIcon.TabIndex = 1;
-            this.closeButtonIcon.TabStop = false;
             // 
             // IdSavePanel
             // 
@@ -187,6 +161,28 @@
             this.colorsetting.Name = "colorsetting";
             this.colorsetting.Size = new System.Drawing.Size(551, 311);
             this.colorsetting.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(136, 256);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 15);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "형식(#aarrggbb)";
+            // 
+            // argbSetting
+            // 
+            this.argbSetting.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.argbSetting.Location = new System.Drawing.Point(379, 274);
+            this.argbSetting.Name = "argbSetting";
+            this.argbSetting.Size = new System.Drawing.Size(75, 21);
+            this.argbSetting.TabIndex = 39;
+            this.argbSetting.Text = "설정";
+            this.argbSetting.UseVisualStyleBackColor = true;
+            this.argbSetting.Click += new System.EventHandler(this.argbSetting_Click);
             // 
             // Colortable
             // 
@@ -676,50 +672,15 @@
             this.InputColorCode.TabIndex = 1;
             this.InputColorCode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // settinglabel
-            // 
-            this.settinglabel.AutoSize = true;
-            this.settinglabel.Font = new System.Drawing.Font("굴림", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.settinglabel.Location = new System.Drawing.Point(3, 0);
-            this.settinglabel.Name = "settinglabel";
-            this.settinglabel.Size = new System.Drawing.Size(93, 37);
-            this.settinglabel.TabIndex = 0;
-            this.settinglabel.Text = "설정";
-            this.settinglabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // argbSetting
-            // 
-            this.argbSetting.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.argbSetting.Location = new System.Drawing.Point(379, 274);
-            this.argbSetting.Name = "argbSetting";
-            this.argbSetting.Size = new System.Drawing.Size(75, 21);
-            this.argbSetting.TabIndex = 39;
-            this.argbSetting.Text = "설정";
-            this.argbSetting.UseVisualStyleBackColor = true;
-            this.argbSetting.Click += new System.EventHandler(this.argbSetting_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(136, 256);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 15);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "형식(#aarrggbb)";
-            // 
             // SettingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelsetting);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SettingPanel";
             this.Size = new System.Drawing.Size(911, 612);
             this.panelsetting.ResumeLayout(false);
-            this.panelsetting.PerformLayout();
-            this.closeButtonPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.IdSavePanel.ResumeLayout(false);
             this.IdSavePanel.PerformLayout();
             this.colorsetting.ResumeLayout(false);
@@ -731,7 +692,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelsetting;
-        private System.Windows.Forms.Label settinglabel;
         private System.Windows.Forms.Panel colorsetting;
         private System.Windows.Forms.Button Color1;
         private System.Windows.Forms.Label SettingColor;
@@ -772,8 +732,6 @@
         private System.Windows.Forms.Button Color2;
         private System.Windows.Forms.Label saveID;
         private System.Windows.Forms.Panel IdSavePanel;
-        private System.Windows.Forms.Panel closeButtonPane;
-        private System.Windows.Forms.PictureBox closeButtonIcon;
         private System.Windows.Forms.Button argbSetting;
         private System.Windows.Forms.Label label1;
     }

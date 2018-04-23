@@ -60,11 +60,13 @@ namespace SM_Movie
             buttonInfoDic.Add("userButton", new ButtonInfo(userButtonIcon, userButtonPane, userButtonLabel, mainPanel, userButtonHighLight));
             buttonInfoDic.Add("settingButton", new ButtonInfo(settingButtonIcon, settingButtonPane, settingButtonLabel, settingPanel, settingButtonHighLight));
 			buttonInfoDic.Add("adminButton", new ButtonInfo(adminButtonIcon, adminButtonPane, adminButtonLabel, adminPanel, adminButtonHighLight));
+            
 
             themeColor = Utils.StyleUtil.getWindowsThemeColor();
             setColors();
             openPage(null, new EventArgs());
             mainPanel.setMain(this);
+            adminPanel.setMain(this);
         }
 
         private void setBestData()
@@ -354,8 +356,8 @@ namespace SM_Movie
                 if(currentUser == null)
                 {
                     openLogin(sender, e);
+                    return;
                 }
-                return;
             }
 
             title.Text = clickedButton.Get_buttonTitle().Text;
@@ -411,6 +413,11 @@ namespace SM_Movie
 
         private void setUserButton()
         {
+            if(currentUser != null && currentUser._memberShipSeq == 1)
+            {
+                buttonInfoDic["adminButton"].Get_buttonPanel().Visible = true;
+            }
+
             if (currentUser == null && !(userButtonLabel.Text.Equals("로그인")))
             {
                 userButtonLabel.Text = "로그인";

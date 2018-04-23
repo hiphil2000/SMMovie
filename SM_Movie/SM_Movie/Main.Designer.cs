@@ -31,75 +31,75 @@
             this.taskBar = new System.Windows.Forms.Panel();
             this.buttonFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.minButtonPane = new System.Windows.Forms.Panel();
+            this.minButtonIcon = new System.Windows.Forms.PictureBox();
             this.recoverButtonPane = new System.Windows.Forms.Panel();
+            this.recoverButtonIcon = new System.Windows.Forms.PictureBox();
             this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
+            this.programIcon = new System.Windows.Forms.PictureBox();
             this.mainPane = new System.Windows.Forms.Panel();
+            this.mainPanel = new SM_Movie.MainPanel();
+            this.settingPanel = new SM_Movie.SettingPanel();
+            this.adminPanel = new SM_Movie.Views.admin();
             this.menuButtonPane = new System.Windows.Forms.Panel();
+            this.menuButtonIcon = new System.Windows.Forms.PictureBox();
             this.menuButtonBack = new System.Windows.Forms.Panel();
             this.menuPane = new System.Windows.Forms.Panel();
             this.menuBarFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.homeButtonPane = new System.Windows.Forms.Panel();
             this.homeButtonHighLight = new System.Windows.Forms.Panel();
             this.homeButtonLabel = new System.Windows.Forms.Label();
+            this.homeButtonIcon = new System.Windows.Forms.PictureBox();
             this.movieButtonPane = new System.Windows.Forms.Panel();
             this.movieButtonHighLight = new System.Windows.Forms.Panel();
+            this.movieButtonIcon = new System.Windows.Forms.PictureBox();
             this.movieButtonLabel = new System.Windows.Forms.Label();
             this.adminButtonPane = new System.Windows.Forms.Panel();
             this.adminButtonHighLight = new System.Windows.Forms.Panel();
+            this.adminButtonIcon = new System.Windows.Forms.PictureBox();
             this.adminButtonLabel = new System.Windows.Forms.Label();
             this.commonUserMenuFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.userButtonPane = new System.Windows.Forms.Panel();
             this.userButtonHighLight = new System.Windows.Forms.Panel();
+            this.userButtonIcon = new System.Windows.Forms.PictureBox();
             this.userButtonLabel = new System.Windows.Forms.Label();
             this.settingButtonPane = new System.Windows.Forms.Panel();
             this.settingButtonHighLight = new System.Windows.Forms.Panel();
+            this.settingButtonIcon = new System.Windows.Forms.PictureBox();
             this.settingButtonLabel = new System.Windows.Forms.Label();
             this.menuFlowWrap = new System.Windows.Forms.Panel();
             this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.homeButtonIcon = new System.Windows.Forms.PictureBox();
-            this.movieButtonIcon = new System.Windows.Forms.PictureBox();
-            this.adminButtonIcon = new System.Windows.Forms.PictureBox();
-            this.userButtonIcon = new System.Windows.Forms.PictureBox();
-            this.settingButtonIcon = new System.Windows.Forms.PictureBox();
-            this.mainPanel = new SM_Movie.MainPanel();
             this.movieSearch = new SM_Movie.movieSearch();
-            this.settingPanel = new SM_Movie.SettingPanel();
-            this.adminPanel = new SM_Movie.Views.admin();
-            this.minButtonIcon = new System.Windows.Forms.PictureBox();
-            this.recoverButtonIcon = new System.Windows.Forms.PictureBox();
-            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
-            this.programIcon = new System.Windows.Forms.PictureBox();
-            this.menuButtonIcon = new System.Windows.Forms.PictureBox();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minButtonIcon)).BeginInit();
             this.recoverButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recoverButtonIcon)).BeginInit();
             this.closeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             this.mainPane.SuspendLayout();
             this.menuButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).BeginInit();
             this.menuButtonBack.SuspendLayout();
             this.menuPane.SuspendLayout();
             this.menuBarFlow.SuspendLayout();
             this.homeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeButtonIcon)).BeginInit();
             this.movieButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.movieButtonIcon)).BeginInit();
             this.adminButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminButtonIcon)).BeginInit();
             this.commonUserMenuFlow.SuspendLayout();
             this.userButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userButtonIcon)).BeginInit();
             this.settingButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).BeginInit();
             this.menuFlowWrap.SuspendLayout();
             this.menuTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movieButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adminButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recoverButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // taskBar
@@ -135,6 +135,22 @@
             this.minButtonPane.Size = new System.Drawing.Size(40, 26);
             this.minButtonPane.TabIndex = 0;
             // 
+            // minButtonIcon
+            // 
+            this.minButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minButtonIcon.Image = global::SM_Movie.Properties.Resources.minimize;
+            this.minButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.minButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.minButtonIcon.Name = "minButtonIcon";
+            this.minButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.minButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minButtonIcon.TabIndex = 1;
+            this.minButtonIcon.TabStop = false;
+            this.minButtonIcon.Click += new System.EventHandler(this.minimizeApp);
+            this.minButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.minButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
             // recoverButtonPane
             // 
             this.recoverButtonPane.BackColor = System.Drawing.Color.Transparent;
@@ -145,6 +161,22 @@
             this.recoverButtonPane.Size = new System.Drawing.Size(40, 26);
             this.recoverButtonPane.TabIndex = 2;
             // 
+            // recoverButtonIcon
+            // 
+            this.recoverButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recoverButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.recoverButtonIcon.Image = global::SM_Movie.Properties.Resources.restore;
+            this.recoverButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.recoverButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.recoverButtonIcon.Name = "recoverButtonIcon";
+            this.recoverButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.recoverButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.recoverButtonIcon.TabIndex = 1;
+            this.recoverButtonIcon.TabStop = false;
+            this.recoverButtonIcon.Click += new System.EventHandler(this.recoverApp);
+            this.recoverButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.recoverButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
             // closeButtonPane
             // 
             this.closeButtonPane.Controls.Add(this.closeButtonIcon);
@@ -153,6 +185,23 @@
             this.closeButtonPane.Name = "closeButtonPane";
             this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
             this.closeButtonPane.TabIndex = 2;
+            // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.BackColor = System.Drawing.Color.Transparent;
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
+            this.closeButtonIcon.Click += new System.EventHandler(this.exitApp);
+            this.closeButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.closeButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
             // title
             // 
@@ -165,6 +214,18 @@
             this.title.TabIndex = 1;
             this.title.Text = "Main";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // programIcon
+            // 
+            this.programIcon.BackColor = System.Drawing.Color.Transparent;
+            this.programIcon.Image = global::SM_Movie.Properties.Resources.minimize;
+            this.programIcon.Location = new System.Drawing.Point(10, 0);
+            this.programIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.programIcon.Name = "programIcon";
+            this.programIcon.Size = new System.Drawing.Size(26, 26);
+            this.programIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.programIcon.TabIndex = 0;
+            this.programIcon.TabStop = false;
             // 
             // mainPane
             // 
@@ -180,6 +241,35 @@
             this.mainPane.Size = new System.Drawing.Size(915, 478);
             this.mainPane.TabIndex = 1;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPanel.Location = new System.Drawing.Point(0, 4);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(915, 700);
+            this.mainPanel.TabIndex = 3;
+            // 
+            // settingPanel
+            // 
+            this.settingPanel.Location = new System.Drawing.Point(0, 0);
+            this.settingPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.settingPanel.Name = "settingPanel";
+            this.settingPanel.Size = new System.Drawing.Size(915, 454);
+            this.settingPanel.TabIndex = 5;
+            this.settingPanel.Visible = false;
+            // 
+            // adminPanel
+            // 
+            this.adminPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminPanel.Name = "adminPanel";
+            this.adminPanel.Size = new System.Drawing.Size(915, 522);
+            this.adminPanel.TabIndex = 6;
+            this.adminPanel.Visible = false;
+            this.adminPanel.VisibleChanged += new System.EventHandler(this.adminPanel_VisibleChanged);
+            // 
             // menuButtonPane
             // 
             this.menuButtonPane.BackColor = System.Drawing.Color.Transparent;
@@ -190,6 +280,22 @@
             this.menuButtonPane.Name = "menuButtonPane";
             this.menuButtonPane.Size = new System.Drawing.Size(48, 48);
             this.menuButtonPane.TabIndex = 3;
+            // 
+            // menuButtonIcon
+            // 
+            this.menuButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuButtonIcon.Image = global::SM_Movie.Properties.Resources.menu;
+            this.menuButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.menuButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.menuButtonIcon.Name = "menuButtonIcon";
+            this.menuButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.menuButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.menuButtonIcon.TabIndex = 5;
+            this.menuButtonIcon.TabStop = false;
+            this.menuButtonIcon.Click += new System.EventHandler(this.openMenu);
+            this.menuButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.menuButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
             // menuButtonBack
             // 
@@ -263,6 +369,21 @@
             this.homeButtonLabel.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.homeButtonLabel.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
+            // homeButtonIcon
+            // 
+            this.homeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeButtonIcon.Image = global::SM_Movie.Properties.Resources.home;
+            this.homeButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.homeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.homeButtonIcon.Name = "homeButtonIcon";
+            this.homeButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.homeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homeButtonIcon.TabIndex = 11;
+            this.homeButtonIcon.TabStop = false;
+            this.homeButtonIcon.Click += new System.EventHandler(this.openPage);
+            this.homeButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.homeButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
             // movieButtonPane
             // 
             this.movieButtonPane.Controls.Add(this.movieButtonHighLight);
@@ -286,6 +407,21 @@
             this.movieButtonHighLight.Click += new System.EventHandler(this.openPage);
             this.movieButtonHighLight.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.movieButtonHighLight.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
+            // movieButtonIcon
+            // 
+            this.movieButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.movieButtonIcon.Image = global::SM_Movie.Properties.Resources.movie;
+            this.movieButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.movieButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.movieButtonIcon.Name = "movieButtonIcon";
+            this.movieButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.movieButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.movieButtonIcon.TabIndex = 11;
+            this.movieButtonIcon.TabStop = false;
+            this.movieButtonIcon.Click += new System.EventHandler(this.openPage);
+            this.movieButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.movieButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
             // movieButtonLabel
             // 
@@ -314,6 +450,7 @@
             this.adminButtonPane.Name = "adminButtonPane";
             this.adminButtonPane.Size = new System.Drawing.Size(250, 48);
             this.adminButtonPane.TabIndex = 15;
+            this.adminButtonPane.Visible = false;
             // 
             // adminButtonHighLight
             // 
@@ -326,6 +463,21 @@
             this.adminButtonHighLight.Click += new System.EventHandler(this.openPage);
             this.adminButtonHighLight.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.adminButtonHighLight.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
+            // adminButtonIcon
+            // 
+            this.adminButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminButtonIcon.Image = global::SM_Movie.Properties.Resources.admin;
+            this.adminButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.adminButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.adminButtonIcon.Name = "adminButtonIcon";
+            this.adminButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.adminButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.adminButtonIcon.TabIndex = 11;
+            this.adminButtonIcon.TabStop = false;
+            this.adminButtonIcon.Click += new System.EventHandler(this.openPage);
+            this.adminButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.adminButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
             // adminButtonLabel
             // 
@@ -378,6 +530,21 @@
             this.userButtonHighLight.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.userButtonHighLight.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
+            // userButtonIcon
+            // 
+            this.userButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userButtonIcon.Image = global::SM_Movie.Properties.Resources.user;
+            this.userButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.userButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.userButtonIcon.Name = "userButtonIcon";
+            this.userButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.userButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userButtonIcon.TabIndex = 11;
+            this.userButtonIcon.TabStop = false;
+            this.userButtonIcon.Click += new System.EventHandler(this.openPage);
+            this.userButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.userButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
             // userButtonLabel
             // 
             this.userButtonLabel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -417,6 +584,21 @@
             this.settingButtonHighLight.Click += new System.EventHandler(this.openPage);
             this.settingButtonHighLight.MouseEnter += new System.EventHandler(this.buttonFocus);
             this.settingButtonHighLight.MouseLeave += new System.EventHandler(this.buttonLostFocus);
+            // 
+            // settingButtonIcon
+            // 
+            this.settingButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingButtonIcon.Image = global::SM_Movie.Properties.Resources.setting;
+            this.settingButtonIcon.Location = new System.Drawing.Point(2, 0);
+            this.settingButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.settingButtonIcon.Name = "settingButtonIcon";
+            this.settingButtonIcon.Size = new System.Drawing.Size(48, 48);
+            this.settingButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.settingButtonIcon.TabIndex = 11;
+            this.settingButtonIcon.TabStop = false;
+            this.settingButtonIcon.Click += new System.EventHandler(this.openPage);
+            this.settingButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
+            this.settingButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
             // settingButtonLabel
             // 
@@ -468,194 +650,13 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // homeButtonIcon
-            // 
-            this.homeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeButtonIcon.Image = global::SM_Movie.Properties.Resources.home;
-            this.homeButtonIcon.Location = new System.Drawing.Point(2, 0);
-            this.homeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.homeButtonIcon.Name = "homeButtonIcon";
-            this.homeButtonIcon.Size = new System.Drawing.Size(48, 48);
-            this.homeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.homeButtonIcon.TabIndex = 11;
-            this.homeButtonIcon.TabStop = false;
-            this.homeButtonIcon.Click += new System.EventHandler(this.openPage);
-            this.homeButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.homeButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // movieButtonIcon
-            // 
-            this.movieButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.movieButtonIcon.Image = global::SM_Movie.Properties.Resources.movie;
-            this.movieButtonIcon.Location = new System.Drawing.Point(2, 0);
-            this.movieButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.movieButtonIcon.Name = "movieButtonIcon";
-            this.movieButtonIcon.Size = new System.Drawing.Size(48, 48);
-            this.movieButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.movieButtonIcon.TabIndex = 11;
-            this.movieButtonIcon.TabStop = false;
-            this.movieButtonIcon.Click += new System.EventHandler(this.openPage);
-            this.movieButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.movieButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // adminButtonIcon
-            // 
-            this.adminButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminButtonIcon.Image = global::SM_Movie.Properties.Resources.admin;
-            this.adminButtonIcon.Location = new System.Drawing.Point(2, 0);
-            this.adminButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.adminButtonIcon.Name = "adminButtonIcon";
-            this.adminButtonIcon.Size = new System.Drawing.Size(48, 48);
-            this.adminButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.adminButtonIcon.TabIndex = 11;
-            this.adminButtonIcon.TabStop = false;
-            this.adminButtonIcon.Click += new System.EventHandler(this.openPage);
-            this.adminButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.adminButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // userButtonIcon
-            // 
-            this.userButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userButtonIcon.Image = global::SM_Movie.Properties.Resources.user;
-            this.userButtonIcon.Location = new System.Drawing.Point(2, 0);
-            this.userButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.userButtonIcon.Name = "userButtonIcon";
-            this.userButtonIcon.Size = new System.Drawing.Size(48, 48);
-            this.userButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userButtonIcon.TabIndex = 11;
-            this.userButtonIcon.TabStop = false;
-            this.userButtonIcon.Click += new System.EventHandler(this.openPage);
-            this.userButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.userButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // settingButtonIcon
-            // 
-            this.settingButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingButtonIcon.Image = global::SM_Movie.Properties.Resources.setting;
-            this.settingButtonIcon.Location = new System.Drawing.Point(2, 0);
-            this.settingButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.settingButtonIcon.Name = "settingButtonIcon";
-            this.settingButtonIcon.Size = new System.Drawing.Size(48, 48);
-            this.settingButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.settingButtonIcon.TabIndex = 11;
-            this.settingButtonIcon.TabStop = false;
-            this.settingButtonIcon.Click += new System.EventHandler(this.openPage);
-            this.settingButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.settingButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.AutoSize = true;
-            this.mainPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanel.Location = new System.Drawing.Point(0, 4);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(915, 700);
-            this.mainPanel.TabIndex = 3;
-            // 
             // movieSearch
             // 
             this.movieSearch.Location = new System.Drawing.Point(0, 71);
             this.movieSearch.Name = "movieSearch";
-            this.movieSearch.Size = new System.Drawing.Size(915, 454);
+            this.movieSearch.Size = new System.Drawing.Size(917, 454);
             this.movieSearch.TabIndex = 4;
             this.movieSearch.Visible = false;
-            // 
-            // settingPanel
-            // 
-            this.settingPanel.Location = new System.Drawing.Point(0, 68);
-            this.settingPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(915, 454);
-            this.settingPanel.TabIndex = 5;
-            this.settingPanel.Visible = false;
-            // 
-            // adminPanel
-            // 
-            this.adminPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(915, 522);
-            this.adminPanel.TabIndex = 6;
-            this.adminPanel.Visible = false;
-            this.adminPanel.VisibleChanged += new System.EventHandler(this.adminPanel_VisibleChanged);
-            // 
-            // minButtonIcon
-            // 
-            this.minButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minButtonIcon.Image = global::SM_Movie.Properties.Resources.minimize;
-            this.minButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.minButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.minButtonIcon.Name = "minButtonIcon";
-            this.minButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.minButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minButtonIcon.TabIndex = 1;
-            this.minButtonIcon.TabStop = false;
-            this.minButtonIcon.Click += new System.EventHandler(this.minimizeApp);
-            this.minButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.minButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // recoverButtonIcon
-            // 
-            this.recoverButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.recoverButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.recoverButtonIcon.Image = global::SM_Movie.Properties.Resources.restore;
-            this.recoverButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.recoverButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.recoverButtonIcon.Name = "recoverButtonIcon";
-            this.recoverButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.recoverButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.recoverButtonIcon.TabIndex = 1;
-            this.recoverButtonIcon.TabStop = false;
-            this.recoverButtonIcon.Click += new System.EventHandler(this.recoverApp);
-            this.recoverButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.recoverButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // closeButtonIcon
-            // 
-            this.closeButtonIcon.BackColor = System.Drawing.Color.Transparent;
-            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
-            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButtonIcon.Name = "closeButtonIcon";
-            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
-            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeButtonIcon.TabIndex = 1;
-            this.closeButtonIcon.TabStop = false;
-            this.closeButtonIcon.Click += new System.EventHandler(this.exitApp);
-            this.closeButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.closeButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
-            // 
-            // programIcon
-            // 
-            this.programIcon.BackColor = System.Drawing.Color.Transparent;
-            this.programIcon.Image = global::SM_Movie.Properties.Resources.minimize;
-            this.programIcon.Location = new System.Drawing.Point(10, 0);
-            this.programIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.programIcon.Name = "programIcon";
-            this.programIcon.Size = new System.Drawing.Size(26, 26);
-            this.programIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.programIcon.TabIndex = 0;
-            this.programIcon.TabStop = false;
-            // 
-            // menuButtonIcon
-            // 
-            this.menuButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuButtonIcon.Image = global::SM_Movie.Properties.Resources.menu;
-            this.menuButtonIcon.Location = new System.Drawing.Point(0, 0);
-            this.menuButtonIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.menuButtonIcon.Name = "menuButtonIcon";
-            this.menuButtonIcon.Size = new System.Drawing.Size(48, 48);
-            this.menuButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.menuButtonIcon.TabIndex = 5;
-            this.menuButtonIcon.TabStop = false;
-            this.menuButtonIcon.Click += new System.EventHandler(this.openMenu);
-            this.menuButtonIcon.MouseEnter += new System.EventHandler(this.buttonFocus);
-            this.menuButtonIcon.MouseLeave += new System.EventHandler(this.buttonLostFocus);
             // 
             // Main
             // 
@@ -677,32 +678,32 @@
             this.taskBar.ResumeLayout(false);
             this.buttonFlow.ResumeLayout(false);
             this.minButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.minButtonIcon)).EndInit();
             this.recoverButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.recoverButtonIcon)).EndInit();
             this.closeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             this.mainPane.ResumeLayout(false);
             this.mainPane.PerformLayout();
             this.menuButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).EndInit();
             this.menuButtonBack.ResumeLayout(false);
             this.menuPane.ResumeLayout(false);
             this.menuBarFlow.ResumeLayout(false);
             this.homeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.homeButtonIcon)).EndInit();
             this.movieButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.movieButtonIcon)).EndInit();
             this.adminButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminButtonIcon)).EndInit();
             this.commonUserMenuFlow.ResumeLayout(false);
             this.userButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userButtonIcon)).EndInit();
             this.settingButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).EndInit();
             this.menuFlowWrap.ResumeLayout(false);
             this.menuTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.homeButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movieButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adminButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recoverButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -744,7 +745,6 @@
         private System.Windows.Forms.Panel homeButtonHighLight;
         private System.Windows.Forms.Panel movieButtonHighLight;
         private MainPanel mainPanel;
-        private movieSearch movieSearch;
         private SettingPanel settingPanel;
 		private System.Windows.Forms.Panel adminButtonPane;
 		private System.Windows.Forms.Panel adminButtonHighLight;
@@ -753,5 +753,6 @@
 		private Views.admin adminPanel;
         private System.Windows.Forms.TableLayoutPanel menuTitle;
         private System.Windows.Forms.Label titleLabel;
+        private movieSearch movieSearch;
     }
 }

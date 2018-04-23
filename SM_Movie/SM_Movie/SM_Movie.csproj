@@ -168,11 +168,11 @@
     <Compile Include="Views\reservation.Designer.cs">
       <DependentUpon>reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\My Info.cs">
+    <Compile Include="Views\UserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\My Info.Designer.cs">
-      <DependentUpon>My Info.cs</DependentUpon>
+    <Compile Include="Views\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Screening Schedule.cs">
       <SubType>UserControl</SubType>
@@ -253,8 +253,8 @@
     <EmbeddedResource Include="Views\reservation.resx">
       <DependentUpon>reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\My Info.resx">
-      <DependentUpon>My Info.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Screening Schedule.resx">
       <DependentUpon>Screening Schedule.cs</DependentUpon>

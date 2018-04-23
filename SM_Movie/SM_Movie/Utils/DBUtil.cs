@@ -1,5 +1,6 @@
 ﻿using SM_Movie.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace SM_Movie.Utils
 {
-    class DBUtil
+    public class DBUtil
     {
         private SqlConnection conn;
 
         public DBUtil()
         {
-            string connectionString = "Data Source=EMT24;Initial Catalog=master;Integrated Security=True;Pooling=False";
+            string connectionString = "Data Source=DESKTOP-HHSGVJH;Initial Catalog=master;Integrated Security=True;Pooling=False";
             conn = new SqlConnection(connectionString);
         }
 
@@ -100,31 +101,33 @@ namespace SM_Movie.Utils
             
         }
 
-        public void register(User user)
+        public bool register(User user)
         {
             try
             {
                 String sql = "INSERT INTO userTbl(userName, userBirthday, userId, userPassword, userNickname, userEmail, userPhone, userAddress, genreSeq, memberShipSeq) " +
-                    "VALUES(:userName, CONVERT(datetime, :userBirthday, 102), :userId, :userPassword, :userEmail, :userPhone, :userAddress, :genreSeq, :memberShipSeq)";
-                SqlCommand com = new SqlCommand(sql, conn);
-                com.Parameters.AddWithValue(":userName", user._userName);
-                com.Parameters.AddWithValue(":userBirthday", user._userBirthday);
-                com.Parameters.AddWithValue(":userId", user._userId);
-                com.Parameters.AddWithValue(":userPassword", user._userPassword);
-                com.Parameters.AddWithValue(":userNickname", user._userNickname);
-                com.Parameters.AddWithValue(":userEmail", user._userEmail);
-                com.Parameters.AddWithValue(":userPhone", user._userPhone);
-                com.Parameters.AddWithValue(":userAddress", user._userAddress);
-                com.Parameters.AddWithValue(":genreSeq", user._genreSeq);
-                com.Parameters.AddWithValue(":memberShipSeq", user._memberShipSeq);
+                    "VALUES(':userName', CONVERT(datetime, ':userBirthday', 102), ':userId', ':userPassword', ':userNickname', ':userEmail', ':userPhone', ':userAddress', ':genreSeq', ':memberShipSeq')";
+                
+                sql = sql.Replace(":userName", user._userName).
+                Replace(":userBirthday", user._userBirthday.ToString("yyyy.MM.dd", null)).
+                Replace(":userId", user._userId).
+                Replace(":userPassword", user._userPassword).
+                Replace(":userNickname", user._userNickname).
+                Replace(":userEmail", user._userEmail).
+                Replace(":userPhone", user._userPhone).
+                Replace(":userAddress", user._userAddress).
+                Replace(":genreSeq", user._genreSeq.ToString()).
+                Replace(":memberShipSeq", user._memberShipSeq.ToString());
 
+                SqlCommand com = new SqlCommand(sql, conn);
                 conn.Open();
                 com.ExecuteNonQuery();
+                return true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
-
+                return false;
             }
             finally
             {
@@ -243,14 +246,14 @@ namespace SM_Movie.Utils
             }
         }
 
-        public void updateUserList(DataTable tableViewData)
+        public void updateUserList(DataTable tableViewData, ArrayList removedSeq)
         {
             try
             {
                 //변경사항 (추가됨)
                 
                 DataTable addedData = tableViewData.GetChanges(DataRowState.Added);
-                DataTable removedData = tableViewData.GetChanges(DataRowState.Deleted);
+                //DataTable removedData = tableViewData.GetChanges(DataRowState.Deleted);
                 DataTable changedData = tableViewData.GetChanges(DataRowState.Modified);
                 MemberShip mem = new MemberShip();
                 Genre gen = new Genre();
@@ -286,15 +289,17 @@ namespace SM_Movie.Utils
                     com.ExecuteNonQuery();
                 }
 
-                if(removedData != null)
+                if(removedSeq.Count > 0)
                 {
                     string sql = "DELETE FROM userTbl WHERE ";
-                    foreach (DataRow dr in removedData.Rows)
+
+                    for(int i =0; i<removedSeq.Count; i++)
                     {
-                        string userSeq = dr["회원 고유번호"].ToString();
+                        int userSeq = int.Parse(removedSeq[i].ToString());
                         string deleteValue = "userSeq = " + userSeq + " OR ";
                         sql += deleteValue;
                     }
+
                     sql.TrimEnd();
                     sql = sql.Substring(0, sql.Length - 3);
                     SqlCommand com = new SqlCommand(sql, conn);

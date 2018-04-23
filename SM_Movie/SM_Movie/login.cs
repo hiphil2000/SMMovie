@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SM_Movie.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,7 +78,18 @@ namespace SM_Movie
 
 		internal void loginAttempt(string id, string password)
 		{
-            db.loginAttempt(id, password);
+            User user = db.loginAttempt(id, password);
+            if (user != null)
+            {
+                MessageBox.Show("로그인에 성공했습니다.\n환영합니다 [" + user._userName + "]님.", "로그인 성공");
+                main.setCurrentUser(user);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("로그인에 실패했습니다.\n데이터를 다시 한번 확인해보십시오.", "로그인 실패");
+            }
+            
 		}
 
 		internal void openPage(string pageName)
@@ -99,5 +111,10 @@ namespace SM_Movie
 			signup1.Visible = false;
             this.Size = log1.Size;
 		}
+
+        public Utils.DBUtil getDBUtil()
+        {
+            return db;
+        }
 	}
 }
