@@ -1,6 +1,6 @@
 ﻿namespace SM_Movie.Views
 {
-    partial class movieMain
+    partial class Contact_us
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -29,47 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Myinfo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.Myinfo);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 634);
+            this.panel1.Size = new System.Drawing.Size(1031, 694);
             this.panel1.TabIndex = 0;
             // 
-            // Myinfo
-            // 
-            this.Myinfo.AutoSize = true;
-            this.Myinfo.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Myinfo.Location = new System.Drawing.Point(0, 0);
-            this.Myinfo.Name = "Myinfo";
-            this.Myinfo.Size = new System.Drawing.Size(144, 29);
-            this.Myinfo.TabIndex = 20;
-            this.Myinfo.Text = "극장 검색";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(155, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(24, 21);
-            this.textBox1.TabIndex = 21;
-            // 
-            // movieMain
+            // Contact_us
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.panel1);
-            this.Name = "movieMain";
-            this.Size = new System.Drawing.Size(705, 637);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "Contact_us";
+            this.Size = new System.Drawing.Size(1037, 700);
             this.ResumeLayout(false);
 
         }
@@ -77,7 +52,5 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Myinfo;
     }
 }
