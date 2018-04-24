@@ -28,5 +28,25 @@ namespace SM_Movie.Utils
                 return Color.FromArgb(255, 0, 0);
             }
         }
+
+        public static Color getRegistryThemeColor()
+        {
+            try
+            {
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey("SM_Movie"))
+                {
+                    if (key != null)
+                    {
+                        int value = Convert.ToInt32(key.GetValue("ThemeColor"));
+                        return Color.FromArgb(value);
+                    }
+                }
+                return Color.FromArgb(255, 0, 0);
+            }
+            catch (Exception e)
+            {
+                return Color.FromArgb(255, 0, 0);
+            }
+        }
     }
 }

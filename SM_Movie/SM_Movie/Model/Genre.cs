@@ -15,10 +15,24 @@ namespace SM_Movie.Model
 
         public Genre()
         {
-            genreDic.Add("장르1", 1);
-            genreNames.Add("장르1");
-            genreDic.Add("장르2", 2);
-            genreNames.Add("장르2");
+            genreDic.Add("액션", 1);
+            genreNames.Add("액션");
+            genreDic.Add("SF", 2);
+            genreNames.Add("SF");
+            genreDic.Add("코미디", 2);
+            genreNames.Add("코미디");
+            genreDic.Add("스릴러", 2);
+            genreNames.Add("스릴러");
+            genreDic.Add("전쟁", 2);
+            genreNames.Add("전쟁");
+            genreDic.Add("스포츠", 2);
+            genreNames.Add("스포츠");
+            genreDic.Add("판타지", 2);
+            genreNames.Add("판타지");
+            genreDic.Add("음악", 2);
+            genreNames.Add("음악");
+            genreDic.Add("멜로", 2);
+            genreNames.Add("멜로");
         }
 
         public int getGenreSeq(string genreName)

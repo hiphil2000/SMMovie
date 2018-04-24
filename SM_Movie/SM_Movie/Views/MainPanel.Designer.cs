@@ -149,6 +149,8 @@
             this.bestMoviePanel.Name = "bestMoviePanel";
             this.bestMoviePanel.Size = new System.Drawing.Size(199, 295);
             this.bestMoviePanel.TabIndex = 19;
+            this.bestMoviePanel.MouseEnter += new System.EventHandler(this.trnsti);
+            this.bestMoviePanel.MouseLeave += new System.EventHandler(this.trnsti2);
             // 
             // bestMovieContentBack
             // 
@@ -161,6 +163,8 @@
             this.bestMovieContentBack.Name = "bestMovieContentBack";
             this.bestMovieContentBack.Size = new System.Drawing.Size(179, 275);
             this.bestMovieContentBack.TabIndex = 10;
+            this.bestMovieContentBack.MouseEnter += new System.EventHandler(this.trnsti);
+            this.bestMovieContentBack.MouseLeave += new System.EventHandler(this.trnsti2);
             // 
             // bestMovieSummary
             // 
@@ -173,6 +177,8 @@
             this.bestMovieSummary.Size = new System.Drawing.Size(163, 75);
             this.bestMovieSummary.TabIndex = 9;
             this.bestMovieSummary.Text = "줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리줄거리";
+            this.bestMovieSummary.MouseEnter += new System.EventHandler(this.trnsti);
+            this.bestMovieSummary.MouseLeave += new System.EventHandler(this.trnsti2);
             // 
             // bestMovieTitle
             // 
@@ -184,6 +190,8 @@
             this.bestMovieTitle.TabIndex = 7;
             this.bestMovieTitle.Text = "레디 플레이어 원";
             this.bestMovieTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bestMovieTitle.MouseEnter += new System.EventHandler(this.trnsti);
+            this.bestMovieTitle.MouseLeave += new System.EventHandler(this.trnsti2);
             // 
             // bestMovieDirector
             // 
@@ -195,6 +203,8 @@
             this.bestMovieDirector.TabIndex = 8;
             this.bestMovieDirector.Text = "스티븐 스필버그";
             this.bestMovieDirector.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bestMovieDirector.MouseEnter += new System.EventHandler(this.trnsti);
+            this.bestMovieDirector.MouseLeave += new System.EventHandler(this.trnsti2);
             // 
             // panel1
             // 

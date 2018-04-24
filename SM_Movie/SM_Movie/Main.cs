@@ -1,4 +1,5 @@
-﻿using SM_Movie.Model;
+﻿using Microsoft.Win32;
+using SM_Movie.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,30 @@ namespace SM_Movie
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             settingPanel.setMain(this);
             this.HorizontalScroll.Visible = false;
+            registrySet();
+        }
+
+        private void registrySet()
+        {
+            RegistryKey rkey = Registry.CurrentUser.CreateSubKey("SM_Movie");
+
+            //테마 색상 설정
+            if (rkey.GetValue("ThemeColor") == null)
+            {
+                int value = 0;
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\DWM"))
+                {
+                    if (key != null)
+                    {
+                        value = Convert.ToInt32(key.GetValue("ColorizationColor"));
+                    }
+                }
+                rkey.SetValue("ThemeColor", value);
+                themeColor = Color.FromArgb(value);
+            } else
+            {
+                themeColor = Color.FromArgb(Convert.ToInt32(rkey.GetValue("ThemeColor")));
+            }
         }
 
 
@@ -60,9 +85,9 @@ namespace SM_Movie
             buttonInfoDic.Add("userButton", new ButtonInfo(userButtonIcon, userButtonPane, userButtonLabel, mainPanel, userButtonHighLight));
             buttonInfoDic.Add("settingButton", new ButtonInfo(settingButtonIcon, settingButtonPane, settingButtonLabel, settingPanel, settingButtonHighLight));
 			buttonInfoDic.Add("adminButton", new ButtonInfo(adminButtonIcon, adminButtonPane, adminButtonLabel, adminPanel, adminButtonHighLight));
-            
 
-            themeColor = Utils.StyleUtil.getWindowsThemeColor();
+
+            //themeColor = Utils.StyleUtil.getRegistryThemeColor();
             setColors();
             openPage(null, new EventArgs());
             mainPanel.setMain(this);

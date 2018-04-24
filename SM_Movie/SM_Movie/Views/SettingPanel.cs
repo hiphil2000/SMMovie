@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace SM_Movie
 {
@@ -88,6 +89,9 @@ namespace SM_Movie
         private void setThemeColor(object sender, EventArgs e)
         {
             Control control = (Control)sender;
+            int argb = ColorDic[control.Name].ToArgb();
+            RegistryKey rkey = Registry.CurrentUser.CreateSubKey("SM_Movie");
+            rkey.SetValue("ThemeColor", argb);
             main.setThemeColor(ColorDic[control.Name]);
         }
 
@@ -113,6 +117,11 @@ namespace SM_Movie
             int r = int.Parse(colorCode.Substring(3, 2), System.Globalization.NumberStyles.HexNumber);
             int g = int.Parse(colorCode.Substring(5, 2), System.Globalization.NumberStyles.HexNumber);
             int b = int.Parse(colorCode.Substring(7, 2), System.Globalization.NumberStyles.HexNumber);
+
+            int argb = (a << 24) + (r << 16) + (g << 8) + b;
+            RegistryKey rkey = Registry.CurrentUser.CreateSubKey("SM_Movie");
+            rkey.SetValue("ThemeColor", argb);
+
             main.setThemeColor(Color.FromArgb(a, r, g, b));
         }
     }

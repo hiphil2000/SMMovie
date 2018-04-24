@@ -16,7 +16,7 @@ namespace SM_Movie.Utils
 
         public DBUtil()
         {
-            string connectionString = "Data Source=DESKTOP-HHSGVJH;Initial Catalog=master;Integrated Security=True;Pooling=False";
+            string connectionString = "Data Source=10.26.139.201,1433;Initial Catalog=master;User ID=sa; Password=1234; Network Library=dbmssocn";
             conn = new SqlConnection(connectionString);
         }
 

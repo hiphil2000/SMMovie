@@ -40,6 +40,7 @@
             this.programIcon = new System.Windows.Forms.PictureBox();
             this.mainPane = new System.Windows.Forms.Panel();
             this.mainPanel = new SM_Movie.MainPanel();
+            this.movieSearch = new SM_Movie.movieSearch();
             this.settingPanel = new SM_Movie.SettingPanel();
             this.adminPanel = new SM_Movie.Views.admin();
             this.menuButtonPane = new System.Windows.Forms.Panel();
@@ -71,7 +72,6 @@
             this.menuFlowWrap = new System.Windows.Forms.Panel();
             this.menuTitle = new System.Windows.Forms.TableLayoutPanel();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.movieSearch = new SM_Movie.movieSearch();
             this.taskBar.SuspendLayout();
             this.buttonFlow.SuspendLayout();
             this.minButtonPane.SuspendLayout();
@@ -250,6 +250,14 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(915, 700);
             this.mainPanel.TabIndex = 3;
+            // 
+            // movieSearch
+            // 
+            this.movieSearch.Location = new System.Drawing.Point(0, 71);
+            this.movieSearch.Name = "movieSearch";
+            this.movieSearch.Size = new System.Drawing.Size(917, 454);
+            this.movieSearch.TabIndex = 4;
+            this.movieSearch.Visible = false;
             // 
             // settingPanel
             // 
@@ -649,14 +657,6 @@
             this.titleLabel.Size = new System.Drawing.Size(911, 46);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // movieSearch
-            // 
-            this.movieSearch.Location = new System.Drawing.Point(0, 71);
-            this.movieSearch.Name = "movieSearch";
-            this.movieSearch.Size = new System.Drawing.Size(917, 454);
-            this.movieSearch.TabIndex = 4;
-            this.movieSearch.Visible = false;
             // 
             // Main
             // 

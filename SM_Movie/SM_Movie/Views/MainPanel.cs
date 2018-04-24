@@ -26,6 +26,7 @@ namespace SM_Movie
             InitializeComponent();
             //  FirstPage.Parent = Mainbar1;
             db = new Utils.DBUtil();
+            movieDic.Add(3, new MovieInfo(bestMoviePanel, bestMovieContentBack, bestMovieTitle, bestMovieDirector, bestMovieSummary, null));
         }
 
         private void MainPanel_Load(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace SM_Movie
         private void refreshMovieTile()
         {
             Font font = bestMovieTitle.Font;
-            BestMovieFlow.Controls.Clear();
+            //BestMovieFlow.Controls.Clear();
             movieDic.Clear();
             DataTable dt = db.getMovieList();
             if (dt != null)
@@ -148,6 +149,8 @@ namespace SM_Movie
             Transition.run(movie._bestMovieContentBack, "BackColor", Color.FromArgb(100, 255, 255, 255), new TransitionType_EaseInEaseOut(250));
         }
 
+        
+
         private void transition_leave(object sender, EventArgs e)
         {
             Control control = (Control)sender;
@@ -159,6 +162,24 @@ namespace SM_Movie
             Transition.run(movie._bestMovieDirector, "Top", 235, new TransitionType_EaseInEaseOut(250));
             Transition.run(movie._bestMovieSummary, "Top", 300, new TransitionType_EaseInEaseOut(250));
             Transition.run(movie._bestMovieContentBack, "BackColor", Color.FromArgb(0, 255, 255, 255), new TransitionType_EaseInEaseOut(250));
+        }
+
+        private void trnsti(object sender, EventArgs e)
+        {
+            Transition.run(bestMoviePanel, "BackColor", Color.FromArgb(50, 0, 0, 0), new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieTitle, "Top", 150, new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieDirector, "Top", 175, new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieSummary, "Top", 200, new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieContentBack, "BackColor", Color.FromArgb(100, 255, 255, 255), new TransitionType_EaseInEaseOut(250));
+        }
+
+        private void trnsti2(object sender, EventArgs e)
+        {
+            Transition.run(bestMoviePanel, "BackColor", Color.FromArgb(0, 0, 0, 0), new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieTitle, "Top", 200, new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieDirector, "Top", 235, new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieSummary, "Top", 300, new TransitionType_EaseInEaseOut(250));
+            Transition.run(bestMovieContentBack, "BackColor", Color.FromArgb(0, 255, 255, 255), new TransitionType_EaseInEaseOut(250));
         }
 
         public void setMain(Main main)
