@@ -31,6 +31,8 @@
             this.Info = new System.Windows.Forms.Panel();
             this.UserInfo = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.memberShipSeq = new System.Windows.Forms.ComboBox();
+            this.userBirthday = new System.Windows.Forms.DateTimePicker();
             this.EmailLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.userAddress = new System.Windows.Forms.TextBox();
@@ -48,11 +50,9 @@
             this.NickLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
             this.birthLabel = new System.Windows.Forms.Label();
+            this.genreSeq = new System.Windows.Forms.ComboBox();
             this.BookingInformation = new System.Windows.Forms.Button();
             this.Changinginformation = new System.Windows.Forms.Button();
-            this.userBirthday = new System.Windows.Forms.DateTimePicker();
-            this.genreSeq = new System.Windows.Forms.ComboBox();
-            this.memberShipSeq = new System.Windows.Forms.ComboBox();
             this.Info.SuspendLayout();
             this.UserInfo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -118,6 +118,25 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(441, 513);
             this.tableLayoutPanel1.TabIndex = 19;
+            // 
+            // memberShipSeq
+            // 
+            this.memberShipSeq.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memberShipSeq.Font = new System.Drawing.Font("맑은 고딕", 14.25F);
+            this.memberShipSeq.FormattingEnabled = true;
+            this.memberShipSeq.Location = new System.Drawing.Point(150, 462);
+            this.memberShipSeq.Name = "memberShipSeq";
+            this.memberShipSeq.Size = new System.Drawing.Size(288, 33);
+            this.memberShipSeq.TabIndex = 26;
+            // 
+            // userBirthday
+            // 
+            this.userBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userBirthday.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.userBirthday.Location = new System.Drawing.Point(150, 54);
+            this.userBirthday.Name = "userBirthday";
+            this.userBirthday.Size = new System.Drawing.Size(288, 33);
+            this.userBirthday.TabIndex = 24;
             // 
             // EmailLabel
             // 
@@ -311,6 +330,16 @@
             this.birthLabel.Text = "생년월일 :";
             this.birthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // genreSeq
+            // 
+            this.genreSeq.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.genreSeq.Font = new System.Drawing.Font("맑은 고딕", 14.25F);
+            this.genreSeq.FormattingEnabled = true;
+            this.genreSeq.Location = new System.Drawing.Point(150, 411);
+            this.genreSeq.Name = "genreSeq";
+            this.genreSeq.Size = new System.Drawing.Size(288, 33);
+            this.genreSeq.TabIndex = 25;
+            // 
             // BookingInformation
             // 
             this.BookingInformation.Location = new System.Drawing.Point(101, 643);
@@ -329,35 +358,6 @@
             this.Changinginformation.Text = "수정";
             this.Changinginformation.UseVisualStyleBackColor = true;
             this.Changinginformation.Click += new System.EventHandler(this.Changinginformation_Click);
-            // 
-            // userBirthday
-            // 
-            this.userBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userBirthday.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.userBirthday.Location = new System.Drawing.Point(150, 54);
-            this.userBirthday.Name = "userBirthday";
-            this.userBirthday.Size = new System.Drawing.Size(288, 33);
-            this.userBirthday.TabIndex = 24;
-            // 
-            // genreSeq
-            // 
-            this.genreSeq.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genreSeq.Font = new System.Drawing.Font("맑은 고딕", 14.25F);
-            this.genreSeq.FormattingEnabled = true;
-            this.genreSeq.Location = new System.Drawing.Point(150, 411);
-            this.genreSeq.Name = "genreSeq";
-            this.genreSeq.Size = new System.Drawing.Size(288, 33);
-            this.genreSeq.TabIndex = 25;
-            // 
-            // memberShipSeq
-            // 
-            this.memberShipSeq.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.memberShipSeq.Font = new System.Drawing.Font("맑은 고딕", 14.25F);
-            this.memberShipSeq.FormattingEnabled = true;
-            this.memberShipSeq.Location = new System.Drawing.Point(150, 462);
-            this.memberShipSeq.Name = "memberShipSeq";
-            this.memberShipSeq.Size = new System.Drawing.Size(288, 33);
-            this.memberShipSeq.TabIndex = 26;
             // 
             // SearchCinema
             // 
