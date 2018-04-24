@@ -34,26 +34,30 @@
             this.SearchPane = new System.Windows.Forms.Panel();
             this.noticePage1 = new System.Windows.Forms.Button();
             this.ViewWindowPane = new System.Windows.Forms.Panel();
-            this.noticeSeqLabel = new System.Windows.Forms.Label();
-            this.noticeTitleLabel = new System.Windows.Forms.Label();
-            this.noticeDateLabel = new System.Windows.Forms.Label();
-            this.noticeViewCountLabel = new System.Windows.Forms.Label();
-            this.noticePage2 = new System.Windows.Forms.Button();
-            this.noticePage3 = new System.Windows.Forms.Button();
-            this.noticePage4 = new System.Windows.Forms.Button();
-            this.noticePage5 = new System.Windows.Forms.Button();
-            this.noticeContentLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.noticePosts = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.noticeContentLabel = new System.Windows.Forms.Label();
+            this.noticePage5 = new System.Windows.Forms.Button();
+            this.noticePage4 = new System.Windows.Forms.Button();
+            this.noticePage3 = new System.Windows.Forms.Button();
+            this.noticePage2 = new System.Windows.Forms.Button();
+            this.noticeViewCountLabel = new System.Windows.Forms.Label();
+            this.noticeDateLabel = new System.Windows.Forms.Label();
+            this.noticeTitleLabel = new System.Windows.Forms.Label();
+            this.noticeSeqLabel = new System.Windows.Forms.Label();
+            this.closeButtonPane = new System.Windows.Forms.Panel();
+            this.closeButtonIcon = new System.Windows.Forms.PictureBox();
             this.SearchPane.SuspendLayout();
             this.ViewWindowPane.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.noticePosts.SuspendLayout();
+            this.closeButtonPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchBox
@@ -85,6 +89,7 @@
             // SearchPane
             // 
             this.SearchPane.Controls.Add(this.SearchBox);
+            this.SearchPane.Controls.Add(this.closeButtonPane);
             this.SearchPane.Controls.Add(this.label1);
             this.SearchPane.Controls.Add(this.SearchBtn);
             this.SearchPane.Location = new System.Drawing.Point(3, 0);
@@ -119,88 +124,6 @@
             this.ViewWindowPane.Size = new System.Drawing.Size(912, 459);
             this.ViewWindowPane.TabIndex = 5;
             // 
-            // noticeSeqLabel
-            // 
-            this.noticeSeqLabel.AutoSize = true;
-            this.noticeSeqLabel.Location = new System.Drawing.Point(8, 10);
-            this.noticeSeqLabel.Name = "noticeSeqLabel";
-            this.noticeSeqLabel.Size = new System.Drawing.Size(29, 12);
-            this.noticeSeqLabel.TabIndex = 5;
-            this.noticeSeqLabel.Text = "번호";
-            // 
-            // noticeTitleLabel
-            // 
-            this.noticeTitleLabel.AutoSize = true;
-            this.noticeTitleLabel.Location = new System.Drawing.Point(92, 10);
-            this.noticeTitleLabel.Name = "noticeTitleLabel";
-            this.noticeTitleLabel.Size = new System.Drawing.Size(29, 12);
-            this.noticeTitleLabel.TabIndex = 6;
-            this.noticeTitleLabel.Text = "제목";
-            // 
-            // noticeDateLabel
-            // 
-            this.noticeDateLabel.AutoSize = true;
-            this.noticeDateLabel.Location = new System.Drawing.Point(709, 10);
-            this.noticeDateLabel.Name = "noticeDateLabel";
-            this.noticeDateLabel.Size = new System.Drawing.Size(41, 12);
-            this.noticeDateLabel.TabIndex = 8;
-            this.noticeDateLabel.Text = "작성일";
-            // 
-            // noticeViewCountLabel
-            // 
-            this.noticeViewCountLabel.AutoSize = true;
-            this.noticeViewCountLabel.Location = new System.Drawing.Point(855, 10);
-            this.noticeViewCountLabel.Name = "noticeViewCountLabel";
-            this.noticeViewCountLabel.Size = new System.Drawing.Size(41, 12);
-            this.noticeViewCountLabel.TabIndex = 9;
-            this.noticeViewCountLabel.Text = "조회수";
-            this.noticeViewCountLabel.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // noticePage2
-            // 
-            this.noticePage2.Location = new System.Drawing.Point(418, 435);
-            this.noticePage2.Name = "noticePage2";
-            this.noticePage2.Size = new System.Drawing.Size(22, 22);
-            this.noticePage2.TabIndex = 10;
-            this.noticePage2.Text = "2";
-            this.noticePage2.UseVisualStyleBackColor = true;
-            // 
-            // noticePage3
-            // 
-            this.noticePage3.Location = new System.Drawing.Point(446, 435);
-            this.noticePage3.Name = "noticePage3";
-            this.noticePage3.Size = new System.Drawing.Size(22, 22);
-            this.noticePage3.TabIndex = 11;
-            this.noticePage3.Text = "3";
-            this.noticePage3.UseVisualStyleBackColor = true;
-            // 
-            // noticePage4
-            // 
-            this.noticePage4.Location = new System.Drawing.Point(474, 435);
-            this.noticePage4.Name = "noticePage4";
-            this.noticePage4.Size = new System.Drawing.Size(22, 22);
-            this.noticePage4.TabIndex = 12;
-            this.noticePage4.Text = "4";
-            this.noticePage4.UseVisualStyleBackColor = true;
-            // 
-            // noticePage5
-            // 
-            this.noticePage5.Location = new System.Drawing.Point(502, 435);
-            this.noticePage5.Name = "noticePage5";
-            this.noticePage5.Size = new System.Drawing.Size(22, 22);
-            this.noticePage5.TabIndex = 13;
-            this.noticePage5.Text = "5";
-            this.noticePage5.UseVisualStyleBackColor = true;
-            // 
-            // noticeContentLabel
-            // 
-            this.noticeContentLabel.AutoSize = true;
-            this.noticeContentLabel.Location = new System.Drawing.Point(287, 10);
-            this.noticeContentLabel.Name = "noticeContentLabel";
-            this.noticeContentLabel.Size = new System.Drawing.Size(29, 12);
-            this.noticeContentLabel.TabIndex = 14;
-            this.noticeContentLabel.Text = "내용";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.noticePosts);
@@ -221,32 +144,14 @@
             this.noticePosts.Size = new System.Drawing.Size(903, 31);
             this.noticePosts.TabIndex = 0;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 12);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(281, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(852, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 12);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "label6";
             // 
             // label5
             // 
@@ -257,14 +162,136 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "label5";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(852, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 12);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(281, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 12);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(86, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 12);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            // 
+            // noticeContentLabel
+            // 
+            this.noticeContentLabel.AutoSize = true;
+            this.noticeContentLabel.Location = new System.Drawing.Point(287, 10);
+            this.noticeContentLabel.Name = "noticeContentLabel";
+            this.noticeContentLabel.Size = new System.Drawing.Size(29, 12);
+            this.noticeContentLabel.TabIndex = 14;
+            this.noticeContentLabel.Text = "내용";
+            // 
+            // noticePage5
+            // 
+            this.noticePage5.Location = new System.Drawing.Point(502, 435);
+            this.noticePage5.Name = "noticePage5";
+            this.noticePage5.Size = new System.Drawing.Size(22, 22);
+            this.noticePage5.TabIndex = 13;
+            this.noticePage5.Text = "5";
+            this.noticePage5.UseVisualStyleBackColor = true;
+            // 
+            // noticePage4
+            // 
+            this.noticePage4.Location = new System.Drawing.Point(474, 435);
+            this.noticePage4.Name = "noticePage4";
+            this.noticePage4.Size = new System.Drawing.Size(22, 22);
+            this.noticePage4.TabIndex = 12;
+            this.noticePage4.Text = "4";
+            this.noticePage4.UseVisualStyleBackColor = true;
+            // 
+            // noticePage3
+            // 
+            this.noticePage3.Location = new System.Drawing.Point(446, 435);
+            this.noticePage3.Name = "noticePage3";
+            this.noticePage3.Size = new System.Drawing.Size(22, 22);
+            this.noticePage3.TabIndex = 11;
+            this.noticePage3.Text = "3";
+            this.noticePage3.UseVisualStyleBackColor = true;
+            // 
+            // noticePage2
+            // 
+            this.noticePage2.Location = new System.Drawing.Point(418, 435);
+            this.noticePage2.Name = "noticePage2";
+            this.noticePage2.Size = new System.Drawing.Size(22, 22);
+            this.noticePage2.TabIndex = 10;
+            this.noticePage2.Text = "2";
+            this.noticePage2.UseVisualStyleBackColor = true;
+            // 
+            // noticeViewCountLabel
+            // 
+            this.noticeViewCountLabel.AutoSize = true;
+            this.noticeViewCountLabel.Location = new System.Drawing.Point(855, 10);
+            this.noticeViewCountLabel.Name = "noticeViewCountLabel";
+            this.noticeViewCountLabel.Size = new System.Drawing.Size(41, 12);
+            this.noticeViewCountLabel.TabIndex = 9;
+            this.noticeViewCountLabel.Text = "조회수";
+            this.noticeViewCountLabel.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // noticeDateLabel
+            // 
+            this.noticeDateLabel.AutoSize = true;
+            this.noticeDateLabel.Location = new System.Drawing.Point(709, 10);
+            this.noticeDateLabel.Name = "noticeDateLabel";
+            this.noticeDateLabel.Size = new System.Drawing.Size(41, 12);
+            this.noticeDateLabel.TabIndex = 8;
+            this.noticeDateLabel.Text = "작성일";
+            // 
+            // noticeTitleLabel
+            // 
+            this.noticeTitleLabel.AutoSize = true;
+            this.noticeTitleLabel.Location = new System.Drawing.Point(92, 10);
+            this.noticeTitleLabel.Name = "noticeTitleLabel";
+            this.noticeTitleLabel.Size = new System.Drawing.Size(29, 12);
+            this.noticeTitleLabel.TabIndex = 6;
+            this.noticeTitleLabel.Text = "제목";
+            // 
+            // noticeSeqLabel
+            // 
+            this.noticeSeqLabel.AutoSize = true;
+            this.noticeSeqLabel.Location = new System.Drawing.Point(8, 10);
+            this.noticeSeqLabel.Name = "noticeSeqLabel";
+            this.noticeSeqLabel.Size = new System.Drawing.Size(29, 12);
+            this.noticeSeqLabel.TabIndex = 5;
+            this.noticeSeqLabel.Text = "번호";
+            // 
+            // closeButtonPane
+            // 
+            this.closeButtonPane.Controls.Add(this.closeButtonIcon);
+            this.closeButtonPane.Location = new System.Drawing.Point(860, 0);
+            this.closeButtonPane.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonPane.Name = "closeButtonPane";
+            this.closeButtonPane.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonPane.TabIndex = 11;
+            // 
+            // closeButtonIcon
+            // 
+            this.closeButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButtonIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButtonIcon.Image = global::SM_Movie.Properties.Resources.exit;
+            this.closeButtonIcon.Location = new System.Drawing.Point(0, 0);
+            this.closeButtonIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButtonIcon.Name = "closeButtonIcon";
+            this.closeButtonIcon.Size = new System.Drawing.Size(40, 26);
+            this.closeButtonIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButtonIcon.TabIndex = 1;
+            this.closeButtonIcon.TabStop = false;
             // 
             // Notice
             // 
@@ -281,6 +308,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.noticePosts.ResumeLayout(false);
             this.noticePosts.PerformLayout();
+            this.closeButtonPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButtonIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,5 +337,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel closeButtonPane;
+        private System.Windows.Forms.PictureBox closeButtonIcon;
     }
 }
